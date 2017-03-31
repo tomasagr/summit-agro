@@ -12,7 +12,8 @@ class CreateAwardsTable extends Migration {
 			$table->timestamps();
 			$table->string('name');
 			$table->integer('stock');
-			$table->string('image');
+			$table->integer('points');
+			$table->string('image')->default('images/default.png');
 		});
 	}
 

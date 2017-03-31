@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AwardsRequest;
+use App\Award;
+use Illuminate\Http\Request;
+
 class AwardController extends Controller {
 
   /**
@@ -11,7 +15,8 @@ class AwardController extends Controller {
    */
   public function index()
   {
-    
+    $awards = Award::all();
+    return view('panel.awards.index', compact('awards'));
   }
 
   /**
@@ -21,6 +26,7 @@ class AwardController extends Controller {
    */
   public function create()
   {
+    return view('panel.awards.create');
   }
 
   /**
@@ -28,20 +34,21 @@ class AwardController extends Controller {
    *
    * @return Response
    */
-  public function store()
+  public function store(AwardsRequest $request)
   {
-    
-  }
+    $award = $request->all();
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function show($id)
-  {
-    
+    if ($request->hasFile('image')) {
+      $award["image"] = $request->image->storeAs('images', 'premio-' . date('dym') . '.' . $request->image->extension());
+    }
+
+    $award = Award::create($award);
+
+    if ($award instanceof Award)   {
+      return redirect('/panel/awards')->with('status', 'Guardado con exito!');
+    }
+
+    return redirect()->back()->with('status', 'Error interno vuelva a intentar');
   }
 
   /**
@@ -52,7 +59,8 @@ class AwardController extends Controller {
    */
   public function edit($id)
   {
-    
+    $award = Award::find($id);
+    return view('panel.awards.edit', compact('award'));
   }
 
   /**
@@ -61,9 +69,15 @@ class AwardController extends Controller {
    * @param  int  $id
    * @return Response
    */
-  public function update($id)
+  public function update(AwardsRequest $request, $id)
   {
-    
+    $award = Award::find($id);
+
+    $res = $award->update($request->all());
+
+    if ($res) {
+      return redirect('/panel/awards')->with('status', 'Actualizado con exito!');
+    }
   }
 
   /**
@@ -74,9 +88,12 @@ class AwardController extends Controller {
    */
   public function destroy($id)
   {
-    
-  }
-  
-}
+    $award = Award::find($id);
 
-?>
+    $res = $award->delete();
+
+    if ($res) {
+      return redirect('/panel/awards')->with('status', 'Eliminado con exito!');
+    }
+  }
+}

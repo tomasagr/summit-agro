@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserStoreRequest;
-use App\Http\Requests\UserUpdateRequest;
-use App\User;
+use App\Levels;
 use Illuminate\Http\Request;
 
-class UserController extends Controller {
+class LevelsController extends Controller {
 
   /**
    * Display a listing of the resource.
@@ -16,8 +14,9 @@ class UserController extends Controller {
    */
   public function index()
   {
-    $users = User::all();
-    return view('panel.users.index', compact('users'));
+    $levels = Levels::all();
+
+    return view('panel.levels.index', compact('levels'));
   }
 
   /**
@@ -27,7 +26,7 @@ class UserController extends Controller {
    */
   public function create()
   {
-    return view('panel.users.create');
+    
   }
 
   /**
@@ -35,17 +34,9 @@ class UserController extends Controller {
    *
    * @return Response
    */
-  public function store(UserStoreRequest $request)
+  public function store()
   {
-    $user = $request->all();
-
-    $user = User::create($user);
-
-    if ($user instanceof User)   {
-      return redirect('/panel/users')->with('status', 'Guardado con exito!');
-    }
-
-    return redirect()->back()->with('status', 'Error interno vuelva a intentar');
+    
   }
 
   /**
@@ -65,10 +56,9 @@ class UserController extends Controller {
    * @param  int  $id
    * @return Response
    */
-  public function edit($id)
+  public function edit(Request $request, $id)
   {
-    $user = User::find($id);
-    return view('panel.users.edit', compact('user'));
+   
   }
 
   /**
@@ -77,15 +67,15 @@ class UserController extends Controller {
    * @param  int  $id
    * @return Response
    */
-  public function update(UserUpdateRequest $request, $id)
+  public function update(Request $request, $id)
   {
-    $user = User::find($id);
+     $level = Levels::find($id);
 
-    $res = $user->update($request->all());
+     $res = $level->update(['points' => $request->points]);
 
-    if ($res) {
-      return redirect('/panel/users')->with('status', 'Actualizado con exito!');
-    }
+     if ($res) {
+      return redirect()->back();
+     }
   }
 
   /**
@@ -96,12 +86,9 @@ class UserController extends Controller {
    */
   public function destroy($id)
   {
-    $user = User::find($id);
-
-    $res = $user->delete();
-
-    if ($res) {
-      return redirect('/panel/users')->with('status', 'Eliminado con exito!');
-    }
+    
   }
+  
 }
+
+?>
