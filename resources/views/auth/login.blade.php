@@ -10,6 +10,7 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/lucass-fresh-project-21ce23.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/custom.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -46,7 +47,7 @@
   </style>
 </head>
 <body>
-<img class="image-3" sizes="100vw" src="images/login-bg.png" srcset="images/login-bg-p-500x330.png 500w, images/login-bg-p-800x528.png 800w, images/login-bg-p-1080x712.png 1080w, images/login-bg.png 1366w">
+<img class="image-3" src="images/login-bg.png">
   <div class="w-container">
     <div class="div-block-6">
       <div class="div-block-7"><img class="image-7" height="60" src="images/logo-summit.svg" width="370"><img class="image-8" src="images/user-pic.png">

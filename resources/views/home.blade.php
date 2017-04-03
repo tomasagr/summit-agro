@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Tue Mar 28 2017 23:32:22 GMT+0000 (UTC)  -->
+<!--  Last Published: Mon Apr 03 2017 14:09:40 GMT+0000 (UTC)  -->
 <html data-wf-page="58d6377d8ca365092ba2436c" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Summit Agro</title>
+  <title>Lucas&#39;s Fresh Project</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -23,6 +23,8 @@
     try{Typekit.load();}catch(e){}
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
   <style>
     select {
     	-webkit-appearance: none !important;
@@ -45,22 +47,21 @@
   }
   </style>
 </head>
-<body><img class="image-2" sizes="100vw" src="images/home.png" srcset="images/home-p-500x418.png 500w, images/home-p-800x669.png 800w, images/home-p-1080x903.png 1080w, images/home.png 1366w">
-  <ul class="unordered-list w-list-unstyled">
-    <li class="list-item">
-      <a href="http://google.com" class="link">
-        <br>
-      </a>
-    </li>
-    <li class="list-item-3">
-      <a href="mi-perfil.html" class="link-2">
-        <br>
-        <br>
-        <br>
-      </a>
-    </li>
-    <li class="list-item-2"></li>
-  </ul>
+<body><img class="image-2" sizes="100vw" src="images/home.png" srcset="images/home.png 500w, images/home.png 800w, images/home.png 1080w, images/home.png 1600w, images/home.png 1920w">
+  <div class="container-home">
+    <div class="brand-image"><img class="image-16" src="images/personaje-logo.png">
+    </div>
+    <div class="logo-image"><img class="image-17" src="images/logo-summit.svg" width="385">
+    </div>
+    <ul class="header-home unordered-list-2 w-list-unstyled">
+      <li class="list-item-4"><a href="#" class="link-6">INICIO</a>
+      </li>
+      <li class="list-item-4"><a class="link-8">MI PERFIL</a>
+      </li>
+      <li class="list-item-4"><a class="link-7">SALIR</a>
+      </li>
+    </ul>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->

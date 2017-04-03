@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Solicitude;
+use App\User;
+use App\Product;
+use Illuminate\Http\Request;
+
 class SolicitudeController extends Controller {
 
   /**
@@ -29,9 +34,38 @@ class SolicitudeController extends Controller {
    *
    * @return Response
    */
-  public function store()
+  public function store(Request $request, $id)
   {
+    $user = User::find($id);
+    $data = $request->all();
+
+    $solicitude = $user->solicitudes()->create($data);
     
+    if (!($solicitude instanceof Solicitude)) {
+      return 'error';
+    }
+    
+    if (count($data["products"])) {
+      $solicitude->products()->attach($data["products"]);
+      
+
+      $this->saveUserPoints($user, $data["products"]);
+    } 
+
+    return 'ok';
+  }
+
+  private function saveUserPoints($user, $ids) {
+      $totalPoints = 0;
+      
+      foreach ($ids as $id) {
+        $product = Product::find($id);
+        $totalPoints += $product->points;
+      }
+
+      $totalPoints += $user->points;
+      
+      return $user->update(['points' => $totalPoints]);
   }
 
   /**
@@ -79,5 +113,3 @@ class SolicitudeController extends Controller {
   }
   
 }
-
-?>

@@ -38,20 +38,22 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>Nombre*</label>
-							<input type="text" autofocus 
-							name="name"
-							value="{{$product->name}}" 
-							placeholder="Ingrese nombre"
-							class="form-control">
+							<input type="text"
+										autofocus
+										name="name"
+										value="{{$product->name}}"
+										placeholder="Ingrese nombre"
+										class="form-control">
 						</div>
 					</div>
 
 					<div class="col-md-6">
 						<div class="form-group">
 							<label>Puntos*</label>
-							<input type="text" name="points" 
-								value="{{$product->points}}"
-								placeholder="Ingrese cantidad" class="form-control">
+							<input type="text"
+										 name="points"
+										 value="{{$product->points}}"
+										 placeholder="Ingrese cantidad" class="form-control">
 						</div>
 					</div>
 				</div>

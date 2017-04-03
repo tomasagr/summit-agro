@@ -13,6 +13,7 @@ class CreateAwardsTable extends Migration {
 			$table->string('name');
 			$table->integer('stock');
 			$table->integer('points');
+			$table->integer('level_id');
 			$table->string('image')->default('images/default.png');
 		});
 	}

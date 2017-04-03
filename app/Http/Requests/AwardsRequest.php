@@ -27,13 +27,15 @@ class AwardsRequest extends FormRequest
             'points' => 'required|integer',
             'name' => 'required',
             'stock' => 'required|integer',
-            'image' => 'image'
+            'image' => 'image',
+            'level_id' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
+            'level_id' => 'El campo nivel es requerido',
             'points.required' => 'El campo puntos es requerido',
             'points.integer' => 'El campo debe ser numerico',
             'name.required' => 'El campo nombre es requerido',

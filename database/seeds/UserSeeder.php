@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         'email'=> 'admin@admin.com',
         'phone'=> '123-123-123',
         'address'=> 'Admin 123',
-        'password'=> Hash::make('administrator'),
+        'password'=> 'administrator',
         'cuit' => '123456',
         'agronomy'=> 'test',
         'agronomy_type' => 'casa',

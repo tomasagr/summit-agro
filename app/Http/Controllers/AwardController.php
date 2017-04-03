@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AwardsRequest;
 use App\Award;
+use App\Http\Requests\AwardsRequest;
+use App\Levels;
 use Illuminate\Http\Request;
 
 class AwardController extends Controller {
@@ -15,7 +16,7 @@ class AwardController extends Controller {
    */
   public function index()
   {
-    $awards = Award::all();
+    $awards = Award::with('level')->get();
     return view('panel.awards.index', compact('awards'));
   }
 
@@ -26,7 +27,8 @@ class AwardController extends Controller {
    */
   public function create()
   {
-    return view('panel.awards.create');
+     $levels = Levels::all();
+    return view('panel.awards.create', compact('levels'));
   }
 
   /**
@@ -39,7 +41,7 @@ class AwardController extends Controller {
     $award = $request->all();
 
     if ($request->hasFile('image')) {
-      $award["image"] = $request->image->storeAs('images', 'premio-' . date('dym') . '.' . $request->image->extension());
+      $award["image"] = $request->image->store('uploads', ['visibility'  => 'public']);
     }
 
     $award = Award::create($award);
@@ -59,8 +61,9 @@ class AwardController extends Controller {
    */
   public function edit($id)
   {
-    $award = Award::find($id);
-    return view('panel.awards.edit', compact('award'));
+    $award = Award::with('level')->find($id);
+    $levels = Levels::all();
+    return view('panel.awards.edit', compact('award', 'levels'));
   }
 
   /**
@@ -72,8 +75,15 @@ class AwardController extends Controller {
   public function update(AwardsRequest $request, $id)
   {
     $award = Award::find($id);
+    $data = $request->all();
 
-    $res = $award->update($request->all());
+    if ($request->hasFile('image')) {
+      $data["image"] = $request->image->store('uploads', ['visibility'  => 'public']);
+    } else {
+      $data["image"] = $award["image"];
+    }
+
+    $res = $award->update($data);
 
     if ($res) {
       return redirect('/panel/awards')->with('status', 'Actualizado con exito!');

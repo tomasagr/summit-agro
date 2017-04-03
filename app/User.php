@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Solicitude;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -36,6 +37,7 @@ class User extends Authenticatable
         "sports",
         "hobby",
         "team",
+        "points",
     ];
 
     /**
@@ -66,5 +68,15 @@ class User extends Authenticatable
         if (!empty($value)) {
             $this->attributes['password'] = Hash::make($value);
         }
+    }
+
+    public function solicitudes()
+    {
+        return $this->hasMany(Solicitude::class, 'user_id');
+    }
+
+    public function awardSolicitude() 
+    {
+        return $this->hasMany(AwardSolicitude::class, 'user_id');
     }
 }

@@ -15,7 +15,6 @@ class LevelsController extends Controller {
   public function index()
   {
     $levels = Levels::all();
-
     return view('panel.levels.index', compact('levels'));
   }
 

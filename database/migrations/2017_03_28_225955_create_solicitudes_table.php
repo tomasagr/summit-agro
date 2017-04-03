@@ -13,10 +13,8 @@ class CreateSolicitudesTable extends Migration {
 			$table->string('invoice_number');
 			$table->datetime('date');
 			$table->string('cuit');
-			$table->integer('award_id');
-			$table->integer('points');
-			$table->boolean('status');
-			$table->string('invoice_image');
+			$table->integer('user_id');
+			$table->string('invoice_image')->default('');
 		});
 	}
 

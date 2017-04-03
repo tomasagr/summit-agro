@@ -34,7 +34,7 @@
 			<form action="/panel/awards" method="POST" class="cleafix" enctype="multipart/form-data">
 				{{csrf_field()}}
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<div class="form-group">
 							<label>Nombre*</label>
 							<input type="text"
@@ -45,17 +45,10 @@
 						</div>
 					</div>
 
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<div class="form-group">
 							<label>Puntos*</label>
 							<input type="text" name="points" placeholder="Ingrese cantidad" class="form-control">
-						</div>
-					</div>
-
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>Stock*</label>
-							<input type="text" name="stock" placeholder="Ingrese cantidad" class="form-control">
 						</div>
 					</div>
 				</div>
@@ -71,6 +64,20 @@
 						<div class="form-group">
 							<label>Foto*</label>
 							<input type="file" name="image" class="form-control">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Nivel*</label>
+							<select name="level_id" class="form-control">
+								<option value="">Seleccionar</option>
+								@foreach($levels as $level)
+									<option value="{{$level->id}}">{{$level->name}}</option>
+								@endforeach
+							</select>
 						</div>
 					</div>
 				</div>

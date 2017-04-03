@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration {
 			$table->string('hobby')->nullable();
 			$table->string('team')->nullable();
 			$table->enum('type', array('user', 'admin'));
+			$table->integer('points')->default(0);
 			$table->string("remember_token")->nullable();
 		});
 	}

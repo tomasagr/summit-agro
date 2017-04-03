@@ -27,6 +27,7 @@
 					<tr>
 						<th>Nombre</th>
 						<th>Puntos</th>
+						<th>Nivel</th>
 						<th>Acciones</th>
 					</tr>
 				</thead>
@@ -36,6 +37,7 @@
 					<tr>
 						<td>{{$award->name}}</td>
 						<td>{{$award->points}}</td>
+						<td>{{$award->level->name}}</td>
 						<td>
 							<div class="btn-group">
 								<a href="/panel/awards/{{$award->id}}/edit" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
