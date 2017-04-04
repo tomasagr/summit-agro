@@ -16,7 +16,7 @@ class SolicitudeController extends Controller {
    */
   public function index()
   {
-    
+    return view('solicitudes.index');
   }
 
   /**
@@ -26,7 +26,7 @@ class SolicitudeController extends Controller {
    */
   public function create()
   {
-    
+
   }
 
   /**
@@ -37,35 +37,31 @@ class SolicitudeController extends Controller {
   public function store(Request $request, $id)
   {
     $user = User::find($id);
-    $data = $request->all();
+    $data = $request->all()["data"];
+
+    if ($request->hasFile('file')) {
+      $data["invoice_image"] = $request->file->store('uploads', ['visibility'  => 'public']);
+    }
 
     $solicitude = $user->solicitudes()->create($data);
-    
+
     if (!($solicitude instanceof Solicitude)) {
-      return 'error';
+      return response()->json(['code' => 500]);
     }
-    
+
     if (count($data["products"])) {
       $solicitude->products()->attach($data["products"]);
-      
+      $this->saveUserPoints($user, $data['points']);
+    }
 
-      $this->saveUserPoints($user, $data["products"]);
-    } 
-
-    return 'ok';
+    return response()->json(['code' => 200]);
   }
 
-  private function saveUserPoints($user, $ids) {
-      $totalPoints = 0;
-      
-      foreach ($ids as $id) {
-        $product = Product::find($id);
-        $totalPoints += $product->points;
-      }
+  private function saveUserPoints($user, $points) {
 
-      $totalPoints += $user->points;
-      
-      return $user->update(['points' => $totalPoints]);
+    $totalPoints = $points + $user->points;
+
+    return $user->update(['points' => $totalPoints]);
   }
 
   /**
@@ -76,7 +72,7 @@ class SolicitudeController extends Controller {
    */
   public function show($id)
   {
-    
+
   }
 
   /**
@@ -87,7 +83,7 @@ class SolicitudeController extends Controller {
    */
   public function edit($id)
   {
-    
+
   }
 
   /**
@@ -98,7 +94,7 @@ class SolicitudeController extends Controller {
    */
   public function update($id)
   {
-    
+
   }
 
   /**
@@ -109,7 +105,7 @@ class SolicitudeController extends Controller {
    */
   public function destroy($id)
   {
-    
+
   }
   
 }

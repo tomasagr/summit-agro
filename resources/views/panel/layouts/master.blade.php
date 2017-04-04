@@ -97,6 +97,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li><a href="/panel/products"><i class="fa fa-archive"></i> <span>Productos</span></a></li>
           <li><a href="/panel/awards"><i class="fa fa-trophy"></i> <span>Premios</span></a></li>
           <li><a href="/panel/levels"><i class="fa fa-bar-chart"></i> <span>Niveles</span></a></li>
+          <li><a href="/panel/cupons"><i class="fa fa-money"></i> <span>Cupones</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

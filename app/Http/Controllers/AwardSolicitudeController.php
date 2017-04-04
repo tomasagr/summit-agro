@@ -11,7 +11,7 @@ use App\Award;
 
 class AwardSolicitudeController extends Controller
 {
-    public function store(Request $request, $id) 
+    public function store(Request $request, $id)
     {
         $user = User::find($id);
         $data = $request->all();
@@ -26,9 +26,9 @@ class AwardSolicitudeController extends Controller
             return 'no dispone de puntos';
         }
 
-        $award = <Award::find></Award::find>($data["award_id"]);
+        $award = Award::find($data["award_id"]);
         $count = $user->points - $award->points;
-        
+
         if ($count < 0) {
             return 'no dispone de puntos';
         }

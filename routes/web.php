@@ -17,6 +17,10 @@ Route::get('/', 'HomeController@index')->middleware('auth');
 Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
 Route::get('/levels/awards', 'LevelAwardsController@index');
 
+Route::group(['middleware' => 'auth'] , function() {
+	Route::get('invoices', 'SolicitudeController@index');
+});
+
 Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], function() {
 	Route::get('/', 'AdminPagesController@panel');
 
@@ -32,6 +36,9 @@ Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], functio
 	Route::resource('solicitudes', 'SolicitudeController');
 
 	Route::resource('levels', 'LevelsController');
+
+	Route::resource('cupons', 'CuponsController');
+	Route::get('cupons/{id}/delete', 'CuponsController@destroy');
 });
 
 Auth::routes();

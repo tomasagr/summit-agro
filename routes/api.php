@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::delete('panel/awards/{id}/image', 'DeleteImageAwardController@destroy');
+Route::get('products', 'ApiProductsController@index');
+Route::get('cupons', 'ApiCuponsController@index');
 
 Route::post('/user/{id}/solicitude', 'SolicitudeController@store');
 Route::post('/user/{id}/awards', 'AwardSolicitudeController@store');

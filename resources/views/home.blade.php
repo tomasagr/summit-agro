@@ -4,12 +4,13 @@
 <html data-wf-page="58d6377d8ca365092ba2436c" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Lucas&#39;s Fresh Project</title>
+  <title>Summit Agro - Inicio</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/lucass-fresh-project-21ce23.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/custom.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -47,18 +48,21 @@
   }
   </style>
 </head>
-<body><img class="image-2" sizes="100vw" src="images/home.png" srcset="images/home.png 500w, images/home.png 800w, images/home.png 1080w, images/home.png 1600w, images/home.png 1920w">
+<body>
+  <img class="image-2" sizes="100vw" src="images/home.png" srcset="images/home.png 500w, images/home.png 800w, images/home.png 1080w, images/home.png 1600w, images/home.png 1920w">
   <div class="container-home">
-    <div class="brand-image"><img class="image-16" src="images/personaje-logo.png">
+    <div class="brand-image">
+      <a href="/"><img class="image-16" src="images/personaje-logo.png"></a>
     </div>
-    <div class="logo-image"><img class="image-17" src="images/logo-summit.svg" width="385">
+    <div class="logo-image">
+      <a href="/"><img class="image-17" src="images/logo-summit.svg" width="385"></a>
     </div>
     <ul class="header-home unordered-list-2 w-list-unstyled">
-      <li class="list-item-4"><a href="#" class="link-6">INICIO</a>
+      <li class="list-item-4  link-active"><a href="/" class="link-6">INICIO</a>
       </li>
-      <li class="list-item-4"><a class="link-8">MI PERFIL</a>
+      <li class="list-item-4"><a href="invoices" class="link-8">MI PERFIL</a>
       </li>
-      <li class="list-item-4"><a class="link-7">SALIR</a>
+      <li class="list-item-4"><a href="/logout" class="link-7">SALIR</a>
       </li>
     </ul>
   </div>

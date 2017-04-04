@@ -1,7 +1,65 @@
+ [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+}
+
+.ng-invalid.ng-touched {
+  border-bottom: 1px solid red !important;
+}
+
+.btn-success[disabled="disabled"] {
+  cursor: not-allowed;
+  background: #8bc34a;
+}
+
+.btn-success {
+  color: white;
+}
+
+.card-success {
+  text-align: center;
+  width: 500px;
+  padding: 2em;
+  border-radius: 5px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 10em;
+  z-index: 2;
+}
+
+.card-success h3 {
+  font-family: "Lato";
+  margin-bottom: 1.5em;
+}
+
 .image-10 {
   width: 432px;
   position: absolute;
   left: -389px;
   top: 0px;
   bottom: 0px;
+}
+
+.link-active {
+    background-image: url(../images/hover.png);
+    background-position: 0px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff !important;
+}
+
+.link-active a {
+  color: #fff !important; 
+}
+
+.list-item-4 a {
+  color: black;
+  text-decoration: none;
+}
+
+.list-item-4 a:hover {
+  color: white !important;
+}
+
+.image-13 {
+  z-index: -1 !important;
 }

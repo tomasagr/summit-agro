@@ -44,10 +44,17 @@
 						</div>
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-md-3">
 						<div class="form-group">
 							<label>Puntos*</label>
 							<input type="text" name="points" placeholder="Ingrese cantidad" class="form-control">
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="form-group">
+							<label>Unidad*</label>
+							<input type="text" name="unit" placeholder="Ingrese la unidad" class="form-control">
 						</div>
 					</div>
 				</div>

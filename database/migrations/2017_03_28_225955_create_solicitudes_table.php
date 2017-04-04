@@ -10,8 +10,10 @@ class CreateSolicitudesTable extends Migration {
 		Schema::create('solicitudes', function(Blueprint $table) {
 			$table->increments('id');
 			$table->timestamps();
+			$table->integer('code_id');
+			$table->integer('points');
 			$table->string('invoice_number');
-			$table->datetime('date');
+			$table->timestamp('date');
 			$table->string('cuit');
 			$table->integer('user_id');
 			$table->string('invoice_image')->default('');
