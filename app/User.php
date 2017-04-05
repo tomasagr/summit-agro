@@ -75,7 +75,7 @@ class User extends Authenticatable
         return $this->hasMany(Solicitude::class, 'user_id');
     }
 
-    public function awardSolicitude() 
+    public function awardSolicitude()
     {
         return $this->hasMany(AwardSolicitude::class, 'user_id');
     }

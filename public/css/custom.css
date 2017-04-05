@@ -41,14 +41,14 @@
 
 .link-active {
     background-image: url(../images/hover.png);
-    background-position: 0px 0px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 76%;
     color: #fff !important;
+    background-repeat: no-repeat;
 }
 
 .link-active a {
-  color: #fff !important; 
+  color: #fff !important;
 }
 
 .list-item-4 a {
@@ -56,10 +56,27 @@
   text-decoration: none;
 }
 
+
 .list-item-4 a:hover {
-  color: white !important;
+  color: white !important!
 }
 
 .image-13 {
   z-index: -1 !important;
+}
+
+.image-25 {
+  height: 186px;
+}
+.item-premio-link{
+  text-decoration: none !important;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: not-allowed;
+}
+
+.container-custom.container-premios {
+  background: white;
 }

@@ -13,6 +13,6 @@ class Levels extends Model {
 
 	public function awards()
 	{
-		return $this->hasMany(Award::class, 'id');
+		return $this->hasMany(Award::class, 'level_id');
 	}
 }

@@ -2,20 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Mail\HasASolicitude;
-use Illuminate\Support\Facades\Mail;
-use App\AwardSolicitude;
-use App\User;
 use App\Award;
+use App\AwardSolicitude;
+use App\Levels;
+use App\Mail\HasASolicitude;
+use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AwardSolicitudeController extends Controller
 {
-    public function store(Request $request, $id)
+    public function index()
     {
-        $user = User::find($id);
-        $data = $request->all();
+        $levels = Levels::with('awards')->orderBy('id', 'DESC')->get();
+        return view('awards.index', compact('levels'));
+    }
 
+    public function store(Request $request, $userId, $awardId)
+    {
+        $user = User::find($userId);
+        $data = $request->all();
+        $data["award_id"] = $awardId;
         $awardSolicitude = $user->awardSolicitude()->create($data);
 
         if (!($awardSolicitude instanceof AwardSolicitude)) {
@@ -26,7 +33,7 @@ class AwardSolicitudeController extends Controller
             return 'no dispone de puntos';
         }
 
-        $award = Award::find($data["award_id"]);
+        $award = Award::find($awardId);
         $count = $user->points - $award->points;
 
         if ($count < 0) {
@@ -37,6 +44,6 @@ class AwardSolicitudeController extends Controller
 
         Mail::to(env('MAIL_TO'))->send(new HasASolicitude($user));
 
-        return 'oks';
+        return redirect('/awards')->with('status', 'Premio solicitado, nos comunicaremos a la brevedad');
     }
 }

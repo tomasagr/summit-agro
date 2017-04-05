@@ -19,6 +19,7 @@ Route::get('/levels/awards', 'LevelAwardsController@index');
 
 Route::group(['middleware' => 'auth'] , function() {
 	Route::get('invoices', 'SolicitudeController@index');
+	Route::get('awards', 'AwardSolicitudeController@index');
 });
 
 Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], function() {
