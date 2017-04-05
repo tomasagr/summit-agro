@@ -12,7 +12,7 @@
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/lucass-fresh-project-21ce23.webflow.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/custom.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script src="https://ajax.googles.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
       google: {
@@ -108,7 +108,7 @@
         <div class="premios-title">PREMIOS DISPONIBLES</div>
       </div>
       @if (session('status'))
-      <div class="alert alert-success" style="border-radius: 5px; display: block; padding: 1em; background: green; font-family:'Lato'; font-size: 12px; color: white; width: 50%; margin: 0 auto;">
+      <div class="alert alert-success" style="border-radius: 5px; display: block; padding: 1em; background: green; font-family:Helvetica; font-size: 13px; color: white; width: 50%; margin: 0 auto;">
         {{session('status')}}
       </div>
       @endif
@@ -117,7 +117,7 @@
             <div class="text-block-12">Nivel 04</div>
           </div>
           @foreach($levels[0]->awards as $award)
-          <a href="api/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points) {{"not-active"}}@endif" >
+          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
             <div class="div-block-25">
               <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
                 <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
@@ -134,7 +134,7 @@
             <div class="text-block-12">Nivel 03</div>
           </div>
           @foreach($levels[1]->awards as $award)
-          <a href="api/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points) {{"not-active"}}@endif" >
+          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
             <div class="div-block-25">
               <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
                 <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
@@ -152,7 +152,7 @@
             <div class="text-block-12">Nivel 02</div>
           </div>
           @foreach($levels[2]->awards as $award)
-          <a href="api/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points) {{"not-active"}}@endif" >
+          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
             <div class="div-block-25">
               <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
                 <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
@@ -169,7 +169,7 @@
             <div class="text-block-12">Nivel 01</div>
           </div>
           @foreach($levels[3]->awards as $award)
-          <a href="/api/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points) {{"not-active"}}@endif" >
+          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
             <div class="div-block-25">
               <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
                 <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
@@ -184,7 +184,7 @@
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googles.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

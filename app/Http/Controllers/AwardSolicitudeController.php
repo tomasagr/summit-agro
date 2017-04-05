@@ -29,11 +29,14 @@ class AwardSolicitudeController extends Controller
             return 'error';
         }
 
+        //TODO CONTROL DE STOCK
+
         if ($user->points <= 0 ) {
             return 'no dispone de puntos';
         }
 
         $award = Award::find($awardId);
+
         $count = $user->points - $award->points;
 
         if ($count < 0) {
@@ -41,9 +44,11 @@ class AwardSolicitudeController extends Controller
         }
 
         $user->update(['points' => $count]);
+        $stock = $award->stock - 1;
+        $award->update(['stock' => $stock]);
 
         Mail::to(env('MAIL_TO'))->send(new HasASolicitude($user));
 
-        return redirect('/awards')->with('status', 'Premio solicitado, nos comunicaremos a la brevedad');
+        return redirect()->back()->with('status', 'Premio solicitado nos comunicaremos a la brevedad');
     }
 }

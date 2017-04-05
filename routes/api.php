@@ -18,4 +18,3 @@ Route::get('products', 'ApiProductsController@index');
 Route::get('cupons', 'ApiCuponsController@index');
 
 Route::post('/user/{id}/solicitude', 'SolicitudeController@store');
-Route::get('/user/{userId}/awards/{awardId}', 'AwardSolicitudeController@store');
