@@ -12,7 +12,7 @@
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/lucass-fresh-project-21ce23.webflow.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/custom.css">
-  <script src="https://ajax.googles.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
       google: {
@@ -184,7 +184,7 @@
       </div>
     </div>
   </div>
-  <script src="https://ajax.googles.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
