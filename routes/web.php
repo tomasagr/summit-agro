@@ -1,5 +1,8 @@
 <?php
 
+use App\Levels;
+use App\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +15,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->middleware('auth');
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@home');
 
 Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
 Route::get('/levels/awards', 'LevelAwardsController@index');
@@ -21,6 +25,22 @@ Route::group(['middleware' => 'auth'] , function() {
 	Route::get('invoices', 'SolicitudeController@index');
 	Route::get('awards', 'AwardSolicitudeController@index');
 	Route::get('/user/{userId}/awards/{awardId}', 'AwardSolicitudeController@store');
+
+	Route::get('/intro-2', function() {
+		return view('intros/intro-2');
+	});
+
+	Route::get('/levels', function() {
+		
+		return view('levels/index');
+	});
+
+	Route::get('/profile', function() {
+		$levels = Levels::with('awards')->get();
+		$users = User::all();
+
+		return view('profile/index', compact('levels', 'users'));
+	});
 });
 
 Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], function() {

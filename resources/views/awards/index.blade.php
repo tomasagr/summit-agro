@@ -55,7 +55,7 @@
         <ul class="unordered-list-2 w-list-unstyled">
           <li class="list-item-4"><a href="/" class="link-6">INICIO</a>
           </li>
-          <li class="list-item-4 link-active"><a href="/awards" class="link-8">MI PERFIL</a>
+          <li class="list-item-4 link-active"><a href="/profile" class="link-8">MI PERFIL</a>
           </li>
           <li class="list-item-4"><a href="/logout" class="link-7">SALIR</a>
           </li>

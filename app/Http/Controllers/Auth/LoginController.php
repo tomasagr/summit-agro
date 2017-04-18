@@ -26,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/panel';
+    protected $redirectTo = '/intro-2';
 
     /**
      * Create a new controller instance.
@@ -48,9 +48,9 @@ class LoginController extends Controller
     public function authenticated($request, $user)
     {
         if ($user->type != 'admin') {
-            $this->redirectTo = '/';
+            $this->redirectTo = '/intro-2';
         } else {
-            $this->redirectTo = '/panel';
+            $this->redirectTo = '/intro-2';
         }
 
         return redirect()->intended($this->redirectPath());

@@ -59,7 +59,7 @@
           <li class="list-item-4"><a href="/" class="link-6">INICIO</a>
           </li>
           <li class="list-item-4 link-active">
-            <a class="link-8" href="/awards">MI PERFIL</a>
+            <a class="link-8" href="/profile">MI PERFIL</a>
           </li>
           <li class="list-item-4">
             <a class="link-7" href="/logout">SALIR</a>
