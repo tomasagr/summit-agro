@@ -85,7 +85,7 @@
             </div>
           </div>
         </div><img class="image-47" src="images/pasto.png"><img class="image-48" src="images/elipse.png">
-        <div class="text-block-23">Si aun no te haz registrado haz <a href="#" class="link-3">click aqui</a>
+        <div class="text-block-23">Si aun no te haz registrado haz <a href="/register" class="link-3">click aqui</a>
         </div>
       </div>
     </div>
