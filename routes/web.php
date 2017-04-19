@@ -22,6 +22,11 @@ Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
 Route::get('/levels/awards', 'LevelAwardsController@index');
 Route::post('/users', 'UserSiteController@store');
 
+	Route::get('/avatar-hombre', function() {
+		return view('avatar/hombre');
+	});
+
+
 Route::group(['middleware' => 'auth'] , function() {
 	Route::get('invoices', 'SolicitudeController@index');
 	Route::get('awards', 'AwardSolicitudeController@index');

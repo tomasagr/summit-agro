@@ -15,7 +15,7 @@ class UserSiteController extends Controller
     $user = User::create($user);
 
     if ($user instanceof User)   {
-      return redirect('/home');
+      return redirect('/avatar-hombre');
     }
 
     return redirect()->back()->with('status', 'Error interno vuelva a intentar');
