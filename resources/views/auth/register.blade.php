@@ -66,32 +66,33 @@
             <div class="w-form">
               <form data-name="Email Form" id="email-form" name="email-form">
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" id="field" maxlength="256" name="field" placeholder="*Nombre" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
+                  <input autofocus class="custom-input w-input" id="field" maxlength="256" name="first_name" placeholder="*Nombre" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Apellido" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
+                  <input  class="custom-input w-input" 
+                        data-name="Field 2" id="field-2" maxlength="256" name="last_name" placeholder="*Apellido" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 3" id="field-3" maxlength="256" name="field-3" placeholder="*DNI" required="required" type="text"><img class="image-5" height="20" src="images/dni.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 3" id="field-3" maxlength="256" name="field-3" placeholder="*DNI" required="required" type="text"><img class="image-5" height="20" src="images/dni.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 4" id="field-4" maxlength="256" name="field-4" placeholder="*Email" required="required" type="email"><img class="image-5" height="20" src="images/email.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 4" id="field-4" maxlength="256" name="field-4" placeholder="*Email" required="required" type="email"><img class="image-5" height="20" src="images/email.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 5" id="Field-11" maxlength="256" name="Field-5" placeholder="*Telefono" required="required" type="text"><img class="image-5" height="20" src="images/telefono.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 5" id="Field-11" maxlength="256" name="Field-5" placeholder="*Telefono" required="required" type="text"><img class="image-5" height="20" src="images/telefono.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 6" id="field-6" maxlength="256" name="field-6" placeholder="*Dirección" required="required" type="text"><img class="image-5" height="20" src="images/direccion.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 6" id="field-6" maxlength="256" name="field-6" placeholder="*Dirección" required="required" type="text"><img class="image-5" height="20" src="images/direccion.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 7" id="field-7" maxlength="256" name="field-7" placeholder="*Contraseña" required="required" type="text"><img class="image-5" height="20" src="images/contrasena.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 7" id="field-7" maxlength="256" name="field-7" placeholder="*Contraseña" required="required" type="text"><img class="image-5" height="20" src="images/contrasena.svg" width="20">
                 </div>
                 <div class="div-block-5"></div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 8" id="field-8" maxlength="256" name="field-8" placeholder="*CUIT de la empresa" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 8" id="field-8" maxlength="256" name="field-8" placeholder="*CUIT de la empresa" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 9" id="field-9" maxlength="256" name="field-9" placeholder="*Agronomia" required="required" type="text"><img class="image-5" height="20" src="images/agronomia.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 9" id="field-9" maxlength="256" name="field-9" placeholder="*Agronomia" required="required" type="text"><img class="image-5" height="20" src="images/agronomia.svg" width="20">
                   <div class="left radio-agr w-clearfix w-radio">
                     <input class="radio-button w-radio-input" data-name="agronomia" id="Casa Central-2" name="agronomia" type="radio" value="Casa Central">
                     <label class="field-label w-form-label" for="Casa Central-2">Casa central</label>
@@ -112,7 +113,7 @@
                     <label class="field-label-2 w-form-label" for="Femenino">Masculino</label>
                   </div>
                 </div>
-                <div class="div-block-4 select-box"><img height="25" src="images/cumpleaños.svg" width="25">
+                <div class="div-block-4 select-box"><img height="25" src="images/cumpleanos.svg" width="25">
                   <div class="text-block-3">Cumpleaños</div>
                   <input class="custom-input w-input" id="field" maxlength="256" name="field" type="date" style="padding-left: 0 !important;">
                 </div>
@@ -138,7 +139,7 @@
                   <input class="custom-input w-input" id="field" maxlength="256" name="field" type="date" style="padding-left: 0 !important;">
                 </div>
                 <div class="div-block-4 select-box">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Cantidad de hijos" required="required" type="text"><img class="image-5" height="20" src="images/cantidadhijos.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Cantidad de hijos" required="required" type="text"><img class="image-5" height="20" src="images/cantidadhijos.svg" width="20">
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/deportes.svg" width="25">
                   <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
@@ -159,7 +160,7 @@
                   </select>
                 </div>
                 <div class="div-block-4 select-box">
-                  <input autofocus="autofocus" class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Equipo de futbol" required="required" type="text"><img class="image-5" height="20" src="images/equipofutbol.svg" width="20">
+                  <input  class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Equipo de futbol" required="required" type="text"><img class="image-5" height="20" src="images/equipofutbol.svg" width="20">
                 </div>
                 <div class="checkbox-field w-checkbox w-clearfix">
                   <input class="checkbox w-checkbox-input" data-name="Checkbox" id="checkbox" name="checkbox" type="checkbox">
