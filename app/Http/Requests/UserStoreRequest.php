@@ -32,7 +32,6 @@ class UserStoreRequest extends FormRequest
           "address" => 'required',
           "email" => 'required',
           "password" => 'required',
-          "type" => 'required',
           "agronomy" => 'required',
           "agronomy_type" => 'required',
         ];
@@ -49,7 +48,6 @@ class UserStoreRequest extends FormRequest
           "address.required" => 'El campo dirección es requerido',
           "email.required" => 'El campo email es requerido',
           "password.required" => 'El campo contraseña es requerido',
-          "type.required" => 'El campo tipo es requerido',
           "agronomy.required" => 'El campo agronomia es requerido',
           "agronomy_type.required" => 'El campo tipo es requerido',
         ];

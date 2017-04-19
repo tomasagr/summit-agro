@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@home');
 
 Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
 Route::get('/levels/awards', 'LevelAwardsController@index');
+Route::post('/users', 'UserSiteController@store');
 
 Route::group(['middleware' => 'auth'] , function() {
 	Route::get('invoices', 'SolicitudeController@index');
@@ -31,9 +32,11 @@ Route::group(['middleware' => 'auth'] , function() {
 	});
 
 	Route::get('/levels', function() {
-		
+
 		return view('levels/index');
 	});
+
+
 
 	Route::get('/profile', function() {
 		$levels = Levels::with('awards')->get();

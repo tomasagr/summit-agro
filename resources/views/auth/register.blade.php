@@ -6,8 +6,10 @@
   <meta charset="utf-8">
   <title>Registro</title>
   <meta content="Registro" property="og:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
+  <meta content="width=device-width, initial-scale=1"
+         name="viewport">
+  <meta content="Webflow"
+         name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/register.css" rel="stylesheet" type="text/css">
@@ -50,6 +52,11 @@
 </head>
 <body class="body-3">
   <div class="w-container">
+  <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
     <div class="div-block">
       <div class="row w-row">
         <div class="column w-col w-col-6">
@@ -64,85 +71,160 @@
         <div class="column-2 w-col w-col-6">
           <div class="column-content">
             <div class="w-form">
-              <form data-name="Email Form" id="email-form" name="email-form">
+              <form action="/users" method="POST">
+                {{csrf_field()}}
                 <div class="div-block-4">
-                  <input autofocus class="custom-input w-input" id="field" maxlength="256" name="first_name" placeholder="*Nombre" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
+                  <input autofocus class="custom-input w-input"
+                         name="first_name"
+                         placeholder="*Nombre"
+                         required="required"
+                         type="text">
+                  <img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" 
-                        data-name="Field 2" id="field-2" maxlength="256" name="last_name" placeholder="*Apellido" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
+                  <input  class="custom-input w-input"
+                          name="last_name"
+                          placeholder="*Apellido"
+                          required="required"
+                          type="text">
+                          <img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 3" id="field-3" maxlength="256" name="field-3" placeholder="*DNI" required="required" type="text"><img class="image-5" height="20" src="images/dni.svg" width="20">
+                  <input  class="custom-input w-input"
+                         name="dni"
+                         placeholder="*DNI"
+                         required="required"
+                         type="text">
+                  <img class="image-5" height="20" src="images/dni.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 4" id="field-4" maxlength="256" name="field-4" placeholder="*Email" required="required" type="email"><img class="image-5" height="20" src="images/email.svg" width="20">
+                  <input class="custom-input w-input"
+                         name="email"
+                         placeholder="*Email"
+                         required="required"
+                         type="email">
+                    <img class="image-5" height="20" src="images/email.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 5" id="Field-11" maxlength="256" name="Field-5" placeholder="*Telefono" required="required" type="text"><img class="image-5" height="20" src="images/telefono.svg" width="20">
+                  <input  class="custom-input w-input"
+                         name="phone"
+                         placeholder="*Telefono"
+                         required="required"
+                         type="text">
+                  <img class="image-5" height="20" src="images/telefono.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 6" id="field-6" maxlength="256" name="field-6" placeholder="*Dirección" required="required" type="text"><img class="image-5" height="20" src="images/direccion.svg" width="20">
+                  <input  class="custom-input w-input"
+                         name="address"
+                         placeholder="*Dirección"
+                         required="required"
+                         type="text">
+                  <img class="image-5" height="20" src="images/direccion.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 7" id="field-7" maxlength="256" name="field-7" placeholder="*Contraseña" required="required" type="text"><img class="image-5" height="20" src="images/contrasena.svg" width="20">
+                  <input  class="custom-input w-input"
+                         name="password"
+                         placeholder="*Contraseña"
+                         required="required"
+                         type="password">
+                  <img class="image-5" height="20" src="images/contrasena.svg" width="20">
                 </div>
                 <div class="div-block-5"></div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 8" id="field-8" maxlength="256" name="field-8" placeholder="*CUIT de la empresa" required="required" type="text"><img class="image-5" height="20" src="images/user.svg" width="20">
+                  <input class="custom-input w-input"
+                         name="cuit"
+                         placeholder="*CUIT de la empresa"
+                         required="required"
+                         type="text">
+                  <img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input  class="custom-input w-input" data-name="Field 9" id="field-9" maxlength="256" name="field-9" placeholder="*Agronomia" required="required" type="text"><img class="image-5" height="20" src="images/agronomia.svg" width="20">
+                  <input  class="custom-input w-input"
+                          name="agronomy"
+                          placeholder="*Agronomia"
+                          required="required"
+                          type="text">
+                  <img class="image-5" height="20" src="images/agronomia.svg" width="20">
                   <div class="left radio-agr w-clearfix w-radio">
-                    <input class="radio-button w-radio-input" data-name="agronomia" id="Casa Central-2" name="agronomia" type="radio" value="Casa Central">
+                    <input class="radio-button w-radio-input"
+                             name="agronomy_type"
+                             type="radio"
+                             required
+                             value="casa">
                     <label class="field-label w-form-label" for="Casa Central-2">Casa central</label>
                   </div>
                   <div class="radio-agr right w-clearfix w-radio">
-                    <input class="w-radio-input" data-name="agronomia" id="Casa Central-2" name="agronomia" type="radio" value="Casa Central">
+                    <input class="w-radio-input"
+                           name="agronomy_type"
+                           type="radio"
+                           required
+                           value="sucursal">
                     <label class="field-label w-form-label" for="Casa Central-2">Sucursal</label>
                   </div>
                 </div>
-                <div class="block-flex"><img height="20" src="images/user.svg" width="20">
+                <div class="block-flex">
+                  <img height="20" src="images/user.svg" width="20">
                   <div class="text-block-2">Genero</div>
                   <div class="radio-button-field-2 w-clearfix w-radio">
-                    <input class="w-radio-input" data-name="gender" id="Femenino" name="gender" type="radio" value="Femenino">
+                    <input class="w-radio-input"
+                             name="gender"
+                             type="radio"
+                             value="Femenino">
                     <label class="field-label-2 w-form-label" for="Femenino">Femenino</label>
                   </div>
                   <div class="radio-button-field-2 w-clearfix w-radio">
-                    <input class="w-radio-input" data-name="gender" id="Femenino" name="gender" type="radio" value="Femenino">
+                    <input class="w-radio-input"
+                             name="gender"
+                             type="radio"
+                             value="Femenino">
                     <label class="field-label-2 w-form-label" for="Femenino">Masculino</label>
                   </div>
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/cumpleanos.svg" width="25">
                   <div class="text-block-3">Cumpleaños</div>
-                  <input class="custom-input w-input" id="field" maxlength="256" name="field" type="date" style="padding-left: 0 !important;">
+                  <input class="custom-input w-input"
+                         name="birthday"
+                         type="date"
+                         style="padding-left: 0 !important;">
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/talle.svg" width="25">
                   <div class="text-block-3">Talle</div>
-                  <select class="custom-input custom-select talle w-select" data-name="Field 12" id="field-14" name="field-12" >
+                  <select class="custom-input custom-select talle w-select"
+                          name="size">
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="XL">XL</option>
                   </select>
                 </div>
-                <div class="div-block-4 select-box"><img height="25" src="images/estadocivil.svg" width="25">
-                  <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
+                <div class="div-block-4 select-box">
+                  <img height="25" src="images/estadocivil.svg" width="25">
+                  <select class="custom-input custom-select estado-select w-select"
+                         name="civil_status">
                     <option value="">Estado Civil</option>
                     <option value="casado">Casado</option>
                     <option value="soltero">Soltero</option>
                     <option value="viudo">Viudo</option>
                   </select>
                 </div>
-                <div class="div-block-4 select-box"><img height="25" src="images/aniversario.svg" width="25">
+                <div class="div-block-4 select-box">
+                   <img height="25" src="images/aniversario.svg" width="25">
                   <div class="text-block-3">Aniversario</div>
-                  <input class="custom-input w-input" id="field" maxlength="256" name="field" type="date" style="padding-left: 0 !important;">
+                  <input class="custom-input w-input"
+                         name="aniversario"
+                         type="date"
+                         style="padding-left: 0 !important;">
                 </div>
                 <div class="div-block-4 select-box">
-                  <input  class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Cantidad de hijos" required="required" type="text"><img class="image-5" height="20" src="images/cantidadhijos.svg" width="20">
+                  <input  class="custom-input w-input"
+                         name="childrens"
+                         placeholder="Cantidad de hijos"
+                         type="text">
+                  <img class="image-5" height="20" src="images/cantidadhijos.svg" width="20">
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/deportes.svg" width="25">
-                  <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
+                  <select class="custom-input custom-select estado-select w-select"
+                          name="sports">
                     <option value="">Deportes</option>
                     <option value="futbol">Futbol</option>
                     <option value="basquet">Basquet</option>
@@ -151,7 +233,8 @@
                   </select>
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/hobby.svg" width="25">
-                  <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
+                  <select class="custom-input custom-select estado-select w-select"
+                         name="hobby">
                     <option value="">Hobby</option>
                     <option value="deporte">Deportes</option>
                     <option value="cocina">Cocina</option>
@@ -160,13 +243,19 @@
                   </select>
                 </div>
                 <div class="div-block-4 select-box">
-                  <input  class="custom-input w-input" data-name="Field 2" id="field-2" maxlength="256" name="field-2" placeholder="*Equipo de futbol" required="required" type="text"><img class="image-5" height="20" src="images/equipofutbol.svg" width="20">
+                  <input class="custom-input w-input"
+                         name="team"
+                         placeholder="Equipo de futbol"
+                         type="text">
+                  <img class="image-5" height="20" src="images/equipofutbol.svg" width="20">
                 </div>
                 <div class="checkbox-field w-checkbox w-clearfix">
-                  <input class="checkbox w-checkbox-input" data-name="Checkbox" id="checkbox" name="checkbox" type="checkbox">
-                  <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a class="link-3">Terminos y Condiciones</a>
-                  </label>
-                </div><a class="btn-success w-button" href="#">Registrarme</a>
+                  <input class="checkbox w-checkbox-input"
+                         id="checkbox"
+                         name="checkbox"
+                         type="checkbox">
+                  <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a class="link-3">Terminos y Condiciones</a></label>
+                </div><button class="btn-success w-button" type="submit">Registrarme</button>
               </form>
             </div>
           </div>
