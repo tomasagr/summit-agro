@@ -4,7 +4,7 @@
 <html data-wf-page="58f6a0d6aa1ab6491f478c5b" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Iniciar Sesión</title>
+  <title>Summit Agro</title>
   <meta content="Iniciar Sesión" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
