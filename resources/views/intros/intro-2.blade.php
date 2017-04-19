@@ -4,7 +4,7 @@
 <html data-wf-page="58f6cbbb1cfbf353876de003" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Lucas&#39;s Fresh Project</title>
+  <title>Summit Agro</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
