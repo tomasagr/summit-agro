@@ -119,18 +119,18 @@
                 <div class="div-block-4 select-box"><img height="25" src="images/talle.svg" width="25">
                   <div class="text-block-3">Talle</div>
                   <select class="custom-input custom-select talle w-select" data-name="Field 12" id="field-14" name="field-12" >
-                    <option value="">XS</option>
-                    <option value="First">First Choice</option>
-                    <option value="Second">Second Choice</option>
-                    <option value="Third">Third Choice</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="XL">XL</option>
                   </select>
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/estadocivil.svg" width="25">
                   <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
                     <option value="">Estado Civil</option>
-                    <option value="First">First Choice</option>
-                    <option value="Second">Second Choice</option>
-                    <option value="Third">Third Choice</option>
+                    <option value="casado">Casado</option>
+                    <option value="soltero">Soltero</option>
+                    <option value="viudo">Viudo</option>
                   </select>
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/aniversario.svg" width="25">
@@ -143,17 +143,19 @@
                 <div class="div-block-4 select-box"><img height="25" src="images/deportes.svg" width="25">
                   <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
                     <option value="">Deportes</option>
-                    <option value="First">First Choice</option>
-                    <option value="Second">Second Choice</option>
-                    <option value="Third">Third Choice</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="otro">Otro</option>
                   </select>
                 </div>
                 <div class="div-block-4 select-box"><img height="25" src="images/hobby.svg" width="25">
                   <select class="custom-input custom-select estado-select w-select" data-name="Field 12" id="field-14" name="field-12">
                     <option value="">Hobby</option>
-                    <option value="First">First Choice</option>
-                    <option value="Second">Second Choice</option>
-                    <option value="Third">Third Choice</option>
+                    <option value="deporte">Deportes</option>
+                    <option value="cocina">Cocina</option>
+                    <option value="musica">Musica</option>
+                    <option value="otros">Otros</option>
                   </select>
                 </div>
                 <div class="div-block-4 select-box">
