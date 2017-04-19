@@ -93,6 +93,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu">
           <li class="header">ADMINISTRACIÓN</li>
           <!-- Optionally, you can add icons to the links -->
+          <li><a href="/home"><i class="fa fa-users"></i> <span>Ir al home</span></a></li>
           <li class="active"><a href="/panel/users"><i class="fa fa-users"></i> <span>Usuarios</span></a></li>
           <li><a href="/panel/products"><i class="fa fa-archive"></i> <span>Productos</span></a></li>
           <li><a href="/panel/awards"><i class="fa fa-trophy"></i> <span>Premios</span></a></li>

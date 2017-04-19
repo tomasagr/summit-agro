@@ -19,9 +19,8 @@
 <body>
   <div id="emailContent">
      <p>Ha recibido una nueva solicitud de premio</p>
-
      <p>Usuario: <b>{{$user->first_name}} {{$user->last_name}}</b></p>
      <p>Email: <b>{{$user->email}}</b></p>
-  </div>  
+  </div>
 </body>
 </html>
