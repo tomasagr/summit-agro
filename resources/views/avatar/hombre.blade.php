@@ -3,7 +3,7 @@
 <!--  Last Published: Fri Apr 21 2017 12:47:04 GMT+0000 (UTC)  -->
 <html data-wf-page="58f7a040f5bb8549330bb718" data-wf-site="58d6377d8ca365092ba2436b" ng-app="app.avatars">
 <head>
-  <meta charset="utf-8>
+  <meta charset="utf-8">
   <title>Avatar</title>
   <meta content="Avatar" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -100,6 +100,7 @@
               </div>
             </div>
           </div>
+          <br><br>
           <div class="box-red default-box">
             <div class="box-red-header default-header">
               <div class="text-block-22">03</div>
@@ -110,7 +111,7 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-1' ? 'box-active' : ''}} m-bg pelo-1 slider-btn w-button" 
+                      <a class="@{{selectedPelo == 'pelo-1' ? 'box-active' : ''}} m-bg pelo-1 slider-btn w-button"
                       ng-click="selectPelo('pelo-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
@@ -238,8 +239,8 @@
               <img class="m @{{selectedOjos}}" ng-src="/images/@{{selectedOjos}}.svg">
             </div>
             <div class="div-block-47">
-              <div class="text-block-26">SUMMIT SAMURAI</div>
-              <div class="text-block-26">サムライサムット</div>
+              <div class="text-block-26">@{{avatar.name}}</div>
+              <div class="text-block-26">@{{avatar.japanese}}</div>
             </div>
           </div>
         </div>

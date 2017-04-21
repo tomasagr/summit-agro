@@ -30,6 +30,10 @@ Route::post('/users', 'UserSiteController@store');
 		return view('avatar/hombre');
 	});
 
+		Route::get('/avatar-mujer/{id}', function() {
+		return view('avatar/mujer');
+	});
+
 	Route::get('/avatar/{name}/translate', 'AvatarsController@translate');
 
 

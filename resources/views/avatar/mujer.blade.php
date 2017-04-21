@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Fri Apr 21 2017 12:47:04 GMT+0000 (UTC)  -->
-<html data-wf-page="58f9f65726084219da25b8bf" data-wf-site="58d6377d8ca365092ba2436b">
+<html data-wf-page="58f7a040f5bb8549330bb718" data-wf-site="58d6377d8ca365092ba2436b" ng-app="app.avatars">
 <head>
   <meta charset="utf-8">
   <title>Avatar</title>
   <meta content="Avatar" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/avatar.css" rel="stylesheet" type="text/css">
+  <link href="/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/css/avatar-mujer.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -23,12 +23,12 @@
   <script type="text/javascript">
     try{Typekit.load();}catch(e){}
   </script>
-  <script src="js/modernizr.js" type="text/javascript"></script>
+  <script src="/js/modernizr.js" type="text/javascript"></script>
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
   <style>
     select {
-    	-webkit-appearance: none !important;
+      -webkit-appearance: none !important;
     }
   /* do not group these rules */
   *::-webkit-input-placeholder {
@@ -48,10 +48,10 @@
   }
   </style>
 </head>
-<body class="body-4">
+<body class="body-4" ng-controller="AvatarsController" ng-cloak>
   <div class="div-block-37">
     <div class="div-block-38">
-      <div class="div-block-39"><img class="image-40" src="images/logo-summit.svg">
+      <div class="div-block-39"><img class="image-40" src="/images/logo-summit.svg">
       </div>
       <div class="div-block-40">
         <a class="link-block-2 w-inline-block" href="/home">
@@ -78,11 +78,13 @@
               <div class="text-block-21">ELIGE TU NOMBRE GUERRERO</div>
             </div>
             <div class="div-block-44">
-              <div class="text-block-23">SUMMIT SAMURAI</div>
-              <div class="text-block-24">￤ &nbsp;サムライサムット</div><img height="20" src="images/correcto.svg" width="20">
+              <div class="text-block-23">
+              <input ng-model="avatar.name" ng-change="translate()" type="text" autofocus>
+              <small ng-if="loading"> Traduciendo...</small></div>
+              <div class="text-block-24"> @{{avatar.japanese}}</div><img height="20" src="/images/correcto.svg" width="20">
             </div>
           </div>
-          <div class="text-block-25">Ups... ese nombre ya esta tomado! Elige otro.</div>
+          <br><br>
           <div class="box-red default-box">
             <div class="box-red-header default-header">
               <div class="text-block-22">02</div>
@@ -94,7 +96,7 @@
                 <div class="title-gender">MASCULINO</div>
               </div>
               <div class="column-8 w-col w-col-6">
-                <a class="button-gender w-button woman" href="#"></a>
+                <a class="button-gender w-button woman button-active" href="#"></a>
                 <div class="title-gender">FEMENINO</div>
               </div>
             </div>
@@ -109,26 +111,27 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="pelo-1 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-1' ? 'box-active' : ''}}  pelo-1 slider-btn w-button"
+                      ng-click="selectPelo('pelo-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="box-active pelo-2 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-2' ? 'box-active' : ''}}  pelo-2 slider-btn w-button"  ng-click="selectPelo('pelo-2')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="pelo-3 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-3' ? 'box-active' : ''}}  pelo-3 slider-btn w-button"  ng-click="selectPelo('pelo-3')" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="pelo-4 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-4' ? 'box-active' : ''}}  pelo-4 slider-btn w-button"  ng-click="selectPelo('pelo-4')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="pelo-5 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-5' ? 'box-active' : ''}}  pelo-5 slider-btn w-button"  ng-click="selectPelo('pelo-5')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="pelo-6 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-6' ? 'box-active' : ''}}  pelo-6 slider-btn w-button"  ng-click="selectPelo('pelo-6')" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -147,26 +150,32 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="ojo-1 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-1' ? 'box-active' : ''}}  ojos-1 slider-btn w-button"
+                      ng-click="selectOjos('ojos-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="box-active ojo-2 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-2' ? 'box-active' : ''}}  ojos-2 slider-btn w-button"
+                      ng-click="selectOjos('ojos-2')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="ojo-3 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}}  ojos-3 slider-btn w-button"
+                      ng-click="selectOjos('ojos-3')" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="ojo-4 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}}  ojos-4 slider-btn w-button"
+                      ng-click="selectOjos('ojos-4')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="ojo-5 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-5' ? 'box-active' : ''}}  ojos-5 slider-btn w-button"
+                      ng-click="selectOjos('ojos-5')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="ojo-6 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-6' ? 'box-active' : ''}}  ojos-6 slider-btn w-button"
+                      ng-click="selectOjos('ojos-6')" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -185,26 +194,32 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="boca-1 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-1' ? 'box-active' : ''}}  boca-1 slider-btn w-button"
+                      ng-click="selectBoca('boca-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="boca-2 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-2' ? 'box-active' : ''}}  boca-2 slider-btn w-button"
+                      ng-click="selectBoca('boca-2')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="boca-3 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-3' ? 'box-active' : ''}}  boca-3 slider-btn w-button"
+                      ng-click="selectBoca('boca-3')" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="boca-4 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-4' ? 'box-active' : ''}}  boca-4 slider-btn w-button"
+                         ng-click="selectBoca('boca-4')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="boca-5 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-5' ? 'box-active' : ''}}  boca-5 slider-btn w-button"
+                         ng-click="selectBoca('boca-5')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="boca-6 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-6' ? 'box-active' : ''}}  boca-6 slider-btn w-button"
+                      ng-click="selectBoca('boca-6')" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -216,21 +231,31 @@
         </div>
         <div class="columns-2">
           <div class="div-block-46">
-            <div class="div-block-45"><img class="f pelo-2" src="images/pelo-f-12.svg" width="148"><img class="boca-f f" src="images/boca-f-6.svg"><img src="images/base-face-f.svg" width="130"><img class="f" src="images/ojos-f-1.svg">
+            <div class="div-block-45" id="canvas"
+                  style="width:300px; height: 300px;visibility: visible;">
+              <img class="f @{{selectedPelo}}" ng-src="/images/f/@{{selectedPelo}}.svg">
+              <img class="f @{{selectedBoca}}" ng-src="/images/f/@{{selectedBoca}}.svg">
+              <img src="/images/base-face-f.svg" width="130">
+              <img class="f @{{selectedOjos}}" ng-src="/images/f/@{{selectedOjos}}.svg">
             </div>
             <div class="div-block-47">
-              <div class="text-block-26">SUMMIT SAMURAI</div>
-              <div class="text-block-26">サムライサムット</div>
+              <div class="text-block-26">@{{avatar.name}}</div>
+              <div class="text-block-26">@{{avatar.japanese}}</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="div-block-48"><a class="btn-success w-button" href="#">CREAR SAMURAI</a>
+      <div style="text-align: center" ng-if="avatar.name.length == 0"><small>Nombre requerido</small></div>
+      <div class="div-block-48"><a ng-click="store()" ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
+      <div class="div-block-48"><a ng-if="avatar.name.length == 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
       </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="{{asset('bower_components/angular/angular.js')}}"></script>
+  <script src="{{asset('js/components/avatars/modules.js')}}"></script>
+  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="{{asset('bower_components/dom-to-image/dist/dom-to-image.min.js')}}"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
