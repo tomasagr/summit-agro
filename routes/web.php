@@ -1,5 +1,9 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+
 use App\Levels;
 use App\User;
 
@@ -22,9 +26,11 @@ Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
 Route::get('/levels/awards', 'LevelAwardsController@index');
 Route::post('/users', 'UserSiteController@store');
 
-	Route::get('/avatar-hombre', function() {
+	Route::get('/avatar-hombre/{id}', function() {
 		return view('avatar/hombre');
 	});
+
+	Route::get('/avatar/{name}/translate', 'AvatarsController@translate');
 
 
 Route::group(['middleware' => 'auth'] , function() {

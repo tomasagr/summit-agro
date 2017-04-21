@@ -1612,16 +1612,27 @@
 
 .button-gender.male {
   width: 193px;
-  border: 1px solid #09f;
+  border: 1px none #09f;
+  background-color: #f0f0f0;
+  background-image: url('../images/male-off.svg');
+  background-size: 64px;
 }
 
-.button-gender.woman {
+.button-gender.male.button-active {
   border: 1px solid #09f;
-  background-image: url('../images/female-on.svg');
+  background-image: url('../images/male-on.svg');
+  background-color:white;
   background-size: 61px;
 }
 
-.button-gender.woman.off {
+.button-gender.female.button-active {
+  border: 1px solid #09f;
+  background-image: url('../images/female-on.svg');
+  background-color:white;
+  background-size: 61px;
+}
+
+.button-gender.woman {
   border-style: none;
   background-color: #f0f0f0;
   background-image: url('../images/female-off.svg');
@@ -1692,10 +1703,19 @@
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .17);
 }
 
+
+
 .slider-btn.pelo-1 {
+  background-image: url('../images/pelo-f-03.svg');
+  background-position: 50% 50%;
+  background-size: 77px;
+  background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.pelo-1 {
   background-image: url('../images/pelo-01.svg');
   background-position: 50% 50%;
-  background-size: 59px;
+  background-size: 77px;
   background-repeat: no-repeat;
 }
 
@@ -1706,104 +1726,245 @@
   background-repeat: no-repeat;
 }
 
+.m-bg.slider-btn.pelo-2 {
+  background-image: url('../images/pelo-02.svg');
+  background-position: 50% 50%;
+  background-size: 77px;
+  background-repeat: no-repeat;
+}
+
+.slider-btn.pelo-2.box-active {
+  border: 1px solid #09f;
+  background-color: #fff;
+  background-image: url('../images/pelo-f-06.svg');
+  background-size: 60px;
+}
+
+.box-active {
+  border: 1px solid #09f;
+  background-color: #fff;
+  background-size: 60px;
+}
+
+.m-bg.slider-btn.pelo-2.box-active {
+  border: 1px solid #09f;
+  background-color: #fff;
+  background-image: url('../images/pelo-02.svg');
+  background-size: 60px;
+}
+
+.slider-btn.pelo-3 {
+  background-image: url('../images/pelo-f-05.svg');
+  background-position: 50% 50%;
+  background-size: 66px;
+  background-repeat: no-repeat;
+}
+
 .slider-btn.pelo-3 {
   background-image: url('../images/pelo-03.svg');
   background-position: 50% 50%;
-  background-size: 68px;
+  background-size: 66px;
   background-repeat: no-repeat;
 }
 
 .slider-btn.pelo-4 {
+  background-image: url('../images/pelo-f-04.svg');
+  background-position: 50% 50%;
+  background-size: 67px;
+  background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.pelo-4 {
   background-image: url('../images/pelo-04.svg');
   background-position: 50% 50%;
-  background-size: 60px;
+  background-size: 66px;
   background-repeat: no-repeat;
 }
 
 .slider-btn.pelo-5 {
-  background-image: url('../images/pelo-06.svg');
+  background-image: url('../images/pelo-f-02.svg');
   background-position: 50% 50%;
-  background-size: 64px;
+  background-size: 58px;
+  background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.pelo-5 {
+  background-image: url('../images/pelo-05.svg');
+  background-position: 50% 50%;
+  background-size: 58px;
   background-repeat: no-repeat;
 }
 
 .slider-btn.pelo-6 {
-  background-image: url('../images/pelo-05.svg');
+  background-image: url('../images/pelo-f-01.svg');
+  background-position: 50% 50%;
+  background-size: 61px;
+  background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.pelo-6 {
+  background-image: url('../images/pelo-06.svg');
+  background-position: 50% 50%;
+  background-size: 58px;
+  background-repeat: no-repeat;
+}
+
+.slider-btn.ojos-1 {
+  background-image: url('../images/ojos-f-06.svg');
   background-position: 50% 50%;
   background-size: 62px;
   background-repeat: no-repeat;
 }
 
-.slider-btn.ojo-1 {
-  background-image: url('../images/ojos-03.svg');
+.m-bg.slider-btn.ojos-1 {
+  background-image: url('../images/ojos-01.svg');
   background-position: 50% 50%;
-  background-size: 65px;
+  background-size: 62px;
   background-repeat: no-repeat;
 }
 
-.slider-btn.ojo-2 {
+.slider-btn.ojos-2 {
   background-image: url('../images/ojos-06.svg');
   background-position: 50% 50%;
   background-size: 65px;
   background-repeat: no-repeat;
 }
 
-.slider-btn.ojo-3 {
-  background-image: url('../images/ojos-05.svg');
-  background-position: 50% 50%;
-  background-size: 65px;
-  background-repeat: no-repeat;
-}
-
-.slider-btn.ojo-5 {
-  background-image: url('../images/ojos-f-01.svg');
+.m-bg.slider-btn.ojos-2 {
+  background-image: url('../images/ojos-02.svg');
   background-position: 50% 50%;
   background-size: 62px;
   background-repeat: no-repeat;
 }
 
-.slider-btn.ojo-6 {
-  background-image: url('../images/ojos-04.svg');
-  background-size: 65px;
+.slider-btn.ojos-2.box-active {
+  border: 1px solid #09f;
+  background-color: #fff;
+  background-image: url('../images/ojos-f-05.svg');
+  background-size: 62px;
 }
 
-.slider-btn.ojo-4 {
+.m-bg.slider-btn.ojos-2.box-active {
+  border: 1px solid #09f;
+  background-color: #fff;
   background-image: url('../images/ojos-02.svg');
-  background-size: 65px;
+  background-size: 62px;
+}
+
+.slider-btn.ojos-3 {
+  background-image: url('../images/ojos-f-04.svg');
+  background-position: 50% 50%;
+  background-size: 62px;
+  background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.ojos-3 {
+  background-image: url('../images/ojos-03.svg');
+  background-position: 50% 50%;
+  background-size: 62px;
+  background-repeat: no-repeat;
+}
+
+.slider-btn.ojos-5 {
+  background-image: url('../images/ojos-f-02.svg');
+  background-position: 50% 50%;
+  background-size: 62px;
+  background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.ojos-5 {
+  background-image: url('../images/ojos-05.svg');
+  background-position: 50% 50%;
+  background-size: 62px;
+  background-repeat: no-repeat;
+}
+
+.slider-btn.ojos-6 {
+  background-image: url('../images/ojos-f-01.svg');
+  background-size: 62px;
+}
+
+.m-bg.slider-btn.ojos-6 {
+  background-image: url('../images/ojos-06.svg');
+  background-position: 50% 50%;
+  background-size: 62px;
+  background-repeat: no-repeat;
+}
+
+.slider-btn.ojos-4 {
+  background-image: url('../images/ojos-f-03.svg');
+  background-size: 62px;
+}
+
+.m-bg.slider-btn.ojos-4 {
+  background-image: url('../images/ojos-04.svg');
+  background-position: 50% 50%;
+  background-size: 62px;
+  background-repeat: no-repeat;
 }
 
 .slider-btn.boca-1 {
-  background-image: url('../images/boca-02.svg');
-  background-size: 65px;
+  background-image: url('../images/boca-f-06.svg');
+  background-size: 62px;
+}
+
+.m-bg.slider-btn.boca-1 {
+  background-image: url('../images/boca-01.svg');
+  background-size: 62px;
 }
 
 .slider-btn.boca-2 {
-  background-image: url('../images/boca-01.svg');
-  background-size: 65px;
+  background-image: url('../images/boca-f-04.svg');
+  background-size: 62px;
+}
+
+.m-bg.slider-btn.boca-2 {
+  background-image: url('../images/boca-02.svg');
+  background-size: 62px;
 }
 
 .slider-btn.boca-3 {
-  background-image: url('../images/boca-04.svg');
+  background-image: url('../images/boca-03.svg');
   background-position: 50% 50%;
-  background-size: 65px;
+  background-size: 62px;
   background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.boca-3 {
+  background-image: url('../images/boca-03.svg');
+  background-size: 62px;
 }
 
 .slider-btn.boca-5 {
-  background-image: url('../images/boca-06.svg');
-  background-size: 65px;
+  background-image: url('../images/boca-f-02.svg');
+  background-size: 62px;
+}
+
+.m-bg.slider-btn.boca-5 {
+  background-image: url('../images/boca-05.svg');
+  background-size: 62px;
 }
 
 .slider-btn.boca-4 {
-  background-image: url('../images/boca-05.svg');
-  background-size: 65px;
+  background-image: url('../images/boca-f-03.svg');
+  background-size: 62px;
+}
+
+.m-bg.slider-btn.boca-4 {
+  background-image: url('../images/boca-04.svg');
+  background-size: 62px;
 }
 
 .slider-btn.boca-6 {
-  background-image: url('../images/boca-03.svg');
+  background-image: url('../images/boca-f-01.svg');
   background-position: 50% 50%;
-  background-size: 65px;
+  background-size: 62px;
   background-repeat: no-repeat;
+}
+
+.m-bg.slider-btn.boca-6 {
+  background-image: url('../images/boca-06.svg');
+  background-size: 62px;
 }
 
 .left-arrow {
@@ -1837,7 +1998,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 314px;
+  width: 321px;
   height: 316px;
   margin-right: -16px;
   margin-left: -16px;
@@ -1856,7 +2017,7 @@
 
 .div-block-46 {
   position: absolute;
-  height: 860px;
+  height: 76.1%;
   padding-left: 0px;
   background-color: #e0cfa5;
 }
@@ -1909,6 +2070,197 @@
   justify-content: center;
 }
 
+.image-41 {
+  position: absolute;
+  width: 141px;
+  margin-top: -41px;
+}
+
+.image-42 {
+  position: absolute;
+  width: 71px;
+  margin-top: -13px;
+}
+
+.image-43 {
+  position: absolute;
+  width: 43px;
+  margin-top: 36px;
+}
+
+.m {
+  position: absolute;
+}
+
+.m.pelo-2 {
+  position: absolute;
+  width: 110px;
+  margin-top: -41px;
+}
+
+.m.pelo-3 {
+  position: absolute;
+  width: 140px;
+  margin-top: -42px;
+  margin-left: 14px;
+}
+
+.m.pelo-1 {
+  position: absolute;
+  width: 140px;
+  margin-top: -42px;
+}
+
+.m.pelo-4 {
+  position: absolute;
+  width: 110px;
+  margin-top: -35px;
+}
+
+.m.pelo-5 {
+  position: absolute;
+  width: 110px;
+  margin-top: -39px;
+}
+
+.m.pelo-6 {
+  position: absolute;
+  width: 108px;
+  margin-top: -43px;
+}
+
+.m.ojos-1 {
+  position: absolute;
+  width: 70px;
+  margin-top: -10px;
+}
+
+.m.ojos-2 {
+  position: absolute;
+  width: 80px;
+  margin-top: -12px;
+}
+
+.m.ojos-3 {
+  width: 80px;
+  margin-top: -12px;
+}
+
+.m.ojos-4 {
+  position: absolute;
+  width: 70px;
+  margin-top: -10px;
+}
+
+.m.ojos-5 {
+  position: absolute;
+  width: 80px;
+  margin-top: -16px;
+}
+
+.m.ojos-6 {
+  z-index: 0;
+  width: 80px;
+  margin-top: -16px;
+}
+
+.m.boca-1 {
+  position: absolute;
+  width: 35px;
+  margin-top: 35px;
+  margin-left: -3px;
+}
+
+.m.boca-2 {
+  width: 35px;
+  margin-top: 35px;
+}
+
+.m.boca-3 {
+  width: 49px;
+  margin-top: 41px;
+}
+
+.m.boca-4 {
+  width: 39px;
+  margin-top: 41px;
+}
+
+.m.boca-5 {
+  width: 38px;
+  margin-top: 44px;
+}
+
+.m.boca-6 {
+  width: 75px;
+  margin-top: 44px;
+}
+
+.image-44 {
+  position: absolute;
+}
+
+.f {
+  position: absolute;
+  width: 80px;
+  margin-top: -11px;
+}
+
+.f.pelo-1 {
+  position: absolute;
+  width: 177px;
+  margin-top: -13px;
+  margin-left: -3px;
+}
+
+.f.pelo-2 {
+  position: absolute;
+  width: 132px;
+  margin-top: -17px;
+}
+
+.f.pelo-3 {
+  position: absolute;
+  height: 155px;
+  margin-top: -19px;
+}
+
+.f.pelo-4 {
+  position: absolute;
+  width: 149px;
+  margin-top: -11px;
+}
+
+.f.pelo-5 {
+  position: absolute;
+  z-index: 1;
+  width: 127px;
+  margin-top: -9px;
+}
+
+.f.pelo-6 {
+  position: absolute;
+  z-index: 1;
+  width: 135px;
+  margin-top: -6px;
+}
+
+.f.ojos-1 {
+  width: 80px;
+  margin-top: -11px;
+}
+
+.f.ojos-5 {
+  width: 101px;
+  margin-top: -5px;
+  margin-left: -2px;
+}
+
+.f.boca-f {
+  width: 30px;
+  margin-top: 36px;
+}
+
 @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
@@ -1938,30 +2290,4 @@
   src: url('../fonts/MadeinChina.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-}
-
-.footer-avatar{
-  position: relative;
-  bottom: 0px;
-  margin-top: 144px;
-  padding-top: 0px;
-  background-image: url('../images/footer.png');
-  background-position: 0px 0px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.texto-avatar-footer {
-  position: relative;
-  left: 0px;
-  top: auto;
-  bottom: 0px;
-  margin-top: 36px;
-  padding-top: 26px;
-  padding-bottom: 13px;
-  font-family: Lato, sans-serif;
-  color: #c4c4c4;
-  font-size: 10px;
-  line-height: 17px;
-  text-align: center;
 }

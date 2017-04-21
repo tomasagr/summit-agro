@@ -18,3 +18,5 @@ Route::get('products', 'ApiProductsController@index');
 Route::get('cupons', 'ApiCuponsController@index');
 
 Route::post('/user/{id}/solicitude', 'SolicitudeController@store');
+
+Route::post('/avatar', 'AvatarsController@store');

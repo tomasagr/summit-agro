@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Wed Apr 19 2017 20:33:19 GMT+0000 (UTC)  -->
-<html data-wf-page="58f7a040f5bb8549330bb718" data-wf-site="58d6377d8ca365092ba2436b">
+<!--  Last Published: Fri Apr 21 2017 12:47:04 GMT+0000 (UTC)  -->
+<html data-wf-page="58f7a040f5bb8549330bb718" data-wf-site="58d6377d8ca365092ba2436b" ng-app="app.avatars">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8>
   <title>Avatar</title>
   <meta content="Avatar" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/avatar.css" rel="stylesheet" type="text/css">
+  <link href="/css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="/css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="/css/avatar.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -23,12 +23,12 @@
   <script type="text/javascript">
     try{Typekit.load();}catch(e){}
   </script>
-  <script src="js/modernizr.js" type="text/javascript"></script>
+  <script src="/js/modernizr.js" type="text/javascript"></script>
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
   <style>
     select {
-    	-webkit-appearance: none !important;
+      -webkit-appearance: none !important;
     }
   /* do not group these rules */
   *::-webkit-input-placeholder {
@@ -48,10 +48,10 @@
   }
   </style>
 </head>
-<body class="body-4">
+<body class="body-4" ng-controller="AvatarsController" ng-cloak>
   <div class="div-block-37">
     <div class="div-block-38">
-      <div class="div-block-39"><img class="image-40" src="images/logo-summit.svg">
+      <div class="div-block-39"><img class="image-40" src="/images/logo-summit.svg">
       </div>
       <div class="div-block-40">
         <a class="link-block-2 w-inline-block" href="/home">
@@ -78,11 +78,12 @@
               <div class="text-block-21">ELIGE TU NOMBRE GUERRERO</div>
             </div>
             <div class="div-block-44">
-              <div class="text-block-23">SUMMIT SAMURAI</div>
-              <div class="text-block-24">￤ &nbsp;サムライサムット</div><img height="20" src="images/correcto.svg" width="20">
+              <div class="text-block-23">
+              <input ng-model="avatar.name" ng-change="translate()" type="text" autofocus>
+              <small ng-if="loading"> Traduciendo...</small></div>
+              <div class="text-block-24"> @{{avatar.japanese}}</div><img height="20" src="/images/correcto.svg" width="20">
             </div>
           </div>
-          <div class="text-block-25">Ups... ese nombre ya esta tomado! Elige otro.</div>
           <div class="box-red default-box">
             <div class="box-red-header default-header">
               <div class="text-block-22">02</div>
@@ -90,7 +91,7 @@
             </div>
             <div class="row-6 w-row">
               <div class="column-7 w-col w-col-6">
-                <a class="button-gender male w-button" href="#"></a>
+                <a class="button-gender male w-button button-active" href="#"></a>
                 <div class="title-gender">MASCULINO</div>
               </div>
               <div class="column-8 w-col w-col-6">
@@ -109,26 +110,27 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="pelo-1 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-1' ? 'box-active' : ''}} m-bg pelo-1 slider-btn w-button" 
+                      ng-click="selectPelo('pelo-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="pelo-2 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-2' ? 'box-active' : ''}} m-bg pelo-2 slider-btn w-button"  ng-click="selectPelo('pelo-2')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="pelo-3 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-3' ? 'box-active' : ''}} m-bg pelo-3 slider-btn w-button"  ng-click="selectPelo('pelo-3')" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="pelo-4 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-4' ? 'box-active' : ''}} m-bg pelo-4 slider-btn w-button"  ng-click="selectPelo('pelo-4')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="pelo-5 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-5' ? 'box-active' : ''}} m-bg pelo-5 slider-btn w-button"  ng-click="selectPelo('pelo-5')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="pelo-6 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedPelo == 'pelo-6' ? 'box-active' : ''}} m-bg pelo-6 slider-btn w-button"  ng-click="selectPelo('pelo-6')" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -147,26 +149,32 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="ojo-1 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-1' ? 'box-active' : ''}} m-bg ojos-1 slider-btn w-button" 
+                      ng-click="selectOjos('ojos-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="ojo-2 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-2' ? 'box-active' : ''}} m-bg ojos-2 slider-btn w-button" 
+                      ng-click="selectOjos('ojos-2')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="ojo-3 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}} m-bg ojos-3 slider-btn w-button" 
+                      ng-click="selectOjos('ojos-3')" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="ojo-4 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}} m-bg ojos-4 slider-btn w-button" 
+                      ng-click="selectOjos('ojos-4')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="ojo-5 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-5' ? 'box-active' : ''}} m-bg ojos-5 slider-btn w-button" 
+                      ng-click="selectOjos('ojos-5')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="ojo-6 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedOjos == 'ojos-6' ? 'box-active' : ''}} m-bg ojos-6 slider-btn w-button" 
+                      ng-click="selectOjos('ojos-6')" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -185,26 +193,32 @@
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="boca-1 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-1' ? 'box-active' : ''}} m-bg boca-1 slider-btn w-button" 
+                      ng-click="selectBoca('boca-1')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="boca-2 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-2' ? 'box-active' : ''}} m-bg boca-2 slider-btn w-button"
+                      ng-click="selectBoca('boca-2')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="boca-3 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-3' ? 'box-active' : ''}} m-bg boca-3 slider-btn w-button" 
+                      ng-click="selectBoca('boca-3')" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="w-slide">
                   <div class="row-7 w-row">
                     <div class="column-9 w-col w-col-4">
-                      <a class="boca-4 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-4' ? 'box-active' : ''}} m-bg boca-4 slider-btn w-button" 
+                      ng-click="selectBoca('boca-4')" href="#"></a>
                     </div>
                     <div class="column-10 w-col w-col-4">
-                      <a class="boca-5 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-5' ? 'box-active' : ''}} m-bg boca-5 slider-btn w-button" 
+                      ng-click="selectBoca('boca-5')" href="#"></a>
                     </div>
                     <div class="column-11 w-col w-col-4">
-                      <a class="boca-6 slider-btn w-button" href="#"></a>
+                      <a class="@{{selectedBoca == 'boca-6' ? 'box-active' : ''}} m-bg boca-6 slider-btn w-button" 
+                      ng-click="selectBoca('boca-6')" href="#"></a>
                     </div>
                   </div>
                 </div>
@@ -216,7 +230,12 @@
         </div>
         <div class="columns-2">
           <div class="div-block-46">
-            <div class="div-block-45"><img src="images/avatar.png">
+            <div class="div-block-45" id="canvas"
+                  style="width:300px; height: 300px;visibility: visible;">
+              <img class="m @{{selectedPelo}}" ng-src="/images/@{{selectedPelo}}.svg">
+              <img class="m @{{selectedBoca}} m" ng-src="/images/@{{selectedBoca}}.svg">
+              <img src="/images/base-face-m.svg" width="130">
+              <img class="m @{{selectedOjos}}" ng-src="/images/@{{selectedOjos}}.svg">
             </div>
             <div class="div-block-47">
               <div class="text-block-26">SUMMIT SAMURAI</div>
@@ -225,17 +244,17 @@
           </div>
         </div>
       </div>
-      <div class="div-block-48"><a class="btn-success w-button" href="/home">CREAR SAMURAI</a>
+      <div style="text-align: center" ng-if="avatar.name.length == 0"><small>Nombre requerido</small></div>
+      <div class="div-block-48"><a ng-click="store()" ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
+      <div class="div-block-48"><a ng-if="avatar.name.length == 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
       </div>
     </div>
-    <div class="footer-avatar">
-      <div class="texto-avatar-footer">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
-        <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
-    </div>
   </div>
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="{{asset('bower_components/angular/angular.js')}}"></script>
+  <script src="{{asset('js/components/avatars/module.js')}}"></script>
+  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="{{asset('bower_components/html2canvas/build/html2canvas.js')}}"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

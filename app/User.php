@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Avatar;
 use App\Solicitude;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -78,5 +79,10 @@ class User extends Authenticatable
     public function awardSolicitude()
     {
         return $this->hasMany(AwardSolicitude::class, 'user_id');
+    }
+
+    public function avatar()
+    {
+        return $this->hasOne(Avatar::class, 'user_id');
     }
 }
