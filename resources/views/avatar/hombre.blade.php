@@ -252,7 +252,7 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="{{asset('bower_components/angular/angular.js')}}"></script>
-  <script src="{{asset('js/components/avatars/module.js')}}"></script>
+  <script src="{{asset('js/components/avatars/modules.js')}}"></script>
   <script src="/js/webflow.js" type="text/javascript"></script>
   <script src="{{asset('bower_components/dom-to-image/dist/dom-to-image.min.js')}}"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
