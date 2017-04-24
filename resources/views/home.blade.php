@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Mon Apr 03 2017 14:09:40 GMT+0000 (UTC)  -->
-<html data-wf-page="58d6377d8ca365092ba2436c" data-wf-site="58d6377d8ca365092ba2436b">
+<!--  Last Published: Mon Apr 24 2017 14:39:49 GMT+0000 (UTC)  -->
+<html data-wf-page="58f77effaa1ab6491f47d41f" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Summit Agro - Inicio</title>
+  <title>Summit Samurai</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
-  <link href="css/custom.css" rel="stylesheet" type="text/css">
+  <link href="css/home.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -26,9 +25,10 @@
   <script src="js/modernizr.js" type="text/javascript"></script>
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="{{asset('bower_components/jquery-modal/jquery.modal.css')}}">
   <style>
     select {
-    	-webkit-appearance: none !important;
+      -webkit-appearance: none !important;
     }
   /* do not group these rules */
   *::-webkit-input-placeholder {
@@ -48,37 +48,40 @@
   }
   </style>
 </head>
-<body>
-  <img class="image-2" sizes="100vw" src="images/home.png" srcset="images/home.png 500w, images/home.png 800w, images/home.png 1080w, images/home.png 1600w, images/home.png 1920w">
-  <div class="container-home">
-    <div class="brand-image">
-      <a href="/"><img class="image-16" src="images/personaje-logo.png"></a>
+<body class="body-5">
+  <div class="div-block-49"></div>
+  <div class="container-home home-c">
+    <div class="brand-image"><img class="image-16" src="images/personaje-logo.png">
     </div>
-    <div class="logo-image">
-      <a href="/"><img class="image-17" src="images/logo-summit.svg" width="385"></a>
+    <div class="logo-image"><img class="image-17" src="images/logo-summit.svg" width="385">
     </div>
     <ul class="header-home unordered-list-2 w-list-unstyled">
-      <li class="list-item-4  link-active"><a href="/" class="link-6">INICIO</a>
+      <li class="list-item-4"><a href="#" class="link-6">INICIO</a>
       </li>
-      <li class="list-item-4"><a href="/profile" class="link-8">MI PERFIL</a>
+      <li class="list-item-4"><a class="link-8">MI PERFIL</a>
       </li>
-      <li class="list-item-4"><a href="/logout" class="link-7">SALIR</a>
+      <li class="list-item-4"><a class="link-7">SALIR</a>
       </li>
     </ul>
   </div>
-  <div class="container-home">
-    <div class="links-containers" style="
-    display: flex;
-    position: absolute;
-    top: 109%;
-    width: 100%;
-">
-      <a href="/levels" class="niveles" style="display: block;width: 500px;height: 500px;"></a>
-      <a href="/awards" class="premios" style="width: 601px;"></a>
+  <div class="div-block-50">
+    <div class="div-block-55">
+      <a class="link-block-6 w-inline-block" href="#video" rel="modal:open"></a>
+      <a class="link-block-7 w-inline-block" href="/invoices"></a>
+      <a class="link-block-8 w-inline-block" href="/levels"></a>
+      <a class="link-block-9 w-inline-block" href="/awards"></a>
     </div>
+  </div>
+  <div class="div-block-40">
+    <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
+      <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
+  </div>
+  <div id="video" class="modal" style="display: none; max-width: 700px!important;">
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/_Po2CF-cL20" frameborder="0" allowfullscreen></iframe>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="{{asset('bower_components/jquery-modal/jquery.modal.js')}}"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

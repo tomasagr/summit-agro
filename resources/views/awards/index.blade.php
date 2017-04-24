@@ -51,7 +51,8 @@
 <body class="body"><img class="image-19" sizes="100vw" src="images/premios-bg.png" srcset="images/premios-bg-p-500x649.png 500w, images/premios-bg-p-800x1038.png 800w, images/premios-bg-p-1080x1402.png 1080w, images/premios-bg-p-1600x2076.png 1600w, images/premios-bg.png 1920w">
   <div class="div-block-11">
     <div class="container-custom">
-      <div class="div-block-12"><img class="image-15" src="images/logo-summit.svg">
+      <div class="div-block-12">
+        <img onclick="window.location='/home'" class="image-15" src="images/logo-summit.svg" style="cursor: pointer;">
         <ul class="unordered-list-2 w-list-unstyled">
           <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
           </li>

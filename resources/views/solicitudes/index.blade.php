@@ -54,7 +54,7 @@
   <div class="div-block-11">
     <div class="container-custom">
       <div class="div-block-12">
-        <a href="/"><img class="image-15" src="images/logo-summit.svg"></a>
+        <a href="/home"><img class="image-15" src="images/logo-summit.svg"></a>
         <ul class="unordered-list-2 w-list-unstyled">
           <li class="list-item-4"><a href="/" class="link-6">INICIO</a>
           </li>

@@ -51,7 +51,7 @@
 </head>
 <body><img class="image-34" sizes="(max-width: 1920px) 100vw, 1920px" src="images/HEADER.png" srcset="images/HEADER.png 500w, images/HEADER.png 800w, images/HEADER.png 1080w, images/HEADER.png 1600w, images/HEADER.png 1920w">
   <div class="container-custom ranking">
-    <div class="div-block-12"><img class="image-15" src="images/logo-summit.svg">
+    <div class="div-block-12"><img onclick="window.location='/home'" class="image-15" src="images/logo-summit.svg" style="cursor: pointer;">
       <ul class="unordered-list-2 w-list-unstyled">
         <li  class="list-item-4"><a href="/home" class="link-6">INICIO</a>
         </li>
