@@ -56,11 +56,11 @@
     <div class="logo-image"><img class="image-17" src="images/logo-summit.svg" width="385">
     </div>
     <ul class="header-home unordered-list-2 w-list-unstyled">
-      <li class="list-item-4"><a href="#" class="link-6">INICIO</a>
+      <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
       </li>
-      <li class="list-item-4"><a class="link-8">MI PERFIL</a>
+      <li class="list-item-4"><a class="link-6" href="/profile">MI PERFIL</a>
       </li>
-      <li class="list-item-4"><a class="link-7">SALIR</a>
+      <li class="list-item-4"><a class="link-6" href="/logout">SALIR</a>
       </li>
     </ul>
   </div>
