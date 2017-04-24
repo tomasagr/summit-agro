@@ -21,4 +21,10 @@ class UserSiteController extends Controller
 
     return redirect()->back()->with('status', 'Error interno vuelva a intentar');
   }
+
+  public function show($id)
+  {
+    $user = User::find($id);
+    return view('profile.show', $user);
+  }
 }

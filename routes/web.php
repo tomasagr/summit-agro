@@ -42,12 +42,13 @@ Route::group(['middleware' => 'auth'] , function() {
 	Route::get('awards', 'AwardSolicitudeController@index');
 	Route::get('/user/{userId}/awards/{awardId}', 'AwardSolicitudeController@store');
 
+	Route::get('/users/{id}/show', 'UserSiteController@show');
+
 	Route::get('/intro-2', function() {
 		return view('intros/intro-2');
 	});
 
 	Route::get('/levels', function() {
-
 		return view('levels/index');
 	});
 

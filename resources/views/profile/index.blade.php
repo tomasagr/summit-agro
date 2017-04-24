@@ -4,7 +4,7 @@
 <html data-wf-page="58f60d92d582b771e6e41d70" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Ranking Perfil</title>
+  <title>Perfil</title>
   <meta content="Ranking Perfil" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -69,7 +69,7 @@
             <div class="text-block-9"><span class="text-span-2">Hola</span>
             <span class="text-span">{{Auth::user()->first_name}} {{Auth::user()->last_name}} </span>
             </div>
-            <div><a>Modificar mis datos</a>
+            <div><a href="/users/{{Auth::user()->id}}/show">Modificar mis datos</a>
             </div>
           </div>
         </div>
