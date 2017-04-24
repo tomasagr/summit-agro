@@ -53,7 +53,7 @@
     <div class="bblock-12-ranking div-block-12">
       <img class="image-15" src="images/logo-summit.svg">
       <ul class="unordered-list-2 w-list-unstyled">
-        <li class="list-item-4"><a href="/" class="link-6">INICIO</a>
+        <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
         </li>
         <li class="list-item-4"><a href="/profile" class="link-8">MI PERFIL</a>
         </li>
