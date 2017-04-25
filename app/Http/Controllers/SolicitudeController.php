@@ -50,7 +50,9 @@ class SolicitudeController extends Controller {
     }
 
     if (count($data["products"])) {
-      $solicitude->products()->attach($data["products"]);
+      foreach ($data["products"] as $value) {
+        $solicitude->products()->attach($value["product_id"], ['quanty' => $value["quanty"]]);
+      }
       $this->saveUserPoints($user, $data['points']);
     }
 
