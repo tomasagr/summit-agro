@@ -166,7 +166,7 @@
           </a>
           @endforeach
         </div>
-        <div class="div-block-23 odd-premios">
+        <div class="div-block-23 odd-premios" style="border-bottom: 0">
           <div class="div-block-24"><img class="image-23" src="images/nivel-1.png">
             <div class="text-block-12" >Nivel 01</div>
           </div>
