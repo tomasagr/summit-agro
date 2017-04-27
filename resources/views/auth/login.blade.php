@@ -48,7 +48,9 @@
   }
   </style>
 </head>
-<body class="body-4">
+<body class="body-4"
+  style="background: url('/images/login-bg.jpg') no-repeat top left;
+      background-size: 100%">
   <div class="div-block-52">
     <div class="div-block-53">
       <div class="div-block-42"><img class="image-46" sizes="(max-width: 991px) 49vw, 395.421875px" src="images/arbol.png" srcset="images/arbol-p-500.png 500w, images/arbol.png 576w">
