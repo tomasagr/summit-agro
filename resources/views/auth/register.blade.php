@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Wed Apr 19 2017 15:21:31 GMT+0000 (UTC)  -->
-<html data-wf-page="58f77effaa1ab6491f47d42d" data-wf-site="58d6377d8ca365092ba2436b">
+<html data-wf-page="58f77effaa1ab6491f47d42d" data-wf-site="58d6377d8ca365092ba2436b" ng-app="app.register">
 <head>
   <meta charset="utf-8">
   <title>Registro</title>
@@ -118,6 +118,8 @@
                          name="address"
                          placeholder="*Dirección"
                          required="required"
+                         googleplace
+                         ng-model="googleplace"
                          type="text">
                   <img class="image-5" height="20" src="images/direccion.svg" width="20">
                 </div>
@@ -264,10 +266,13 @@
     </div><img class="image-6" src="images/elipse.png">
   </div>
   <div class="div-block-40">
-      <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
-        <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
-    </div>
+    <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
+      <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
+  </div>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/components/register/module.js"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
