@@ -52,8 +52,6 @@ Route::group(['middleware' => 'auth'] , function() {
 		return view('levels/index');
 	});
 
-
-
 	Route::get('/profile', function() {
 		$levels = Levels::with('awards')->get();
 		$users = User::all();

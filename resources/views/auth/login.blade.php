@@ -74,7 +74,7 @@
                   </div>
                 </div>
                 <div class="div-block-49"><button class="btn-success w-button" type="summit">Ingresar</button>
-                  <div class="text-block-22"><a class="link-2">Olvidaste tu contraseña?</a>
+                  <div class="text-block-22"><a href="/password/reset" class="link-2">Olvidaste tu contraseña?</a>
                   </div>
                 </div>
               </form>
