@@ -68,7 +68,7 @@
     </div>
     <div class="div-block-41">
       <div>
-        <div class="text-block-19">CREA TU SAMURAI</div>
+        <div class="text-block-19"><img src="/images/creatusamurai.png" alt="" width="250px"></div>
         <div class="text-block-20">elige las opciones y personaliza tu samurai</div>
       </div>
       <div class="div-block-42">
