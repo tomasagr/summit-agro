@@ -490,3 +490,24 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.alternate-38 {
+   position: relative;
+    width: 100%;
+    max-width: 770px;
+    margin-right: auto;
+    margin-left: auto;
+    /* padding-top: 16px; */
+    background-image: url(../images/background-info-intro.png);
+    background-position: 0px 0px;
+    background-size: 100% 343px;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+
+}
+
+.alternate-44 {
+      left: 25%;
+    top: 88%;
+}

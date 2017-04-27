@@ -77,7 +77,7 @@
       <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
   </div>
   <div id="video" class="modal" style="display: none; max-width: 700px!important;">
-    <iframe width="100%" height="480" src="https://www.youtube.com/embed/_Po2CF-cL20" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/214694695" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
