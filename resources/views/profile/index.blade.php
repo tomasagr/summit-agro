@@ -114,7 +114,7 @@ background-size: 100%">
   </div>
 </div>
 </div>
-<div class="row-4 w-row">
+<div class="row-4 w-row container-custom ranking">
   <div class="column-4 w-col w-col-8">
     <div class="div-block-34">
       <div class="div-block-33">RANKING DE SAMURAIS</div>
