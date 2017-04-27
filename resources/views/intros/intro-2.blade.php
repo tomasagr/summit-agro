@@ -68,7 +68,12 @@ Desde cómo jugar hasta qué armas elegir y cómo controlar tus puntos. </p>
 Desde conocer mejor la cultura japonesa hasta ver cómo vienen tus rivales.
 Todo, para ayudarte a encontrar el camino al éxito. Y para que ganar no sea una lucha.</div>
       <div class="text-block-19">...</div><img class="image-43 rock-intro-2" src="images/rocks.png">
-      <a class="intro-link w-inline-block" href="/home"><img class="image-41" src="images/button-ingresar.png">
+      @if(Auth::user()->avatar != null)
+        <a class="intro-link w-inline-block" href="/home">
+      @else
+        <a class="intro-link w-inline-block" href="/avatar-hombre/{{Auth::user()->id}}">
+      @endif
+      <img class="image-41" src="images/button-ingresar.png">
       </a>
     </div><img class="image-44 alternate-44" src="images/elipse.png">
   </div>

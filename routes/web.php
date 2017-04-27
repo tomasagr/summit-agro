@@ -65,7 +65,7 @@ Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], functio
 
 	Route::resource('users', 'UserController');
 	Route::get('users/{id}/delete', 'UserController@destroy');
-
+	Route::get('users/{id}/toggle', 'UserController@toggle');
 	Route::resource('products', 'ProductController');
 	Route::get('products/{id}/delete', 'ProductController@destroy');
 

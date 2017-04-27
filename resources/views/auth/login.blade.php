@@ -30,71 +30,76 @@
     select {
       -webkit-appearance: none !important;
     }
-  /* do not group these rules */
-  *::-webkit-input-placeholder {
+    /* do not group these rules */
+    *::-webkit-input-placeholder {
       color: white;
-  }
-  *:-moz-placeholder {
+    }
+    *:-moz-placeholder {
       /* FF 4-18 */
       color: white;
-  }
-  *::-moz-placeholder {
+    }
+    *::-moz-placeholder {
       /* FF 19+ */
       color: white;
-  }
-  *:-ms-input-placeholder {
+    }
+    *:-ms-input-placeholder {
       /* IE 10+ */
       color: white;
-  }
+    }
   </style>
 </head>
 <body class="body-4"
-  style="background: url('/images/login-bg.jpg') no-repeat top left;
-      background-size: 100%">
-  <div class="div-block-52">
-    <div class="div-block-53">
-      <div class="div-block-42">
-        <img class="image-46" sizes="(max-width: 991px) 49vw, 395.421875px" src="images/arbol.png" srcset="images/arbol-p-500.png 500w, images/arbol.png 576w">
-        <div class="div-block-43">
-          <div class="div-block-44"><img src="images/logo-summit.svg" width="382">
-          </div>
-          <div class="div-block-45"><img src="images/user-pic.png">
-          </div>
+style="background: url('/images/login-bg.jpg') no-repeat top left;
+background-size: 100%">
+<div class="div-block-52">
+  <div class="div-block-53">
+    <div class="div-block-42">
+      <img class="image-46" sizes="(max-width: 991px) 49vw, 395.421875px" src="images/arbol.png" srcset="images/arbol-p-500.png 500w, images/arbol.png 576w">
+      <div class="div-block-43">
+        <div class="div-block-44"><img src="images/logo-summit.svg" width="382">
         </div>
-        <div class="div-block-46">
-          <div>
-            <div class="w-form">
-              <form class="form" action="{{ route('login') }}" id="email-form" name="email-form" method="POST">
-              {{csrf_field()}}
-                <div class="div-block-47">
-                  <div class="div-block-48">
-                    <input class="form-control w-input" data-name="email" id="email-2" maxlength="256" name="email" placeholder="Email" required="required" type="email"><img class="image-45" height="25" src="images/email.svg" width="25">
-                  </div>
-                  <div class="div-block-48">
-                    <input class="form-control w-input" data-name="password" id="password" maxlength="256" name="password" placeholder="Contraseña" required="required" type="password"><img class="image-45" height="25" src="images/contrasena.svg" width="25">
-                  </div>
-                </div>
-                <div class="div-block-49"><button class="btn-success w-button" type="summit">Ingresar</button>
-                  <div class="text-block-22"><a href="/password/reset" class="link-2">Olvidaste tu contraseña?</a>
-                  </div>
-                </div>
-              </form>
-              <div class="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div class="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form</div>
-              </div>
-            </div>
-          </div>
-        </div><img class="image-47" src="images/pasto.png"><img class="image-48" src="images/elipse.png">
-        <div class="text-block-23">Si aun no te haz registrado haz <a href="/register" class="link-3">click aqui</a>
+        <div class="div-block-45"><img src="images/user-pic.png">
         </div>
       </div>
+      <div class="div-block-46">
+        <div>
+          <div class="w-form">
+            <form class="form" action="{{ route('login') }}" id="email-form" name="email-form" method="POST" style="flex-wrap: wrap;">
+              {{csrf_field()}}
+              @if (session('error'))
+                <p style="font-family: 'Lato'; width: 100%; color: white; font-weight: 300; margin: 1em 0; ">
+                {{ session('status') }}
+              </p>
+              @endif
+              <div class="div-block-47">
+                <div class="div-block-48">
+                  <input class="form-control w-input" data-name="email" id="email-2" maxlength="256" name="email" placeholder="Email" required="required" type="email"><img class="image-45" height="25" src="images/email.svg" width="25">
+                </div>
+                <div class="div-block-48">
+                  <input class="form-control w-input" data-name="password" id="password" maxlength="256" name="password" placeholder="Contraseña" required="required" type="password"><img class="image-45" height="25" src="images/contrasena.svg" width="25">
+                </div>
+              </div>
+              <div class="div-block-49"><button class="btn-success w-button" type="summit">Ingresar</button>
+                <div class="text-block-22"><a href="/password/reset" class="link-2">Olvidaste tu contraseña?</a>
+                </div>
+              </div>
+            </form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form</div>
+            </div>
+          </div>
+        </div>
+      </div><img class="image-47" src="images/pasto.png"><img class="image-48" src="images/elipse.png">
+      <div class="text-block-23">Si aun no te haz registrado haz <a href="/register" class="link-3">click aqui</a>
+      </div>
     </div>
-    <div class="div-block-40">
-      <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
-        <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
+  </div>
+  <div class="div-block-40">
+    <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
+      <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>

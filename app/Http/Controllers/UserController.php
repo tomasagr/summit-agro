@@ -39,6 +39,7 @@ class UserController extends Controller {
   {
     $user = $request->all();
 
+    
     $user = User::create($user);
 
     if ($user instanceof User)   {
@@ -48,15 +49,14 @@ class UserController extends Controller {
     return redirect()->back()->with('status', 'Error interno vuelva a intentar');
   }
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function show($id)
+  public function toggle($id)
   {
-    
+  $user = User::find($id);
+
+    $status = $user->status ? 0 : 1;
+    $res = $user->update(['status' => $status]);
+
+    return redirect()->back();
   }
 
   /**

@@ -13,7 +13,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-     
     }
 
     /**
@@ -23,6 +22,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if (!\Auth::guest()) {
+            return redirect('/home');
+        }
         return view('intros/intro-1');
     }
 

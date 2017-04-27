@@ -28,6 +28,7 @@
 						<th>Nombre</th>
 						<th>Telefono</th>
 						<th>Agronomia</th>
+						<th>Estado</th>
 						<th>Acciones</th>
 					</tr>
 				</thead>
@@ -38,6 +39,7 @@
 						<td>{{$user->first_name}} {{$user->last_name}}</td>
 						<td>{{$user->phone}}</td>
 						<td>{{$user->agronomy}}</td>
+						<td><a href="/panel/users/{{$user->id}}/toggle" class="btn btn-xs btn-{{$user->status ? 'success' : 'danger'}}">{{$user->status ? 'Activado' : 'Desactivado'}}</a></td>
 						<td>
 							<div class="btn-group">
 								<a href="/panel/users/{{$user->id}}/edit" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
