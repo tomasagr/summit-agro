@@ -93,12 +93,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="sidebar-menu">
           <li class="header">ADMINISTRACIÓN</li>
           <!-- Optionally, you can add icons to the links -->
-          <li><a href="/home"><i class="fa fa-users"></i> <span>Ir al home</span></a></li>
-          <li class="active"><a href="/panel/users"><i class="fa fa-users"></i> <span>Usuarios</span></a></li>
-          <li><a href="/panel/products"><i class="fa fa-archive"></i> <span>Productos</span></a></li>
-          <li><a href="/panel/awards"><i class="fa fa-trophy"></i> <span>Premios</span></a></li>
-          <li><a href="/panel/levels"><i class="fa fa-bar-chart"></i> <span>Niveles</span></a></li>
-          <li><a href="/panel/cupons"><i class="fa fa-money"></i> <span>Cupones</span></a></li>
+          <li><a href="/home"><i class="fa fa-home"></i> <span>Ir al home</span></a></li>
+          <li class="{{Request::is('panel/users') || Request::is('panel/users/*') ? 'active' : ''}}">
+            <a href="/panel/users"><i class="fa fa-users"></i> <span>Usuarios</span>
+            </a>
+          </li>
+          <li class="{{Request::is('panel/products') || Request::is('panel/products/*') ? 'active' : ''}}">
+            <a href="/panel/products"><i class="fa fa-archive"></i> <span>Productos</span></a></li>
+          <li class="{{Request::is('panel/awards') || Request::is('panel/awards/*') ? 'active' : ''}}">
+            <a href="/panel/awards"><i class="fa fa-trophy"></i> <span>Premios</span></a></li>
+          <li class="{{Request::is('panel/levels') || Request::is('panel/levels/*') ? 'active' : ''}}">
+            <a href="/panel/levels"><i class="fa fa-bar-chart"></i> <span>Niveles</span></a></li>
+          <li class="{{Request::is('panel/cupons') || Request::is('panel/cupons/*') ? 'active' : ''}}">
+            <a href="/panel/cupons"><i class="fa fa-money"></i> <span>Cupones</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>
