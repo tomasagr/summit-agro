@@ -17,7 +17,7 @@ class UserSiteController extends Controller
     $user = User::create($user);
 
     if ($user instanceof User) {
-      \Mail::to(env('MAIL_TO'))->send(new Register($user));
+      \Mail::to(config('user.mails')))->send(new Register($user));
       return redirect('/login')->with('status', 'Registrado con exito sera habilitado a la brevedad');
     }
 

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\HasASolicitude;
+use App\Mail\Invoice;
+use App\Product;
 use App\Solicitude;
 use App\User;
-use App\Product;
 use Illuminate\Http\Request;
 
 class SolicitudeController extends Controller {
@@ -56,6 +58,9 @@ class SolicitudeController extends Controller {
       $this->saveUserPoints($user, $data['points']);
     }
 
+    \Mail::to(config('user.mails'))
+      ->send(new Invoice($user));
+      
     return response()->json(['code' => 200]);
   }
 

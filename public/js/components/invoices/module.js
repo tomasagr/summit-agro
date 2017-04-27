@@ -56,6 +56,7 @@ app.controller('InvoicesController', ['Upload', '$http', function (Upload, $http
       data: {file: vm.invoice.file, 'data': data}
     }).then(function (resp) {
       vm.formHidden = true
+      console.log(resp)
     }, function (resp) {
       console.log('Error status: ' + resp.status)
     })

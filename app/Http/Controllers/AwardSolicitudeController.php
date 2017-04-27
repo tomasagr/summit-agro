@@ -47,7 +47,7 @@ class AwardSolicitudeController extends Controller
         $stock = $award->stock - 1;
         $award->update(['stock' => $stock]);
 
-        Mail::to(env('MAIL_TO'))->send(new HasASolicitude($user));
+        Mail::to(config('user.mails'))->send(new HasASolicitude($user));
 
         return redirect()->back()->with('status', 'Premio solicitado nos comunicaremos a la brevedad');
     }
