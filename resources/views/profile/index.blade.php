@@ -64,7 +64,7 @@ background-size: 100%">
   </div>
   <div class="user-header">
     <div class="user-data">
-     @if (Auth::user()->has('avatar'))
+     @if (isset(Auth::user()->avatar))
      <div class="user-image">
       <img class="user-bg" src="/images/profile.svg" alt="">
       <img class="user-avatar" src="/avatars/{{Auth::user()->avatar->image}}">
@@ -76,7 +76,7 @@ background-size: 100%">
      <div class="div-block-22">
       <div class="text-block-9"><span class="text-span-2">Hola</span>
         <span class="text-span">
-          @if (Auth::user()->avatar->japanese)
+          @if (isset(Auth::user()->avatar->japanese))
           {{utf8_decode(Auth::user()->avatar->japanese)}}
           @else
           {{''}}
