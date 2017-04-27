@@ -92,7 +92,7 @@
             </div>
             <div class="row-6 w-row">
               <div class="column-7 w-col w-col-6">
-                <a class="button-gender male w-button" href="#"></a>
+                <a class="button-gender male w-button" href="/avatar-hombre/@{{userid}}"></a>
                 <div class="title-gender">MASCULINO</div>
               </div>
               <div class="column-8 w-col w-col-6">

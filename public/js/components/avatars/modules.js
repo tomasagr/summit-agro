@@ -2,6 +2,7 @@
   angular.module('app.avatars', [])
   .controller('AvatarsController', function ($scope, $http) {
     $scope.errors = false
+    $scope.userid = Number(location.pathname.split('/')[2])
     $scope.avatar = {
       gender: 'm',
       name: '',

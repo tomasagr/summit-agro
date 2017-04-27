@@ -95,7 +95,7 @@
                 <div class="title-gender">MASCULINO</div>
               </div>
               <div class="column-8 w-col w-col-6">
-                <a class="button-gender off w-button woman" href="#"></a>
+                <a class="button-gender off w-button woman" href="/avatar-mujer/@{{userid}}"></a>
                 <div class="title-gender">FEMENINO</div>
               </div>
             </div>
