@@ -31,22 +31,22 @@
     select {
       -webkit-appearance: none !important;
     }
-  /* do not group these rules */
-  *::-webkit-input-placeholder {
+    /* do not group these rules */
+    *::-webkit-input-placeholder {
       color: white;
-  }
-  *:-moz-placeholder {
+    }
+    *:-moz-placeholder {
       /* FF 4-18 */
       color: white;
-  }
-  *::-moz-placeholder {
+    }
+    *::-moz-placeholder {
       /* FF 19+ */
       color: white;
-  }
-  *:-ms-input-placeholder {
+    }
+    *:-ms-input-placeholder {
       /* IE 10+ */
       color: white;
-  }
+    }
   </style>
 </head>
 <body class="body-4" ng-controller="AvatarsController" ng-cloak>
@@ -80,164 +80,166 @@
             </div>
             <div class="div-block-44">
               <div class="text-block-23">
-              <input ng-model="avatar.name" ng-change="translate()" type="text" autofocus>
-              <small ng-if="loading"> Traduciendo...</small></div>
-              <div class="text-block-24"> @{{avatar.japanese}}</div><img height="20" src="/images/correcto.svg" width="20">
-            </div>
-          </div>
-          <div class="box-red default-box">
-            <div class="box-red-header default-header">
-              <div class="text-block-22">02</div>
-              <div class="text-block-21">ELIGE TU GENERO</div>
-            </div>
-            <div class="row-6 w-row">
-              <div class="column-7 w-col w-col-6">
-                <a class="button-gender male w-button button-active" href="#"></a>
-                <div class="title-gender">MASCULINO</div>
-              </div>
-              <div class="column-8 w-col w-col-6">
-                <a class="button-gender off w-button woman" href="/avatar-mujer/@{{userid}}"></a>
-                <div class="title-gender">FEMENINO</div>
+                <input ng-model="avatar.name" ng-change="translate()" type="text" autofocus>
+                <small ng-if="loading"> Traduciendo...</small></div>
+                <div class="text-block-24"> @{{avatar.japanese}}</div><img height="20" src="/images/correcto.svg" width="20">
               </div>
             </div>
-          </div>
-          <br><br>
-          <div class="box-red default-box">
-            <div class="box-red-header default-header">
-              <div class="text-block-22">03</div>
-              <div class="text-block-21">TIPO DE PELO</div>
-            </div>
-            <div class="slider w-slider" data-animation="slide" data-duration="500">
-              <div class="w-slider-mask">
-                <div class="w-slide">
-                  <div class="row-7 w-row">
-                    <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-1' ? 'box-active' : ''}} m-bg pelo-1 slider-btn w-button"
-                      ng-click="selectPelo('pelo-1')" href="#"></a>
-                    </div>
-                    <div class="column-10 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-2' ? 'box-active' : ''}} m-bg pelo-2 slider-btn w-button"  ng-click="selectPelo('pelo-2')" href="#"></a>
-                    </div>
-                    <div class="column-11 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-3' ? 'box-active' : ''}} m-bg pelo-3 slider-btn w-button"  ng-click="selectPelo('pelo-3')" href="#"></a>
-                    </div>
-                  </div>
+            <div class="box-red default-box">
+              <div class="box-red-header default-header">
+                <div class="text-block-22">02</div>
+                <div class="text-block-21">ELIGE TU GENERO</div>
+              </div>
+              <div class="row-6 w-row">
+                <div class="column-7 w-col w-col-6">
+                  <a class="button-gender male w-button button-active" href="#"></a>
+                  <div class="title-gender">MASCULINO</div>
                 </div>
-                <div class="w-slide">
-                  <div class="row-7 w-row">
-                    <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-4' ? 'box-active' : ''}} m-bg pelo-4 slider-btn w-button"  ng-click="selectPelo('pelo-4')" href="#"></a>
-                    </div>
-                    <div class="column-10 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-5' ? 'box-active' : ''}} m-bg pelo-5 slider-btn w-button"  ng-click="selectPelo('pelo-5')" href="#"></a>
-                    </div>
-                    <div class="column-11 w-col w-col-4">
-                      <a class="@{{selectedPelo == 'pelo-6' ? 'box-active' : ''}} m-bg pelo-6 slider-btn w-button"  ng-click="selectPelo('pelo-6')" href="#"></a>
-                    </div>
-                  </div>
+                <div class="column-8 w-col w-col-6">
+                  <a class="button-gender off w-button woman" href="/avatar-mujer/@{{userid}}"></a>
+                  <div class="title-gender">FEMENINO</div>
                 </div>
               </div>
-              <div class="left-arrow w-slider-arrow-left"></div>
-              <div class="right-arrow w-slider-arrow-right"></div>
             </div>
-          </div>
-          <div class="box-red default-box">
-            <div class="box-red-header default-header">
-              <div class="text-block-22">04</div>
-              <div class="text-block-21">TIPO DE OJOS</div>
-            </div>
-            <div class="slider w-slider" data-animation="slide" data-duration="500">
-              <div class="w-slider-mask">
-                <div class="w-slide">
-                  <div class="row-7 w-row">
-                    <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedOjos == 'ojos-1' ? 'box-active' : ''}} m-bg ojos-1 slider-btn w-button" 
-                      ng-click="selectOjos('ojos-1')" href="#"></a>
-                    </div>
-                    <div class="column-10 w-col w-col-4">
-                      <a class="@{{selectedOjos == 'ojos-2' ? 'box-active' : ''}} m-bg ojos-2 slider-btn w-button" 
-                      ng-click="selectOjos('ojos-2')" href="#"></a>
-                    </div>
-                    <div class="column-11 w-col w-col-4">
-                      <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}} m-bg ojos-3 slider-btn w-button" 
-                      ng-click="selectOjos('ojos-3')" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="w-slide">
-                  <div class="row-7 w-row">
-                    <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}} m-bg ojos-4 slider-btn w-button" 
-                      ng-click="selectOjos('ojos-4')" href="#"></a>
-                    </div>
-                    <div class="column-10 w-col w-col-4">
-                      <a class="@{{selectedOjos == 'ojos-5' ? 'box-active' : ''}} m-bg ojos-5 slider-btn w-button" 
-                      ng-click="selectOjos('ojos-5')" href="#"></a>
-                    </div>
-                    <div class="column-11 w-col w-col-4">
-                      <a class="@{{selectedOjos == 'ojos-6' ? 'box-active' : ''}} m-bg ojos-6 slider-btn w-button" 
-                      ng-click="selectOjos('ojos-6')" href="#"></a>
-                    </div>
-                  </div>
-                </div>
+            <br><br>
+            <div class="box-red default-box">
+              <div class="box-red-header default-header">
+                <div class="text-block-22">03</div>
+                <div class="text-block-21">TIPO DE PELO</div>
               </div>
-              <div class="left-arrow w-slider-arrow-left"></div>
-              <div class="right-arrow w-slider-arrow-right"></div>
-            </div>
-          </div>
-          <div class="box-red default-box">
-            <div class="box-red-header default-header">
-              <div class="text-block-22">05</div>
-              <div class="text-block-21">TIPO DE BOCA</div>
-            </div>
-            <div class="slider w-slider" data-animation="slide" data-duration="500">
-              <div class="w-slider-mask">
-                <div class="w-slide">
-                  <div class="row-7 w-row">
-                    <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedBoca == 'boca-1' ? 'box-active' : ''}} m-bg boca-1 slider-btn w-button" 
-                      ng-click="selectBoca('boca-1')" href="#"></a>
+              <div class="slider w-slider" data-animation="slide" data-duration="500">
+                <div class="w-slider-mask">
+                  <div class="w-slide">
+                    <div class="row-7 w-row">
+                      <div class="column-9 w-col w-col-4">
+                        <a class="@{{selectedPelo == 'pelo-1' ? 'box-active' : ''}} m-bg pelo-1 slider-btn w-button"
+                        ng-click="selectPelo('pelo-1')" href="#"></a>
+                      </div>
+                      <div class="column-10 w-col w-col-4">
+                        <a class="@{{selectedPelo == 'pelo-2' ? 'box-active' : ''}} m-bg pelo-2 slider-btn w-button"  ng-click="selectPelo('pelo-2')" href="#"></a>
+                      </div>
+                      <div class="column-11 w-col w-col-4">
+                        <a class="@{{selectedPelo == 'pelo-3' ? 'box-active' : ''}} m-bg pelo-3 slider-btn w-button"  ng-click="selectPelo('pelo-3')" href="#"></a>
+                      </div>
                     </div>
-                    <div class="column-10 w-col w-col-4">
-                      <a class="@{{selectedBoca == 'boca-2' ? 'box-active' : ''}} m-bg boca-2 slider-btn w-button"
-                      ng-click="selectBoca('boca-2')" href="#"></a>
-                    </div>
-                    <div class="column-11 w-col w-col-4">
-                      <a class="@{{selectedBoca == 'boca-3' ? 'box-active' : ''}} m-bg boca-3 slider-btn w-button" 
-                      ng-click="selectBoca('boca-3')" href="#"></a>
+                  </div>
+                  <div class="w-slide">
+                    <div class="row-7 w-row">
+                      <div class="column-9 w-col w-col-4">
+                        <a class="@{{selectedPelo == 'pelo-4' ? 'box-active' : ''}} m-bg pelo-4 slider-btn w-button"  ng-click="selectPelo('pelo-4')" href="#"></a>
+                      </div>
+                      <div class="column-10 w-col w-col-4">
+                        <a class="@{{selectedPelo == 'pelo-5' ? 'box-active' : ''}} m-bg pelo-5 slider-btn w-button"  ng-click="selectPelo('pelo-5')" href="#"></a>
+                      </div>
+                      <div class="column-11 w-col w-col-4">
+                        <a class="@{{selectedPelo == 'pelo-6' ? 'box-active' : ''}} m-bg pelo-6 slider-btn w-button"  ng-click="selectPelo('pelo-6')" href="#"></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="w-slide">
-                  <div class="row-7 w-row">
-                    <div class="column-9 w-col w-col-4">
-                      <a class="@{{selectedBoca == 'boca-4' ? 'box-active' : ''}} m-bg boca-4 slider-btn w-button" 
-                      ng-click="selectBoca('boca-4')" href="#"></a>
-                    </div>
-                    <div class="column-10 w-col w-col-4">
-                      <a class="@{{selectedBoca == 'boca-5' ? 'box-active' : ''}} m-bg boca-5 slider-btn w-button" 
-                      ng-click="selectBoca('boca-5')" href="#"></a>
-                    </div>
-                    <div class="column-11 w-col w-col-4">
-                      <a class="@{{selectedBoca == 'boca-6' ? 'box-active' : ''}} m-bg boca-6 slider-btn w-button" 
-                      ng-click="selectBoca('boca-6')" href="#"></a>
-                    </div>
-                  </div>
-                </div>
+                <div class="left-arrow w-slider-arrow-left"></div>
+                <div class="right-arrow w-slider-arrow-right"></div>
               </div>
-              <div class="left-arrow w-slider-arrow-left"></div>
-              <div class="right-arrow w-slider-arrow-right"></div>
+            </div>
+            <div class="box-red default-box">
+              <div class="box-red-header default-header">
+                <div class="text-block-22">04</div>
+                <div class="text-block-21">TIPO DE OJOS</div>
+              </div>
+              <div class="slider w-slider" data-animation="slide" data-duration="500">
+                <div class="w-slider-mask">
+                  <div class="w-slide">
+                    <div class="row-7 w-row">
+                      <div class="column-9 w-col w-col-4">
+                        <a class="@{{selectedOjos == 'ojos-1' ? 'box-active' : ''}} m-bg ojos-1 slider-btn w-button" 
+                        ng-click="selectOjos('ojos-1')" href="#"></a>
+                      </div>
+                      <div class="column-10 w-col w-col-4">
+                        <a class="@{{selectedOjos == 'ojos-2' ? 'box-active' : ''}} m-bg ojos-2 slider-btn w-button" 
+                        ng-click="selectOjos('ojos-2')" href="#"></a>
+                      </div>
+                      <div class="column-11 w-col w-col-4">
+                        <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}} m-bg ojos-3 slider-btn w-button" 
+                        ng-click="selectOjos('ojos-3')" href="#"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div class="row-7 w-row">
+                      <div class="column-9 w-col w-col-4">
+                        <a class="@{{selectedOjos == 'ojos-3' ? 'box-active' : ''}} m-bg ojos-4 slider-btn w-button" 
+                        ng-click="selectOjos('ojos-4')" href="#"></a>
+                      </div>
+                      <div class="column-10 w-col w-col-4">
+                        <a class="@{{selectedOjos == 'ojos-5' ? 'box-active' : ''}} m-bg ojos-5 slider-btn w-button" 
+                        ng-click="selectOjos('ojos-5')" href="#"></a>
+                      </div>
+                      <div class="column-11 w-col w-col-4">
+                        <a class="@{{selectedOjos == 'ojos-6' ? 'box-active' : ''}} m-bg ojos-6 slider-btn w-button" 
+                        ng-click="selectOjos('ojos-6')" href="#"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="left-arrow w-slider-arrow-left"></div>
+                <div class="right-arrow w-slider-arrow-right"></div>
+              </div>
+            </div>
+            <div class="box-red default-box">
+              <div class="box-red-header default-header">
+                <div class="text-block-22">05</div>
+                <div class="text-block-21">TIPO DE BOCA</div>
+              </div>
+              <div class="slider w-slider" data-animation="slide" data-duration="500">
+                <div class="w-slider-mask">
+                  <div class="w-slide">
+                    <div class="row-7 w-row">
+                      <div class="column-9 w-col w-col-4">
+                        <a class="@{{selectedBoca == 'boca-1' ? 'box-active' : ''}} m-bg boca-1 slider-btn w-button" 
+                        ng-click="selectBoca('boca-1')" href="#"></a>
+                      </div>
+                      <div class="column-10 w-col w-col-4">
+                        <a class="@{{selectedBoca == 'boca-2' ? 'box-active' : ''}} m-bg boca-2 slider-btn w-button"
+                        ng-click="selectBoca('boca-2')" href="#"></a>
+                      </div>
+                      <div class="column-11 w-col w-col-4">
+                        <a class="@{{selectedBoca == 'boca-3' ? 'box-active' : ''}} m-bg boca-3 slider-btn w-button" 
+                        ng-click="selectBoca('boca-3')" href="#"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div class="row-7 w-row">
+                      <div class="column-9 w-col w-col-4">
+                        <a class="@{{selectedBoca == 'boca-4' ? 'box-active' : ''}} m-bg boca-4 slider-btn w-button" 
+                        ng-click="selectBoca('boca-4')" href="#"></a>
+                      </div>
+                      <div class="column-10 w-col w-col-4">
+                        <a class="@{{selectedBoca == 'boca-5' ? 'box-active' : ''}} m-bg boca-5 slider-btn w-button" 
+                        ng-click="selectBoca('boca-5')" href="#"></a>
+                      </div>
+                      <div class="column-11 w-col w-col-4">
+                        <a class="@{{selectedBoca == 'boca-6' ? 'box-active' : ''}} m-bg boca-6 slider-btn w-button" 
+                        ng-click="selectBoca('boca-6')" href="#"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="left-arrow w-slider-arrow-left"></div>
+                <div class="right-arrow w-slider-arrow-right"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="columns-2">
-          <div class="div-block-46">
-            <div class="div-block-45" id="canvas"
-                  style="width:300px; height: 300px;visibility: visible;">
-              <img class="m @{{selectedPelo}}" ng-src="/images/@{{selectedPelo}}.svg">
-              <img class="m @{{selectedBoca}} m" ng-src="/images/@{{selectedBoca}}.svg">
-              <img src="/images/base-face-m.svg" width="130">
-              <img class="m @{{selectedOjos}}" ng-src="/images/@{{selectedOjos}}.svg">
+          <div class="columns-2">
+            <div class="div-block-46">
+            <div style="width: 300px; height: 300px; background: white">
+                <div class="div-block-45" id="canvas"
+                style="width:300px; height: 300px;visibility: visible; background: transparent;">
+                <img class="m @{{selectedPelo}}" ng-src="/images/@{{selectedPelo}}.svg">
+                <img class="m @{{selectedBoca}} m" ng-src="/images/@{{selectedBoca}}.svg">
+                <img src="/images/base-face-m.svg" width="130">
+                <img class="m @{{selectedOjos}}" ng-src="/images/@{{selectedOjos}}.svg">
+              </div>
             </div>
             <div class="div-block-47">
               <div class="text-block-26">@{{avatar.name}}</div>
@@ -248,17 +250,17 @@
       </div>
       <div style="text-align: center" ng-if="avatar.name.length == 0"><small>Nombre requerido</small></div>
       <div class="div-block-48"><a ng-click="store()"
-                                   ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI
-                                   <i ng-if="loadingUpload" class="fa fa-spinner fa-spin" style="font-size: 14px!important"></i></a></a>
-      <div class="div-block-48"><a ng-if="avatar.name.length == 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
-      </div>
-    </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="{{asset('bower_components/angular/angular.js')}}"></script>
-  <script src="{{asset('js/components/avatars/modules.js')}}"></script>
-  <script src="/js/webflow.js" type="text/javascript"></script>
-  <script src="{{asset('bower_components/dom-to-image/dist/dom-to-image.min.js')}}"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-</body>
-</html>
+       ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI
+       <i ng-if="loadingUpload" class="fa fa-spinner fa-spin" style="font-size: 14px!important"></i></a></a>
+       <div class="div-block-48"><a ng-if="avatar.name.length == 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
+       </div>
+     </div>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+   <script src="{{asset('bower_components/angular/angular.js')}}"></script>
+   <script src="{{asset('js/components/avatars/modules.js')}}"></script>
+   <script src="/js/webflow.js" type="text/javascript"></script>
+   <script src="{{asset('bower_components/dom-to-image/dist/dom-to-image.min.js')}}"></script>
+   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+ </body>
+ </html>

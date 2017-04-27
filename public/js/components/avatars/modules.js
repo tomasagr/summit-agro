@@ -35,6 +35,7 @@
 
     $scope.store = function () {
       var node = document.getElementById('canvas')
+
       $scope.loadingUpload = true
 
       domtoimage.toPng(node, {width: 300, height: 300})

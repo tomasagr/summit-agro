@@ -2360,3 +2360,10 @@
     line-height: 17px;
     text-align: center;
 }
+
+@media all and (min-width: 1656px) {
+
+  .link-block-8, .link-block-9 {
+    height: 70%;
+  }
+}

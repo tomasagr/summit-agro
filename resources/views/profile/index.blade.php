@@ -30,108 +30,122 @@
     select {
     	-webkit-appearance: none !important;
     }
-  /* do not group these rules */
-  *::-webkit-input-placeholder {
+    /* do not group these rules */
+    *::-webkit-input-placeholder {
       color: white;
-  }
-  *:-moz-placeholder {
+    }
+    *:-moz-placeholder {
       /* FF 4-18 */
       color: white;
-  }
-  *::-moz-placeholder {
+    }
+    *::-moz-placeholder {
       /* FF 19+ */
       color: white;
-  }
-  *:-ms-input-placeholder {
+    }
+    *:-ms-input-placeholder {
       /* IE 10+ */
       color: white;
-  }
+    }
   </style>
 </head>
-<body><img class="image-34" sizes="(max-width: 1920px) 100vw, 1920px" src="images/HEADER.png" srcset="images/HEADER.png 500w, images/HEADER.png 800w, images/HEADER.png 1080w, images/HEADER.png 1600w, images/HEADER.png 1920w">
-  <div class="container-custom ranking">
-    <div class="bblock-12-ranking div-block-12">
-      <img class="image-15" src="images/logo-summit.svg">
-      <ul class="unordered-list-2 w-list-unstyled">
-        <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
-        </li>
-        <li class="list-item-4"><a href="/profile" class="link-8">MI PERFIL</a>
-        </li>
-        <li class="list-item-4"><a href="/logout" class="link-7">SALIR</a>
-        </li>
-      </ul>
-    </div>
-    <div class="user-header">
-        <div class="user-data">
-          <div class="user-image"><img src="images/personaje-2.png">
-          </div>
-          <div class="div-block-22">
-            <div class="text-block-9"><span class="text-span-2">Hola</span>
-            <span class="text-span">{{Auth::user()->first_name}} {{Auth::user()->last_name}} </span>
-            </div>
-            <div><a href="/users/{{Auth::user()->id}}/show">Modificar mis datos</a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="text-block-10">Eres samurai
-            @if(Auth::user()->points > $levels[0]->points)
-            <strong>Nivel 04</strong>
-            <?php $actual = 0 ?>
-            @elseif(Auth::user()->points >= $levels[1]->points)
-            <strong>Nivel 03</strong>
-            <?php $actual = 1 ?>
-            @elseif(Auth::user()->points >= $levels[2]->points)
-            <strong>Nivel 02</strong>
-            <?php $actual = 2 ?>
-            @elseif(Auth::user()->points >= $levels[3]->points || Auth::user()->points <= $levels[3]->points)
-            <?php $actual = 3 ?>
-            <strong>Nivel 01</strong>
-            @endif
-            <span class="text-span-3">{{Auth::user()->points}} puntos</span>
-          </div>
-          @if(isset($levels[$actual - 1]))
-          <div class="text-block-11">
-            Necesitas
-            <span>{{$levels[$actual - 1]->points - Auth::user()->points}}</span>
-            puntos para alcanzar el siguiente nivel!
-          </div>
-          @endif()
-          </div>
-        </div>
+<body style="background: url('/images/bg-profile.png') no-repeat top left;
+background-size: 100%">
+<div class="container-custom ranking">
+  <div class="bblock-12-ranking div-block-12">
+    <img class="image-15" src="images/logo-summit.svg">
+    <ul class="unordered-list-2 w-list-unstyled">
+      <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
+      </li>
+      <li class="list-item-4"><a href="/profile" class="link-6">MI PERFIL</a>
+      </li>
+      <li class="list-item-4"><a href="/logout" class="link-6">SALIR</a>
+      </li>
+    </ul>
+  </div>
+  <div class="user-header">
+    <div class="user-data">
+     @if (Auth::user()->has('avatar'))
+     <div class="user-image">
+      <img src="/images/profile.svg" alt="">
+      <img src="/avatars/{{Auth::user()->avatar->image}}">
       </div>
-    <div class="row-4 w-row">
-      <div class="column-4 w-col w-col-8">
-        <div class="div-block-34">
-          <div class="div-block-33">RANKING DE SAMURAIS</div>
-          <div class="div-block-35">
-            @foreach($users as $key => $value)
-              <div class="row-5 w-row">
-              <div class="w-col w-col-2">
-                <div class="text-block-15">#{{$key + 1}}</div>
-              </div>
-              <div class="column-5 w-col w-col-7"><img class="image-36" src="images/user-pic.png">
-                <div class="text-block-16">{{$value->first_name}} {{$value->last_name}}</div>
-              </div>
-              <div class="w-col w-col-3">
-                <div class="text-block-17">samurai nivel 01</div>
-              </div>
-            </div>
-            @endforeach
-          </div><img class="image-37" src="images/elipse.png">
-        </div>
+     @else
+     <div class="user-image"><img src="images/personaje-2.png"></div>
+     @endif
+
+     <div class="div-block-22">
+      <div class="text-block-9"><span class="text-span-2">Hola</span>
+        <span class="text-span">
+          @if (Auth::user()->avatar->japanese)
+          {{utf8_decode(Auth::user()->avatar->japanese)}}
+          @else
+          {{''}}
+          @endif
+        </span>
       </div>
-      <div class="column-6 w-col w-col-4"><a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
-        <div class="div-block-36"><img class="image-38" sizes="420px" src="images/background-info-intro.png" srcset="images/background-info-intro-p-500.png 500w, images/background-info-intro-p-800.png 800w, images/background-info-intro.png 1070w">
-          <div class="text-block-18">Conoce los premios a tu alcance!</div>
-          <a class="link-block w-inline-block" href="/awards"><img class="image-39" src="images/ver-premios.png">
-          </a>
-        </div>
+      <div><a href="/users/{{Auth::user()->id}}/show">Modificar mis datos</a>
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <div>
+    <div class="text-block-10">Eres samurai
+      @if(Auth::user()->points > $levels[0]->points)
+      <strong>Nivel 04</strong>
+      <?php $actual = 0 ?>
+      @elseif(Auth::user()->points >= $levels[1]->points)
+      <strong>Nivel 03</strong>
+      <?php $actual = 1 ?>
+      @elseif(Auth::user()->points >= $levels[2]->points)
+      <strong>Nivel 02</strong>
+      <?php $actual = 2 ?>
+      @elseif(Auth::user()->points >= $levels[3]->points || Auth::user()->points <= $levels[3]->points)
+      <?php $actual = 3 ?>
+      <strong>Nivel 01</strong>
+      @endif
+      <span class="text-span-3">{{Auth::user()->points}} puntos</span>
+    </div>
+    @if(isset($levels[$actual - 1]))
+    <div class="text-block-11">
+      Necesitas
+      <span>{{$levels[$actual - 1]->points - Auth::user()->points}}</span>
+      puntos para alcanzar el siguiente nivel!
+    </div>
+    @endif()
+  </div>
+</div>
+</div>
+<div class="row-4 w-row">
+  <div class="column-4 w-col w-col-8">
+    <div class="div-block-34">
+      <div class="div-block-33">RANKING DE SAMURAIS</div>
+      <div class="div-block-35">
+        @foreach($users as $key => $value)
+        <div class="row-5 w-row">
+          <div class="w-col w-col-2">
+            <div class="text-block-15">#{{$key + 1}}</div>
+          </div>
+          <div class="column-5 w-col w-col-7"><img class="image-36" src="images/user-pic.png">
+            <div class="text-block-16">{{$value->first_name}} {{$value->last_name}}</div>
+          </div>
+          <div class="w-col w-col-3">
+            <div class="text-block-17">samurai nivel 01</div>
+          </div>
+        </div>
+        @endforeach
+      </div><img class="image-37" src="images/elipse.png">
+    </div>
+  </div>
+  <div class="column-6 w-col w-col-4"><a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
+    <div class="div-block-36"><img class="image-38" sizes="420px" src="images/background-info-intro.png" srcset="images/background-info-intro-p-500.png 500w, images/background-info-intro-p-800.png 800w, images/background-info-intro.png 1070w">
+      <div class="text-block-18">Conoce los premios a tu alcance!</div>
+      <a class="link-block w-inline-block" href="/awards"><img class="image-39" src="images/ver-premios.png">
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+<script src="js/webflow.js" type="text/javascript"></script>
+<!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
