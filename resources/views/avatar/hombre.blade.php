@@ -246,7 +246,9 @@
         </div>
       </div>
       <div style="text-align: center" ng-if="avatar.name.length == 0"><small>Nombre requerido</small></div>
-      <div class="div-block-48"><a ng-click="store()" ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
+      <div class="div-block-48"><a ng-click="store()"
+                                   ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI
+                                   <i ng-if="loadingUpload" class="fa fa-spinner fa-spin" style="font-size: 14px!important"></i></a></a>
       <div class="div-block-48"><a ng-if="avatar.name.length == 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
       </div>
     </div>

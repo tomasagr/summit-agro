@@ -13,6 +13,7 @@
       clothes: ''
     }
     $scope.loading = false
+    $scope.loadingUpload = false
     $scope.selectedPelo = 'pelo-2'
     $scope.selectedBoca = 'boca-2'
     $scope.selectedOjos = 'ojos-2'
@@ -34,6 +35,7 @@
 
     $scope.store = function () {
       var node = document.getElementById('canvas')
+      $scope.loadingUpload = true
 
       domtoimage.toPng(node, {width: 300, height: 300})
       .then(function (dataUrl) {

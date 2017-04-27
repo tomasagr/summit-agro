@@ -12,6 +12,7 @@
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
   <link href="/css/avatar-mujer.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript">
     WebFont.load({
       google: {
@@ -246,8 +247,12 @@
         </div>
       </div>
       <div style="text-align: center" ng-if="avatar.name.length == 0"><small>Nombre requerido</small></div>
-      <div class="div-block-48"><a ng-click="store()" ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
-      <div class="div-block-48"><a ng-if="avatar.name.length == 0" class="btn-success w-button" href="#">CREAR SAMURAI</a>
+      <div class="div-block-48"><a ng-click="store()"
+                                   ng-if="avatar.name.length != 0" class="btn-success w-button" href="#">CREAR SAMURAI
+                                   <i ng-if="loadingUpload" class="fa fa-spinner fa-spin" style="font-size: 14px!important"></i></a>
+
+      <div class="div-block-48"><a ng-if="avatar.name.length == 0"
+          class="btn-success w-button" href="#">CREAR SAMURAI</a>
       </div>
     </div>
   </div>
