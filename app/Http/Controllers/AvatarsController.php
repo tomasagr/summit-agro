@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Avatar;
 use Illuminate\Http\Request;
+use Stichoza\GoogleTranslate\TranslateClient;
 
 class AvatarsController extends Controller
 {
     public function translate($name)
     {
-    	$client = new \GuzzleHttp\Client();
-    	$res = $client->request('GET', 'http://www.transltr.org/api/translate?text=' . $name .'&to=ja&from=es');
-
-      return response($res->getBody());
+       $tr = new TranslateClient('es', 'ja');
+       $res = $tr->translate($name);
+       return response()->json(['translationText' => $res]);
     }
 
-    public function store(Request $request) 
+    public function store(Request $request)
     {
     	$data = $request->all();
 
