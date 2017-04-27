@@ -278,7 +278,7 @@
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyCqVmmATrASj9S6j5U6oyATsJZjnT667F8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="/js/angular.min.js"></script>
-  <script src="/js/components/register/module.js"></script>
+  <script src="/js/components/register/module_.js"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
