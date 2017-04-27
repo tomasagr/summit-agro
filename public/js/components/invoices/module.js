@@ -4,7 +4,7 @@ app.controller('InvoicesController', ['Upload', '$http', function (Upload, $http
   var vm = this
   vm.invoice = {}
   vm.invoice.products = []
-  vm.productList = []
+  vm.productList = [{}]
   vm.promoCode = ''
   vm.code = {}
   vm.totalPoints = 0

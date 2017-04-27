@@ -49,8 +49,9 @@
     }
   </style>
 </head>
-<body ng-app="loadInvoices" ng-controller="InvoicesController as invoices">
-  <img class="image-13" sizes="100vw" src="images/cargar-bg.png" srcset="images/cargar-bg.png 500w, images/cargar-bg.png 800w, images/cargar-bg.png 1080w, images/cargar-bg.png 1600w, images/cargar-bg.png 1920w"><img class="image-14" sizes="100vw" src="images/capa-header.png" srcset="images/capa-header-p-500x21.png 500w, images/capa-header-p-800x33.png 800w, images/capa-header-p-1080x45.png 1080w, images/capa-header.png 1366w">
+<body ng-app="loadInvoices" ng-controller="InvoicesController as invoices"
+      style="background: url('/images/bg-solicitudes.png') no-repeat top left;
+      background-size: 100%">
   <div class="div-block-11">
     <div class="container-custom">
       <div class="div-block-12">
@@ -173,18 +174,17 @@
         <div class="w-row">
           <div class="w-col w-col-9">
             <input class="factura-field w-input"
-            id="promo_code"
-            ng-model="invoices.promoCode"
-            ng-change="invoices.searchCode()"
-            placeholder="*Codigo promocional"
-            type="text">
+                  id="promo_code"
+                  ng-model="invoices.promoCode"
+                  ng-change="invoices.searchCode()"
+                  placeholder="*Codigo promocional"
+                  type="text">
             <small ng-if="invoices.code != ''" style="color: @{{invoices.codeColor}}">@{{invoices.codeMessage}}</small>
           </div>
           <div class="code w-col w-col-3">
             <div class="points" ng-if="invoices.code.points">+@{{invoices.code.points}} pts</div>
           </div>
         </div>
-        <div class="div-block-19"></div>
         <div class="row-3 w-row">
           <div class="w-col w-col-9">
             <div class="text-block-7">CANTIDAD TOTAL DE PUNTOS ACUMULADOS</div>
@@ -194,7 +194,7 @@
           </div>
         </div>
         <input type="hidden" ng-init="invoices.user_id = {{Auth::user()->id}}">
-        <div class="div-block-20">
+        <div class="div-block-20" style="margin-top: 10%; padding-bottom: 1em;">
           <div class="text-block-8">* Campos obligatorios</div>
           <button class="alt-btn btn-success w-button" ng-click="invoices.storeInvoice()" type="submit" ng-disabled="invoicesForm.$invalid">Sumar Puntos</button>
           @if (session('status'))
@@ -204,9 +204,16 @@
           @endif
         </div>
       </div>
+      <div class="image-shadow">
+        <img src="images/elipse.png" alt="">
+      </div>
     </form>
   </div>
 </div>
+ <div class="footer">
+  <div class="footer-text">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
+  <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
+  </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 
 <script src="bower_components/angular/angular.min.js"></script>

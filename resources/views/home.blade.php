@@ -67,7 +67,7 @@
   <div class="div-block-50">
     <div class="div-block-55">
       <a class="link-block-6 w-inline-block" href="#video" rel="modal:open"></a>
-      <a class="link-block-7 w-inline-block" href="/invoices"></a>
+      <a class="link-block-7 w-inline-block" href="/profile"></a>
       <a class="link-block-8 w-inline-block" href="/levels"></a>
       <a class="link-block-9 w-inline-block" href="/awards"></a>
     </div>
