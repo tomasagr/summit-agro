@@ -2555,3 +2555,10 @@
     line-height: 17px;
     text-align: center;
 }
+
+
+@media all and (min-width: 1656px) {
+  .div-block-57 {
+    margin-top: 15%;
+  }
+}

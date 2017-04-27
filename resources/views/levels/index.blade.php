@@ -61,7 +61,7 @@
       </li>
     </ul>
   </div>
-  <div class="div-block-57"><img class="image-51" sizes="100vw" src="/images/montana.png" srcset="images/montana.png 500w, images/montana.png 800w, images/montana.png 1261w">
+  <div class="div-block-57">
     <div class="div-block-58">
       <div class="div-block-59"><img class="image-49" height="104" src="/images/ranking-title.png" width="445">
       </div>
