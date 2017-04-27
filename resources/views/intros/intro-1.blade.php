@@ -59,14 +59,14 @@
   <div class="div-block-39">
     <div class="div-block-38 intro-bg">
       <div class="text-block-19">...</div>
-      <div class="text-block-20"><span class="text-span-8">Summit Agro</span> busca samurais, acaso tu te animarais?
-        <br>Si Summit recomendais, muchos premios ganarais.
+      <div class="text-block-20"><span class="text-span-8">Summit Agro</span> busca samuráis, acaso tú te animaráis?
+        <br>Si Summit recomendais, muchos premios ganaráis.
         <br>Y si vender es tu deber, la gloria has de beber.
         <br>Las armas necesarias portarás, por muchos logros pelearás.
         <br>Superarte a ti mismo deberás, pero ojo, también participan los demás.
         <br>
-        <br>Asi que recuerda querido samurai,
-        <br>más puntos sumais, más premios ganais.</div><img class="image-43" src="images/rocks.png">
+        <br>Asi que recuerda querido samurái,
+        <br>más puntos sumáis, más premios ganáis.</div><img class="image-43" src="images/rocks.png">
       <a class="w-inline-block" href="/login"><img class="image-41" src="images/button-ingresar.png">
       </a>
     </div><img class="image-44" src="images/elipse.png">
