@@ -85,6 +85,7 @@
                 <div class="text-block-24"> @{{avatar.japanese}}</div><img height="20" src="/images/correcto.svg" width="20">
               </div>
             </div>
+            <br><br>
             <div class="box-red default-box">
               <div class="box-red-header default-header">
                 <div class="text-block-22">02</div>
@@ -101,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <br><br>
+            
             <div class="box-red default-box">
               <div class="box-red-header default-header">
                 <div class="text-block-22">03</div>
@@ -232,7 +233,7 @@
           </div>
           <div class="columns-2">
             <div class="div-block-46">
-            <div style="width: 300px; height: 300px; background: white">
+            <div style="width: 300px; height: 300px; background: white" margin-left="">
                 <div class="div-block-45" id="canvas"
                 style="width:300px; height: 300px;visibility: visible; background: transparent;">
                 <img class="m @{{selectedPelo}}" ng-src="/images/@{{selectedPelo}}.svg">

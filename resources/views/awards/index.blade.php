@@ -115,10 +115,11 @@
       @endif
         <div class="div-block-23">
           <div class="div-block-24"><img class="image-20" src="images/nivel-4.png" @if(Auth::user()->points >= $levels[0]->points) {{"style=opacity:1"}}@endif>
-            <div class="text-block-12">Nivel 04</div>
+            <div class="text-block-12"  @if(Auth::user()->points < $levels[0]->points) {{"style=color:gray"}}@endif>Nivel 04</div>
           </div>
           @foreach($levels[0]->awards as $award)
-          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
+          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}"
+             class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}} @endif">
             <div class="div-block-25">
               <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
                 <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
@@ -132,7 +133,7 @@
         </div>
         <div class="div-block-23 odd-premios">
           <div class="div-block-24"><img class="image-20" src="images/nivel-1.png" @if(Auth::user()->points >= $levels[0]->points) {{"style=opacity:1"}}@endif>
-            <div class="text-block-12">Nivel 03</div>
+            <div class="text-block-12"  @if(Auth::user()->points < $levels[1]->points) {{"style=color:gray"}}@endif>Nivel 03</div>
           </div>
           @foreach($levels[1]->awards as $award)
           <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
@@ -150,7 +151,7 @@
         <div class="div-block-23">
           <div class="div-block-24">
             <img class="image-22" src="images/nivel-2.png" @if(Auth::user()->points >= $levels[2]->points) {{"style=opacity:1"}}@endif>
-            <div class="text-block-12">Nivel 02</div>
+            <div class="text-block-12"  @if(Auth::user()->points < $levels[2]->points) {{"style=color:gray"}}@endif>Nivel 02</div>
           </div>
           @foreach($levels[2]->awards as $award)
           <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
@@ -167,7 +168,7 @@
         </div>
         <div class="div-block-23 odd-premios">
           <div class="div-block-24"><img class="image-23" src="images/nivel-1.png">
-            <div class="text-block-12">Nivel 01</div>
+            <div class="text-block-12" >Nivel 01</div>
           </div>
           @foreach($levels[3]->awards as $award)
           <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >

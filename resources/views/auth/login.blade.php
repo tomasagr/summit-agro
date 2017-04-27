@@ -4,7 +4,7 @@
 <html data-wf-page="58f6a0d6aa1ab6491f478c5b" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Summit Agro</title>
+  <title>Summit Sammurái</title>
   <meta content="Iniciar Sesión" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -53,7 +53,8 @@
       background-size: 100%">
   <div class="div-block-52">
     <div class="div-block-53">
-      <div class="div-block-42"><img class="image-46" sizes="(max-width: 991px) 49vw, 395.421875px" src="images/arbol.png" srcset="images/arbol-p-500.png 500w, images/arbol.png 576w">
+      <div class="div-block-42">
+        <img class="image-46" sizes="(max-width: 991px) 49vw, 395.421875px" src="images/arbol.png" srcset="images/arbol-p-500.png 500w, images/arbol.png 576w">
         <div class="div-block-43">
           <div class="div-block-44"><img src="images/logo-summit.svg" width="382">
           </div>
