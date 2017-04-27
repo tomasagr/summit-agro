@@ -50,7 +50,7 @@
   }
   </style>
 </head>
-<body class="body-3">
+<body class="body-3" ng-controller="RegisterController">
   <div class="w-container">
   <ul>
             @foreach ($errors->all() as $error)
@@ -71,7 +71,7 @@
         <div class="column-2 w-col w-col-6">
           <div class="column-content">
             <div class="w-form">
-              <form action="/users" method="POST">
+              <form action="/users" method="POST" autocomplete="off">
                 {{csrf_field()}}
                 <div class="div-block-4">
                   <input autofocus class="custom-input w-input"
@@ -137,6 +137,8 @@
                          name="cuit"
                          placeholder="*CUIT de la empresa"
                          required="required"
+                         ng-model="cuit"
+                         ng-change="checkAgronomia()"
                          type="text">
                   <img class="image-5" height="20" src="images/user.svg" width="20">
                 </div>
@@ -144,6 +146,7 @@
                   <input  class="custom-input w-input"
                           name="agronomy"
                           placeholder="*Agronomia"
+                          ng-model="agronomy"
                           required="required"
                           type="text">
                   <img class="image-5" height="20" src="images/agronomia.svg" width="20">
@@ -257,7 +260,10 @@
                          name="checkbox"
                          type="checkbox">
                   <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a class="link-3">Terminos y Condiciones</a></label>
-                </div><button class="btn-success w-button" type="submit">Registrarme</button>
+                </div>
+
+                <button class="btn-success w-button @{{status == false ? 'not-active' : ''}}"
+                        type="submit">Registrarme</button>
               </form>
             </div>
           </div>

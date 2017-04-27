@@ -20,3 +20,5 @@ Route::get('cupons', 'ApiCuponsController@index');
 Route::post('/user/{id}/solicitude', 'SolicitudeController@store');
 
 Route::post('/avatar', 'AvatarsController@store');
+
+Route::get('/agronomia/check', 'AgronomiaController@show');

@@ -1,6 +1,21 @@
 (function () {
   var myApp = angular.module('app.register', [])
 
+  myApp.controller('RegisterController', function ($scope, $http) {
+    $scope.status = false
+
+    $scope.checkAgronomia = function () {
+      var cuit = $scope.cuit || ''
+      cuit = cuit.split('-').join('')
+
+      $http.get('/api/agronomia/check?cuit=' + cuit)
+      .then(function (response) {
+        $scope.status = response.data.status
+        $scope.agronomy = response.data.nombre
+      })
+    }
+  })
+
   myApp.directive('googleplace', function () {
     return {
       require: 'ngModel',
