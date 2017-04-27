@@ -1404,3 +1404,18 @@
 .div-block-34 {
     height: 1055px;
 }
+
+.user-bg {
+  width: 160px;
+}
+
+.user-image {
+  position: relative;
+}
+
+.user-avatar {
+      top: 4px;
+    left: 11px;
+  position: absolute;
+  width: 200px;
+}

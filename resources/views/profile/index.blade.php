@@ -66,8 +66,8 @@ background-size: 100%">
     <div class="user-data">
      @if (Auth::user()->has('avatar'))
      <div class="user-image">
-      <img src="/images/profile.svg" alt="">
-      <img src="/avatars/{{Auth::user()->avatar->image}}">
+      <img class="user-bg" src="/images/profile.svg" alt="">
+      <img class="user-avatar" src="/avatars/{{Auth::user()->avatar->image}}">
       </div>
      @else
      <div class="user-image"><img src="images/personaje-2.png"></div>
