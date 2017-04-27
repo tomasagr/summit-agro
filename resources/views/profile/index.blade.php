@@ -136,10 +136,13 @@ background-size: 100%">
     </div>
   </div>
   <div class="column-6 w-col w-col-4"><a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
-    <div class="div-block-36"><img class="image-38" sizes="420px" src="images/background-info-intro.png" srcset="images/background-info-intro-p-500.png 500w, images/background-info-intro-p-800.png 800w, images/background-info-intro.png 1070w">
-      <div class="text-block-18">Conoce los premios a tu alcance!</div>
-      <a class="link-block w-inline-block" href="/awards"><img class="image-39" src="images/ver-premios.png">
+    <div class="div-block-36">
+      <a href="/awards">
+        <img src="/images/btn-verpremios.png" alt="">
       </a>
+    </div>
+    <div style="margin-top: 26%;">
+      <img src="/images/arbol-p-500.png" alt="">
     </div>
   </div>
 </div>
