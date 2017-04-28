@@ -57,11 +57,11 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
-    <div class="div-block">
+    <div class="div-block" style="margin-top: 241px">
       <div class="row w-row">
         <div class="column w-col w-col-6">
           <div class="column-content"><img src="images/logo-summit.svg">
-            <div class="text-block">Bienvenido Samurai</div>
+            <div class="text-block"><img src="/images/bienvenido.png" alt="" width="268"></div>
             <div class="desc text-block">ingresa para poder sumar puntos y ganar grandes premios</div>
             <div class="div-block-3 v-divisor">
               <div class="div-block-2"></div>
@@ -259,7 +259,7 @@
                          id="checkbox"
                          name="checkbox"
                          type="checkbox">
-                  <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a href="/bases" class="link-3">Terminos y Condiciones</a></label>
+                  <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a href="/bases" class="link-3" style="color:white">Terminos y Condiciones</a></label>
                 </div>
 
                 <button class="btn-success w-button @{{status == false ? 'not-active' : ''}}"
@@ -269,7 +269,12 @@
           </div>
         </div>
       </div>
-    </div><img class="image-6" src="images/elipse.png">
+    </div>
+    <img class="image-6" src="images/elipse.png">
+    <div style="text-align: center; font-family: 'Lato'; margin-top: .3em; margin-left: 30%;">
+      * campos obligatorios <br>
+      Si ya tienes cuenta <a href="/login" style="color: black">ingresa aqui</a>
+    </div>
   </div>
   <div class="div-block-40">
     <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
