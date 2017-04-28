@@ -1421,7 +1421,7 @@
 }
 
 
-.div-block-40 {
+.div-block-40 , .footer {
   width: 100%;
   position: relative;
   bottom: 0px;
@@ -1433,7 +1433,7 @@
   background-repeat: no-repeat;
 }
 
-.text-block-21 {
+.text-block-21, .footer-text {
       position: relative;
     left: 0px;
     top: auto;

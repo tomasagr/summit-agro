@@ -50,8 +50,9 @@
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
-<body class="body"><img class="image-19" sizes="100vw" src="images/premios-bg.png" srcset="images/premios-bg-p-500x649.png 500w, images/premios-bg-p-800x1038.png 800w, images/premios-bg-p-1080x1402.png 1080w, images/premios-bg-p-1600x2076.png 1600w, images/premios-bg.png 1920w">
-  <div class="div-block-11">
+<body class="body" style="background: url('/images/awards-bg.png') no-repeat top left;
+background-size: 100%">
+  <div class="div-block-11" style="margin-bottom: 25em;">
     <div class="container-custom">
       <div class="div-block-12">
         <img onclick="window.location='/home'" class="image-15" src="images/logo-summit.svg" style="cursor: pointer;">
@@ -173,7 +174,8 @@
             <div class="text-block-12" >Nivel 01</div>
           </div>
           @foreach($levels[3]->awards as $award)
-          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}" class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif" >
+          <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}"
+             class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@endif">
             <div class="div-block-25">
               <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
                 <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
@@ -187,6 +189,13 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+    <div class="footer-text">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
+      <br>
+      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Terminos &amp;Condiciones.</a>
+      <br>
+      Si tenes alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
+  </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->

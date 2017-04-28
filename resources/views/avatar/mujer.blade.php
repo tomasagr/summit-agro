@@ -232,12 +232,14 @@
         </div>
         <div class="columns-2">
           <div class="div-block-46">
+          <div style="width: 300px; height: 300px; background: white" margin-left="">
             <div class="div-block-45" id="canvas"
-                  style="width:300px; height: 300px;visibility: visible;">
+                  style="width:300px; height: 300px;visibility: visible; background: transparent;">
               <img class="f @{{selectedPelo}}" ng-src="/images/f/@{{selectedPelo}}.svg">
               <img class="f @{{selectedBoca}}" ng-src="/images/f/@{{selectedBoca}}.svg">
               <img src="/images/base-face-f.svg" width="130">
               <img class="f @{{selectedOjos}}" ng-src="/images/f/@{{selectedOjos}}.svg">
+            </div>
             </div>
             <div class="div-block-47">
               <div class="text-block-26">@{{avatar.name}}</div>
