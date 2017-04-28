@@ -178,7 +178,7 @@
               </div>
               <div class="text-block-13" >{{$award->points}} puntos</div>
               <div class="text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>{{$award->name}}</div>
-              <div class="text-14 text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>Disponible {{$award->stock}} u.</div>
+              <div class="text-14 text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>Disponible {{$award->stock}} {{$award->unit}}</div>
             </div>
           </a>
           @endforeach
