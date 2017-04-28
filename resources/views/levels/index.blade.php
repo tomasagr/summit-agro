@@ -1,3 +1,4 @@
+@inject('levels', '\App\Levels')
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
 <!--  Last Published: Tue Apr 25 2017 15:10:12 GMT+0000 (UTC)  -->
@@ -48,6 +49,7 @@
   }
   </style>
 </head>
+<?php $level = $levels->all();?>
 <body class="body-8"><img class="image-48" sizes="100vw" src="/images/header-houses.png" srcset="images/header-houses-p-500.png 500w, images/header-houses-p-800.png 800w, images/header-houses-p-1080.png 1080w, images/header-houses-p-1600.png 1600w, images/header-houses.png 1920w">
   <div class="div-block-12">
     <div class="div-block-56"><img class="image-15" src="/images/logo-summit.svg">
@@ -73,6 +75,7 @@
             <div class="text-block-27">NIVEL 04</div>
             <div class="text-block-28">Ultimo Samurai</div>
             <div class="text-block-29">Arma de entrenamiento: Katana Moderna</div>
+            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[3]->points}}</div>
           </div>
         </div>
       </div>
@@ -84,6 +87,7 @@
             <div class="text-block-27">NIVEL 03</div>
             <div class="text-block-28">Samurai con armadura clasica</div>
             <div class="text-block-29">Arma de entrenamiento: Katana&nbsp;</div>
+            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[2]->points}}</div>
           </div>
         </div>
       </div>
@@ -95,6 +99,7 @@
             <div class="text-block-27">NIVEL 02</div>
             <div class="text-block-28">Samurai con armadura simple</div>
             <div class="text-block-29">Arma de entrenamiento: Bokken</div>
+            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[1]->points}}</div>
           </div>
         </div>
       </div>
@@ -106,6 +111,7 @@
             <div class="text-block-27">NIVEL 01</div>
             <div class="text-block-28">Ultimo Samurai</div>
             <div class="text-block-29">Arma de entrenamiento: Bokken</div>
+            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[0]->points}}</div>
           </div>
         </div>
       </div>
@@ -113,7 +119,10 @@
   </div>
   <div class="div-block-40">
     <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
-      <br>Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. Terminos &amp; Condiciones.</div>
+      <br>
+      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Terminos &amp;Condiciones.</a>
+      <br>
+      Si tenes alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="/js/webflow.js" type="text/javascript"></script>
