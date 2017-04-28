@@ -4,7 +4,7 @@
 <html data-wf-page="58e294199b1faa2f73aee6dc" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Premios</title>
+  <title>Summit Samurái</title>
   <meta content="Premios" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -47,6 +47,8 @@
       color: white;
     }
   </style>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 <body class="body"><img class="image-19" sizes="100vw" src="images/premios-bg.png" srcset="images/premios-bg-p-500x649.png 500w, images/premios-bg-p-800x1038.png 800w, images/premios-bg-p-1080x1402.png 1080w, images/premios-bg-p-1600x2076.png 1600w, images/premios-bg.png 1920w">
   <div class="div-block-11">

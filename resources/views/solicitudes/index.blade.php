@@ -4,7 +4,7 @@
 <html data-wf-page="58d63f394f3644b01d6493b5" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Summit Agro | Cargar Factura</title>
+  <title>Summit Samurái</title>
   <meta content="Productos Disponibles" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
@@ -25,8 +25,8 @@
     try{Typekit.load();}catch(e){}
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <style>
     select {
     	-webkit-appearance: none !important;
