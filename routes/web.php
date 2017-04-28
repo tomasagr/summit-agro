@@ -70,6 +70,10 @@ Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], functio
 	Route::get('users/{id}/delete', 'UserController@destroy');
 	Route::get('users/{id}/toggle', 'UserController@toggle');
 	Route::resource('products', 'ProductController');
+
+	Route::resource('invoices', 'InvoicesController');
+	Route::get('invoices/{id}/status', 'InvoicesController@status');
+
 	Route::get('products/{id}/delete', 'ProductController@destroy');
 
 	Route::resource('awards', 'AwardController');
