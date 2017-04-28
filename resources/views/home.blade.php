@@ -51,9 +51,11 @@
 <body class="body-5">
   <div class="div-block-49"></div>
   <div class="container-home home-c">
-    <div class="brand-image"><img class="image-16" src="images/personaje-logo.png">
+    <div class="brand-image">
+      <img class="image-16" src="images/personaje-logo.png">
     </div>
-    <div class="logo-image"><img class="image-17" src="images/logo-summit.svg" width="385">
+    <div class="logo-image">
+      <img class="image-17" src="images/logo-summit.svg" width="385">
     </div>
     <ul class="header-home unordered-list-2 w-list-unstyled">
       <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
@@ -75,9 +77,9 @@
   <div class="div-block-40">
     <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
       <br>
-      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Terminos &amp;Condiciones.</a>
+      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases & Condiciones</a>
       <br>
-      Si tenes alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
+      Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
   <div id="video" class="modal" style="display: none; max-width: 700px!important;">
     <iframe src="https://player.vimeo.com/video/214694695" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

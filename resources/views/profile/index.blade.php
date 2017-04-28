@@ -49,7 +49,7 @@
   </style>
 </head>
 <body style="background: url('/images/bg-profile.png') no-repeat top left;
-background-size: 100%">
+background-size: 100%; background-color: #6BA242;">
 <div class="container-custom ranking">
   <div class="bblock-12-ranking div-block-12">
     <img class="image-15" src="images/logo-summit.svg">
@@ -88,7 +88,7 @@ background-size: 100%">
     </div>
   </div>
   <div>
-    <div class="text-block-10">Eres samurai
+    <div class="text-block-10">Eres samurái
       @if(Auth::user()->points > $levels[0]->points)
       <strong>Nivel 04</strong>
       <?php $actual = 0 ?>
@@ -106,7 +106,7 @@ background-size: 100%">
     </div>
     @if(isset($levels[$actual - 1]))
     <div class="text-block-11">
-      Necesitas
+      ¡Necesitas
       <span>{{$levels[$actual - 1]->points - Auth::user()->points}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
@@ -150,9 +150,9 @@ background-size: 100%">
 <div class="div-block-40">
     <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
       <br>
-      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Terminos &amp;Condiciones.</a>
+      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases & Condiciones.</a>
       <br>
-      Si tenes alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
+      Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script src="js/webflow.js" type="text/javascript"></script>

@@ -73,7 +73,7 @@
           </div>
           <div class="w-col w-col-9">
             <div class="text-block-27">NIVEL 04</div>
-            <div class="text-block-28">Ultimo Samurai</div>
+            <div class="text-block-28">Ultimo Samurái</div>
             <div class="text-block-29">Arma de entrenamiento: Katana Moderna</div>
             <div class="text-block-29">Cantidad de puntos necesarios: {{$level[3]->points}}</div>
           </div>
@@ -85,7 +85,7 @@
           </div>
           <div class="w-col w-col-9">
             <div class="text-block-27">NIVEL 03</div>
-            <div class="text-block-28">Samurai con armadura clasica</div>
+            <div class="text-block-28">Samurái con armadura clasica</div>
             <div class="text-block-29">Arma de entrenamiento: Katana&nbsp;</div>
             <div class="text-block-29">Cantidad de puntos necesarios: {{$level[2]->points}}</div>
           </div>
@@ -97,7 +97,7 @@
           </div>
           <div class="w-col w-col-9">
             <div class="text-block-27">NIVEL 02</div>
-            <div class="text-block-28">Samurai con armadura simple</div>
+            <div class="text-block-28">Samurái con armadura simple</div>
             <div class="text-block-29">Arma de entrenamiento: Bokken</div>
             <div class="text-block-29">Cantidad de puntos necesarios: {{$level[1]->points}}</div>
           </div>
@@ -109,7 +109,7 @@
           </div>
           <div class="w-col w-col-9">
             <div class="text-block-27">NIVEL 01</div>
-            <div class="text-block-28">Ultimo Samurai</div>
+            <div class="text-block-28">Samurái sin armadura, aprendiz</div>
             <div class="text-block-29">Arma de entrenamiento: Bokken</div>
             <div class="text-block-29">Cantidad de puntos necesarios: {{$level[0]->points}}</div>
           </div>

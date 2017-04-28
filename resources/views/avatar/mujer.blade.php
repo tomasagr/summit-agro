@@ -69,7 +69,7 @@
     <div class="div-block-41">
       <div>
         <div class="text-block-19"><img src="/images/creatusamurai.png" alt="" width="250px"></div>
-        <div class="text-block-20">elige las opciones y personalizá tu samurái</div>
+        <div class="text-block-20">Elegí las opciones y personalizá tu samurái</div>
       </div>
       <div class="div-block-42">
         <div class="columnt-1 div-block-43">
