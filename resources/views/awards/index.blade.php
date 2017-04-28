@@ -46,6 +46,33 @@
       /* IE 10+ */
       color: white;
     }
+
+    .div-block-40 , .footer {
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  margin-top: 144px;
+  padding-top: 0px;
+  background-image: url('../images/footer.png');
+  background-position: 0px 0px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.text-block-21, .footer-text {
+      position: relative;
+    left: 0px;
+    top: auto;
+    bottom: 0px;
+    margin-top: 36px;
+    padding-top: 26px;
+    padding-bottom: 13px;
+    font-family: Lato, sans-serif;
+    color: #c4c4c4;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+}
   </style>
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
