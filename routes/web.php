@@ -21,6 +21,9 @@ use App\User;
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@home');
+Route::get('bases', function() {
+	return view('bases.index');
+});
 
 Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
 Route::get('/levels/awards', 'LevelAwardsController@index');
