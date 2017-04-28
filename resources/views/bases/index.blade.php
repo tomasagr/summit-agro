@@ -147,7 +147,7 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($products->all() as $product)
+            @foreach($products->orderBy('name', 'asc')->get() as $product)
               <tr>
               <td>{{$product->name}}</td>
               <td>{{$product->points}}</td>
@@ -170,15 +170,10 @@
             </tr>
           </thead>
           <tbody>
-            <?php $collection = $levels->all(); ?>
-            @foreach($collection as $level)
+            @foreach($levels->all() as $level)
               <tr>
               <td>Nivel {{$level->name}}</td>
-              @if ($loop->first)
-                <td>0 a {{$product->points}}</td>
-              @else
-                <td>{{$collection[$loop->index - 1]->points - 1}} a {{$level->points}}</td>
-              @endif
+              <td>{{$level->points}}</td>
             </tr>
             @endforeach
           </tbody>
