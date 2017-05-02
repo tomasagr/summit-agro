@@ -46,6 +46,13 @@
       /* IE 10+ */
       color: white;
     }
+
+    .div-block-34 {
+      padding-bottom: 45px;
+      border-radius: 5px;
+      background-color: #fff;
+      overflow-y: scroll !important;
+    }
   </style>
 </head>
 <body style="background: url('/images/bg-profile.png') no-repeat top left;
@@ -59,18 +66,18 @@ background-size: 100%; background-color: #6BA242;">
      <div class="user-image">
       <img class="user-bg" src="/images/profile.svg" alt="">
       <img class="user-avatar" src="/avatars/{{Auth::user()->avatar->image}}">
-      </div>
-     @else
-     <div class="user-image"><img src="images/personaje-2.png"></div>
-     @endif
+    </div>
+    @else
+    <div class="user-image"><img src="images/personaje-2.png"></div>
+    @endif
 
-     <div class="div-block-22">
+    <div class="div-block-22">
       <div class="text-block-9"><span class="text-span-2">Hola</span>
         <span class="text-span">
           @if (isset(Auth::user()->avatar->japanese))
           {{utf8_decode(Auth::user()->avatar->japanese)}}
           @else
-            {{''}}
+          {{''}}
           @endif
         </span>
       </div>
@@ -116,7 +123,7 @@ background-size: 100%; background-color: #6BA242;">
             <div class="text-block-15">#{{$key + 1}}</div>
           </div>
           <div class="column-5 w-col w-col-7">
-          <img class="image-36" src="@if($value->image){{$value->image}}@else{{'images/user-pic.png'}}@endif" style="border-radius: 100%; height: 37px; width: 37px">
+            <img class="image-36" src="@if($value->image){{$value->image}}@else{{'images/user-pic.png'}}@endif" style="border-radius: 100%; height: 37px; width: 37px">
             <div class="text-block-16">{{$value->first_name}} {{$value->last_name}}</div>
           </div>
           <div class="w-col w-col-3">
@@ -140,14 +147,14 @@ background-size: 100%; background-color: #6BA242;">
 </div>
 </div>
 <div class="div-block-40">
-    <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
-      <br>
-      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases & Condiciones.</a>
-      <br>
-      Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
+  <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
+    <br>
+    Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases & Condiciones.</a>
+    <br>
+    Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-<script src="js/webflow.js" type="text/javascript"></script>
-<!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
