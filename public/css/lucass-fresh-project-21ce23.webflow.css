@@ -626,4 +626,14 @@
   .form p {
     text-align: center;
   }
+
+  .alternate-38 {
+    background-size: 100% 450px !important;
+  }
+
+  .alternate-44 {
+   left: 1%;
+    top: 98%;
+    width: 400px;
+  }
 }
