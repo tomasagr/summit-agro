@@ -98,6 +98,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="/panel/users"><i class="fa fa-users"></i> <span>Usuarios</span>
             </a>
           </li>
+          <li class="{{Request::is('panel/solicitudes') || Request::is('panel/solicitudes/*') ? 'active' : ''}}">
+            <a href="/panel/award-solicitudes"><i class="fa fa-gift"></i> <span>Solicitudes Premios</span>
+            </a>
+          </li>
           <li class="{{Request::is('panel/invoices') || Request::is('panel/invoices/*') ? 'active' : ''}}">
             <a href="/panel/invoices"><i class="fa fa-file-text-o"></i> <span>Facturas Cargadas</span>
             </a>

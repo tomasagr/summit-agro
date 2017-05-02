@@ -81,6 +81,9 @@ Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], functio
 
 	Route::resource('solicitudes', 'SolicitudeController');
 
+	Route::resource('award-solicitudes', 'PanelAwardSolicitudeController');
+	Route::get('award-solicitudes/{id}/toggle', 'PanelAwardSolicitudeController@toggle');
+
 	Route::resource('levels', 'LevelsController');
 
 	Route::resource('cupons', 'CuponsController');
