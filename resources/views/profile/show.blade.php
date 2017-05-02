@@ -10,7 +10,7 @@
   <meta content="Webflow" name="generator">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="/css/editprofile.css" rel="stylesheet" type="text/css">
+  <link href="/css/editprofile.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -49,6 +49,7 @@
   </style>
 </head>
 <body class="body-4" ng-controller="ShowController">
+  @include('partials.header')
   <div class="div-block-52">
     <div class="div-block-53">
       <div class="div-block-42">

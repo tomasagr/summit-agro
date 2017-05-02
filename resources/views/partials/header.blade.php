@@ -2,7 +2,7 @@
   .header-main {
   position: relative;
   padding-top: 28px;
-  background-image: url('../images/header-top.png');
+  background-image: url('/images/header-top.png');
   background-position: 0px 0px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@
 }
 
 .header-link:hover {
-  background-image: url('../images/hover.png');
+  background-image: url('/images/hover.png');
   background-position: 50% 50%;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@
 }
 
 .header-link.active {
-  background-image: url('../images/hover.png');
+  background-image: url('/images/hover.png');
   background-position: 0px 0px;
   background-size: 100%;
   background-repeat: no-repeat;

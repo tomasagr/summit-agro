@@ -24,8 +24,8 @@
     try{Typekit.load();}catch(e){}
 </script>
 <script src="/js/modernizr.js" type="text/javascript"></script>
-<link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 <style>
     select {
       -webkit-appearance: none !important;
@@ -49,8 +49,8 @@
 </style>
 </head>
 <body class="body-4"
-style="background: url('/images/login-bg.jpg') no-repeat top left;
-background-size: 100%">
+  style="background: url('/images/login-bg.jpg') no-repeat top left;
+  background-size: 100%">
 <div class="div-block-52">
     <div class="div-block-53">
       <div class="div-block-42"><img class="image-46" sizes="(max-width: 991px) 49vw, 395.421875px" src="/images/arbol.png" srcset="/images/arbol-p-500.png 500w, /images/arbol.png 576w">
@@ -81,12 +81,6 @@ background-size: 100%">
             @endif
         </div>
     </form>
-    <div class="w-form-done">
-        <div>Thank you! Your submission has been received!</div>
-    </div>
-    <div class="w-form-fail">
-        <div>Oops! Something went wrong while submitting the form</div>
-    </div>
 </div>
 </div>
 <img class="image-47" style="bottom: 0" src="/images/pasto.png"><img class="image-48" src="/images/elipse.png">
