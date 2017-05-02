@@ -1413,3 +1413,72 @@
   line-height: 17px;
   text-align: center;
 }
+
+
+@media  all and (max-width: 990px) {
+   .body-3 {
+    background-color: #45A337;
+    background-image: url('../images/login-mobile.png');
+    background-position: 0px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+  .div-block {
+    margin-top: 110px!important;
+    padding: 1.5em;
+  }
+
+  .div-block-3 {
+    display: none;
+  }
+
+  .div-left {
+    display: none;
+  }
+
+  .div-left-responsive {
+    display: block;
+  }
+
+  .desc.text-block {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0;
+    text-align: left;
+    line-height: 27px;
+     margin-top: 1em;
+  }
+
+  .div-block-title {
+    margin-top: 7em;
+    margin-left: .66em;
+  }
+
+  form {
+        text-align: center;
+  }
+
+  .checkbox-field {
+    text-align: left;
+  }
+
+  .image-6 {
+    position: static;
+    margin-top: -56px;
+    margin-left: 24px;
+    width: 90%;
+  }
+
+  .div-block-40 {
+    background-size: 100%;
+    background-position: top left;
+    background: url(../images/footer-mobile.png) no-repeat;
+  }
+
+  .text-block-21 {
+    padding: 4em 2.5em;
+    line-height: 17px;
+  }
+}
