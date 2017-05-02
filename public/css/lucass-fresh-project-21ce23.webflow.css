@@ -492,22 +492,74 @@
 }
 
 .alternate-38 {
-   position: relative;
-    width: 100%;
-    max-width: 770px;
-    margin-right: auto;
-    margin-left: auto;
-    /* padding-top: 16px; */
-    background-image: url(../images/background-info-intro.png);
-    background-position: 0px 0px;
-    background-size: 100% 343px;
-    background-repeat: no-repeat;
-    color: #fff;
-    text-align: center;
+ position: relative;
+ width: 100%;
+ max-width: 770px;
+ margin-right: auto;
+ margin-left: auto;
+ /* padding-top: 16px; */
+ background-image: url(../images/background-info-intro.png);
+ background-position: 0px 0px;
+ background-size: 100% 343px;
+ background-repeat: no-repeat;
+ color: #fff;
+ text-align: center;
 
 }
 
 .alternate-44 {
-      left: 25%;
+  left: 25%;
+  top: 88%;
+}
+
+
+@media  all and (max-width: 990px) {
+  .body-3 {
+    background-color: #45A337;
+    background-image: url('../images/intro-a-mobile.png');
+    background-position: 0px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .text-block-20 {
+    font-size: 16px;
+  }
+
+  .text-span-8 {
+    font-size: 19px;
+    letter-spacing: 2px;
+  }
+
+  .div-block-38 {
+    width: 90%;
+    margin-top: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .image-43 {
+    position: absolute;
+    left: 0px;
+    bottom: 29px;
+    width: 100px;
+    margin-left: -38px;
+  }
+
+  .div-block-37 {
+    width: 35%;
+    margin-top: 34%;
+  }
+
+  .image-44 {
+    left: -4%;
     top: 88%;
+    width: 600px;
+  }
+
+  .div-block-40 {
+    background-size: 100%;
+    background-position: top left;
+    background: url(../images/footer-mobile.png) no-repeat;
+  }
 }
