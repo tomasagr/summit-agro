@@ -1481,4 +1481,8 @@
     padding: 4em 2.5em;
     line-height: 17px;
   }
+
+  .radio-agr.left {
+    margin-left: 137px;
+  }
 }
