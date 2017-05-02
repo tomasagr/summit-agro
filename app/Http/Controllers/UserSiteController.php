@@ -29,4 +29,26 @@ class UserSiteController extends Controller
     $user = User::find($id);
     return view('profile.show', $user);
   }
+
+  public function showApi($id)
+  {
+    return $user = User::find($id);
+  }
+
+  public function update(Request $request, $id)
+  {
+    $user = User::find($id);
+    $res = $user->update($request->all());
+    return response()->json(['res' => $res]);
+  }
+
+  public function image(Request $request, $id) 
+  {
+    $user = User::find($id);
+
+    $image = $request->file->store('uploads', ['visibility'  => 'public']);
+
+    $user->update(['image' => $image]);
+    return response()->json(['image' => $image]);
+  }
 }

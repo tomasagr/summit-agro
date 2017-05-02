@@ -39,7 +39,8 @@ class User extends Authenticatable
         "hobby",
         "team",
         "points",
-        "status"
+        "status",
+        "image"
     ];
 
     /**

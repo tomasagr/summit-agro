@@ -50,18 +50,9 @@
 </head>
 <body style="background: url('/images/bg-profile.png') no-repeat top left;
 background-size: 100%; background-color: #6BA242;">
+@include('partials.header')
 <div class="container-custom ranking">
-  <div class="bblock-12-ranking div-block-12">
-    <img class="image-15" src="images/logo-summit.svg">
-    <ul class="unordered-list-2 w-list-unstyled">
-      <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
-      </li>
-      <li class="list-item-4"><a href="/profile" class="link-6">MI PERFIL</a>
-      </li>
-      <li class="list-item-4"><a href="/logout" class="link-6">SALIR</a>
-      </li>
-    </ul>
-  </div>
+  
   <div class="user-header">
     <div class="user-data">
      @if (isset(Auth::user()->avatar))
@@ -79,7 +70,7 @@ background-size: 100%; background-color: #6BA242;">
           @if (isset(Auth::user()->avatar->japanese))
           {{utf8_decode(Auth::user()->avatar->japanese)}}
           @else
-          {{''}}
+            {{''}}
           @endif
         </span>
       </div>

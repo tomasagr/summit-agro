@@ -18,6 +18,9 @@ Route::get('products', 'ApiProductsController@index');
 Route::get('cupons', 'ApiCuponsController@index');
 
 Route::post('/user/{id}/solicitude', 'SolicitudeController@store');
+Route::get('/user/{id}', 'UserSiteController@showApi');
+Route::put('/user/{id}', 'UserSiteController@update');
+Route::post('/user/{id}/image', 'UserSiteController@image');
 
 Route::post('/avatar', 'AvatarsController@store');
 

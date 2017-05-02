@@ -53,21 +53,7 @@
       style="background: url('/images/bg-solicitudes.png') no-repeat top left;
       background-size: 100%">
   <div class="div-block-11">
-    <div class="container-custom">
-      <div class="div-block-12">
-        <a href="/home"><img class="image-15" src="images/logo-summit.svg"></a>
-        <ul class="unordered-list-2 w-list-unstyled">
-          <li class="list-item-4"><a href="/" class="link-6">INICIO</a>
-          </li>
-          <li class="list-item-4 link-active">
-            <a class="link-8" href="/profile">MI PERFIL</a>
-          </li>
-          <li class="list-item-4">
-            <a class="link-7" href="/logout">SALIR</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    @include('partials.header')
   </div>
   <div class="card-success" ng-if="invoices.formHidden" ng-cloak>
     <h3>Puntos cargados con exito</h3>

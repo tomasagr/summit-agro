@@ -51,18 +51,7 @@
 </head>
 <?php $level = $levels->all();?>
 <body class="body-8"><img class="image-48" sizes="100vw" src="/images/header-houses.png" srcset="images/header-houses-p-500.png 500w, images/header-houses-p-800.png 800w, images/header-houses-p-1080.png 1080w, images/header-houses-p-1600.png 1600w, images/header-houses.png 1920w">
-  <div class="div-block-12">
-    <div class="div-block-56"><img class="image-15" src="/images/logo-summit.svg">
-    </div>
-    <ul class="unordered-list-2 w-list-unstyled">
-      <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
-      </li>
-      <li class="list-item-4"><a href="/profile" class="link-6">MI PERFIL</a>
-      </li>
-      <li class="list-item-4"><a href="http://logout" class="link-6">SALIR</a>
-      </li>
-    </ul>
-  </div>
+ @include('partials.header')
   <div class="div-block-57">
     <div class="div-block-58">
       <div class="div-block-59"><img class="image-49" height="104" src="/images/ranking-title.png" width="445">

@@ -80,30 +80,31 @@
 <body class="body" style="background: url('/images/awards-bg.png') no-repeat top left;
 background-size: 100%; background-color: #6BA242">
   <div class="div-block-11" style="margin-bottom: 25em;">
-    <div class="container-custom">
-      <div class="div-block-12">
-        <img onclick="window.location='/home'" class="image-15" src="images/logo-summit.svg" style="cursor: pointer;">
-        <ul class="unordered-list-2 w-list-unstyled">
-          <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
-          </li>
-          <li class="list-item-4 link-active"><a href="/profile" class="link-8">MI PERFIL</a>
-          </li>
-          <li class="list-item-4"><a href="/logout" class="link-7">SALIR</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    @include('partials.header')
     <div class="container-custom">
       <div class="user-header">
         <div class="user-data">
-          <div class="user-image"><img src="images/personaje-2.png">
-          </div>
-          <div class="div-block-22">
-            <div class="text-block-9"><span class="text-span-2">Hola</span> <span class="text-span">{{Auth::user()->first_name}} {{Auth::user()->last_name}} </span>
-            </div>
-            <div><a>Modificar mis datos</a>
-            </div>
-          </div>
+          @if (isset(Auth::user()->avatar))
+     <div class="user-image">
+      <img class="user-bg" src="/images/profile.svg" alt="">
+      <img class="user-avatar" src="/avatars/{{Auth::user()->avatar->image}}">
+      </div>
+     @else
+     <div class="user-image"><img src="images/personaje-2.png"></div>
+     @endif
+     <div class="div-block-22">
+      <div class="text-block-9"><span class="text-span-2">Hola</span>
+        <span class="text-span">
+          @if (isset(Auth::user()->avatar->japanese))
+          {{utf8_decode(Auth::user()->avatar->japanese)}}
+          @else
+            {{''}}
+          @endif
+        </span>
+      </div>
+      <div><a href="/users/{{Auth::user()->id}}/show">Modificar mis datos</a>
+      </div>
+    </div>
         </div>
         <div>
           <div class="text-block-10">Eres samurai

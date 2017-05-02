@@ -549,32 +549,29 @@
   justify-content: flex-start;
 }
 
-.list-item-4 {
-  padding: 10px 30px;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  font-family: Poppins, sans-serif;
-  color: #000;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.list-item-4:hover {
-  background-image: url('../images/hover.png');
-  background-position: 0px 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-}
-
 .link-6 {
-  padding: 0px;
+  font-family: "Lato";
+  display: block;
+  padding: 10px 30px !important;
   color: #000;
   text-decoration: none;
 }
 
 .link-6:hover {
+  color: #fff;
+  background-image: url('../images/hover.png');
+  background-position: 0px 0px;
+  background-size: 100% 39px;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.link-6.active {
+  color: #fff;
+  background-image: url('../images/hover.png');
+  background-position: 0px 0px;
+  background-size: 100% 39px;
+  background-repeat: no-repeat;
   color: #fff;
 }
 

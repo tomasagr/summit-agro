@@ -58,7 +58,8 @@
       <img class="image-17" src="images/logo-summit.svg" width="385">
     </div>
     <ul class="header-home unordered-list-2 w-list-unstyled">
-      <li class="list-item-4"><a href="/home" class="link-6">INICIO</a>
+    <img src="/images/menu-bg.png" alt="" style="position: absolute; top: -50px; left: -50px; z-index: -1">
+      <li class="list-item-4"><a href="/home" class="link-6 active">INICIO</a>
       </li>
       <li class="list-item-4"><a class="link-6" href="/profile">MI PERFIL</a>
       </li>
