@@ -2556,6 +2556,16 @@
     text-align: center;
 }
 
+.title-modal {
+  text-align: center;
+  font-family: "MadeinChina";
+}
+
+.p-modal {
+  text-align: center;
+  font-family: "Lato";
+  font-size: 20px;
+}
 
 @media all and (min-width: 1656px) {
   .div-block-57 {
