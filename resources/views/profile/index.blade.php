@@ -115,7 +115,7 @@ background-size: 100%; background-color: #6BA242;">
           <div class="w-col w-col-2">
             <div class="text-block-15">#{{$key + 1}}</div>
           </div>
-          <div class="column-5 w-col w-col-7"><img class="image-36" src="images/user-pic.png">
+          <div class="column-5 w-col w-col-7"><img class="image-36" src="@if($value->image){{$value->image}}@else{{'images/user-pic.png'}}@endif">
             <div class="text-block-16">{{$value->first_name}} {{$value->last_name}}</div>
           </div>
           <div class="w-col w-col-3">
