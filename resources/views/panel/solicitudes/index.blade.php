@@ -36,7 +36,7 @@
 								<a href="/panel/users/{{$solicitude->user->id}}/edit">{{$solicitude->user->first_name}} {{$solicitude->user->last_name}}</a>
 							</td>
 							<td>
-								<a href="/panel/awards/{{$solicitude->user->id}}/edit">{{$solicitude->award->name}}</a>
+								<a href="/panel/awards/{{$solicitude->award->id}}/edit">{{$solicitude->award->name}}</a>
 							</td>
 							<td>
 								@if ($solicitude->status)
