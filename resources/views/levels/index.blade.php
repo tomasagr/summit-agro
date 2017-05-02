@@ -144,11 +144,12 @@
   <div id="nivel3" class="modal" style="display: none; max-width: 700px!important;">
     <h2 class="title-modal">NIVEL 3</h2>
     <p class="p-modal">
-      <p class="p-body">
-        *Curiosidad: La armadura clásica del samurái, yoroi, se calcula que pesa unos 30 kilogramos y es un tipo de armadura laminar y se desprendió de la armadura keikō (携行?). Su peso considerable se debe a que la armadura era hecha completamente de hierro, solo se empleaban piezas de ese metal en las zonas donde se requería de más protección y en el resto de la armadura se alternaban piezas de hierro con cuero.
-      </p>
+      
       Has sumado tantos puntos, que ya tienes la armadura clásica empleada por los samuráis, <b>YOROI</b>, y tu arma sigue siendo la <b>KATANA</b>.
     </p>
+    <p class="p-body">
+        *Curiosidad: La armadura clásica del samurái, yoroi, se calcula que pesa unos 30 kilogramos y es un tipo de armadura laminar y se desprendió de la armadura keikō (携行?). Su peso considerable se debe a que la armadura era hecha completamente de hierro, solo se empleaban piezas de ese metal en las zonas donde se requería de más protección y en el resto de la armadura se alternaban piezas de hierro con cuero.
+      </p>
   </div>
   <div id="nivel4" class="modal" style="display: none; max-width: 700px!important;">
     <h2 class="title-modal">NIVEL 4</h2>
