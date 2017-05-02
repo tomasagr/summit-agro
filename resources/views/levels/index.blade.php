@@ -144,7 +144,6 @@
   <div id="nivel3" class="modal" style="display: none; max-width: 700px!important;">
     <h2 class="title-modal">NIVEL 3</h2>
     <p class="p-modal">
-      
       Has sumado tantos puntos, que ya tienes la armadura clásica empleada por los samuráis, <b>YOROI</b>, y tu arma sigue siendo la <b>KATANA</b>.
     </p>
     <p class="p-body">
