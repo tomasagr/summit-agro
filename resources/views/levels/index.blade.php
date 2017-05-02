@@ -58,29 +58,17 @@
       </div>
       <div class="div-block-60"><img class="image-52" sizes="66vw" src="/images/montana.png" srcset="images/montana-p-500.png 500w, images/montana-p-800.png 800w, images/montana.png 873w">
         <div class="row-8 w-row">
-          <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-4.png" width="75">
+          <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-1.png" width="115">
           </div>
           <div class="w-col w-col-9">
-            <div class="text-block-27">NIVEL 04</div>
-            <div class="text-block-28">Ultimo Samurái</div>
-            <div class="text-block-29">Arma de entrenamiento: Katana Moderna</div>
-            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[3]->points}}</div>
+            <div class="text-block-27">NIVEL 01</div>
+            <div class="text-block-28">Samurái sin armadura, aprendiz</div>
+            <div class="text-block-29">Arma de entrenamiento: Bokken</div>
+            <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[0]->points}}</div>
           </div>
         </div>
       </div>
       <div class="alternate div-block-60">
-        <div class="row-8 w-row">
-          <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-3.png" width="115">
-          </div>
-          <div class="w-col w-col-9">
-            <div class="text-block-27">NIVEL 03</div>
-            <div class="text-block-28">Samurái con armadura clasica</div>
-            <div class="text-block-29">Arma de entrenamiento: Katana&nbsp;</div>
-            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[2]->points}}</div>
-          </div>
-        </div>
-      </div>
-      <div class="div-block-60">
         <div class="row-8 w-row">
           <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-2.png" width="115">
           </div>
@@ -88,19 +76,31 @@
             <div class="text-block-27">NIVEL 02</div>
             <div class="text-block-28">Samurái con armadura simple</div>
             <div class="text-block-29">Arma de entrenamiento: Bokken</div>
-            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[1]->points}}</div>
+            <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[1]->points}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="div-block-60">
+        <div class="row-8 w-row">
+          <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-3.png" width="115">
+          </div>
+          <div class="w-col w-col-9">
+            <div class="text-block-27">NIVEL 03</div>
+            <div class="text-block-28">Samurái con armadura clasica</div>
+            <div class="text-block-29">Arma de entrenamiento: Katana&nbsp;</div>
+            <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[2]->points}}</div>
           </div>
         </div>
       </div>
       <div class="alternate div-block-60">
         <div class="row-8 w-row">
-          <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-1.png" width="115">
+          <div class="column-12 w-col w-col-3"><img height="70" src="/images/nivel-4.png" width="75">
           </div>
           <div class="w-col w-col-9">
-            <div class="text-block-27">NIVEL 01</div>
-            <div class="text-block-28">Samurái sin armadura, aprendiz</div>
-            <div class="text-block-29">Arma de entrenamiento: Bokken</div>
-            <div class="text-block-29">Cantidad de puntos necesarios: {{$level[0]->points}}</div>
+            <div class="text-block-27">NIVEL 04</div>
+            <div class="text-block-28">Ultimo Samurái</div>
+            <div class="text-block-29">Arma de entrenamiento: Katana Moderna</div>
+            <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[3]->points}}</div>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
   <div class="div-block-40">
     <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
       <br>
-      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Terminos &amp;Condiciones.</a>
+      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases y Condiciones.</a>
       <br>
       Si tenes alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
