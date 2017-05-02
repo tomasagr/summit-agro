@@ -10,7 +10,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/lucass-fresh-project-21ce23.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/lucass-fresh-project-21ce23.webflow.css?v=3" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -84,12 +84,6 @@
                 </div>
               </div>
             </form>
-            <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form</div>
-            </div>
           </div>
         </div>
       </div><img class="image-47" src="images/pasto.png"><img class="image-48" src="images/elipse.png">
