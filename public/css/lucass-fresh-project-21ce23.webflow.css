@@ -520,10 +520,12 @@
     background-position: 0px 0px;
     background-size: 100%;
     background-repeat: no-repeat;
+    overflow-x: hidden;
   }
 
   .text-block-20 {
     font-size: 16px;
+    line-height: 25px;
   }
 
   .text-span-8 {
@@ -561,6 +563,10 @@
     background-size: 100%;
     background-position: top left;
     background: url(../images/footer-mobile.png) no-repeat;
+  }
+
+  .div-block-41 {
+    width: 351px;
   }
 
   .text-block-21 {
