@@ -106,7 +106,7 @@
 <div class="header-main">
     <div class="header-content">
       <div class="header-logo">
-        <img class="logo-image" src="/images/logo-summit.svg">
+        <a href="/home"><img class="logo-image" src="/images/logo-summit.svg"></a>
       </div>
       <div class="header-links">
         <div class="houses">
