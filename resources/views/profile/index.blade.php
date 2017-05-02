@@ -110,15 +110,21 @@ background-size: 100%; background-color: #6BA242;">
     @if(isset($levels[$actual - 1]) && $actual != 3)
     <div class="text-block-11">
       ¡Necesitás
-      <span>{{$levels[$actual - 1]->points - (Auth::user()->points - $levels[$actual - 1]->points)}}</span>
+      <span>{{$levels[$actual + 1]->points - Auth::user()->points}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
-    @elseif ($actual == 0)
+    @elseif (Auth::user()->points < $levels[0]->points  && $actual != 3)
     <div class="text-block-11">
       ¡Necesitás
-      <span>{{$levels[$actual]->points}}</span>
+      <span>{{$levels[$actual]->points - Auth::user()->points}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
+    @elseif (Auth::user()->points >= $levels[0]->points  && $actual != 3)
+    <div class="text-block-11">
+      ¡Necesitás
+      <span>{{$levels[$actual + 1]->points - Auth::user()->points}}</span>
+      puntos para alcanzar el siguiente nivel!
+      </div>
     @endif
   </div>
 </div>
