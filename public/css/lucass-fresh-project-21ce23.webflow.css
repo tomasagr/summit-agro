@@ -562,4 +562,9 @@
     background-position: top left;
     background: url(../images/footer-mobile.png) no-repeat;
   }
+
+  .text-block-21 {
+    padding: 4em 2.5em;
+    line-height: 17px;
+  }
 }
