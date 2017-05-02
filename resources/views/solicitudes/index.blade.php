@@ -10,7 +10,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
   <link href="css/custom.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
@@ -113,7 +113,11 @@
               <div class="w-col w-col-6">
                 <div class="header-table">Productos</div>
               </div>
-              <div class="w-col w-col-3">
+              <div class="w-col w-col-1" style="padding: 0;
+            width: 10px;
+            margin-top: 14px;
+            "></div>
+              <div class="w-col w-col-2">
                 <div class="header-table">Cantidad</div>
               </div>
               <div class="w-col w-col-3">
@@ -133,7 +137,11 @@
                 <option value="">Seleccionar</option>
               </select>
             </div>
-            <div class="column-3 w-col w-col-3">
+            <div class=" w-col w-col-1" style="padding: 0;
+            width: 10px;
+            margin-top: 14px;
+            ">@{{invoices.invoice.products[$index].unit}}</div>
+            <div class="w-col w-col-2">
               <input class="factura-field w-input"
               ng-model="invoices.invoice.products[$index].quanty"
               id="quanty"

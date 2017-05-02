@@ -83,7 +83,7 @@
       Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
   <div id="video" class="modal" style="display: none; max-width: 700px!important;">
-    <iframe src="https://player.vimeo.com/video/214694695" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe width="100%" height="720" src="https://www.youtube.com/embed/8pBKJuhNonY" frameborder="0" allowfullscreen></iframe>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>

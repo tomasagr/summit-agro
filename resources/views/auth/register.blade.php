@@ -59,7 +59,7 @@
     </ul>
     <div class="div-block" style="margin-top: 241px">
       <div class="row w-row">
-        <div class="column w-col w-col-6 ">
+        <div class="column w-col w-col-6 div-left-responsive">
           <div class="column-content div-left-responsive">
             <img src="images/logo-summit.svg">
             <div style="display: flex;">
@@ -78,13 +78,19 @@
             </div>
           </div>
         </div>
-        <div class="column-content div-left">
-          <img src="images/logo-summit.svg">
-          <div class="text-block">
-            <div class="div-block-3 v-divisor">
-              <div class="div-block-2"></div>
+        <div class="column w-col w-col-6 ">
+          <div class="column-content div-left">
+            <img src="images/logo-summit.svg">
+
+
+            <div class="text-block">
+              <img src="/images/bienvenido.png" alt="" width="268">
+                <div class="desc text-block">Ingresa para poder sumar puntos y ganar grandes premios!</div>
+              <div class="div-block-3 v-divisor">
+                <div class="div-block-2"></div>
+              </div>
+              <img class="image-4" height="555" src="images/pers-registro.svg">
             </div>
-            <img class="image-4" height="555" src="images/pers-registro.svg">
           </div>
         </div>
         <div class="column-2 w-col w-col-6">

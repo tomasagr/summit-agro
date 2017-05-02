@@ -112,3 +112,10 @@
   text-align: center;
   margin-top: -19px;
 }
+
+select.factura-field {
+  background: linear-gradient(45deg, transparent 50%, black 50%), linear-gradient(135deg, black 50%, transparent 50%);
+    background-position: calc(100% - 21px) 18px, calc(100% - 16px) 18px;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}

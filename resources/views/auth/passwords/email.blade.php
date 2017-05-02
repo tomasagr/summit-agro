@@ -91,7 +91,7 @@ background-size: 100%">
 </div>
 <img class="image-47" style="bottom: 0" src="/images/pasto.png"><img class="image-48" src="/images/elipse.png">
 </div>
-<div class="text-block-23">Si aun no te haz registrado haz <a href="/register" class="link-3">click aqui</a>
+<div class="text-block-23">Si aun no te has registrado haz <a href="/register" class="link-3">click aquí</a>
 </div>
 </div>
 </div>

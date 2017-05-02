@@ -60,7 +60,7 @@
     <div class="div-block-38 intro-bg">
       <div class="text-block-19">...</div>
       <div class="text-block-20"><span class="text-span-8">Summit Agro</span> busca samuráis, acaso tú te animaráis?
-        <br>Si Summit recomendais, muchos premios ganaráis.
+        <br>Si Summit recomendáis, muchos premios ganaráis.
         <br>Y si vender es tu deber, la gloria has de beber.
         <br>Las armas necesarias portarás, por muchos logros pelearás.
         <br>Superarte a ti mismo deberás, pero ojo, también participan los demás.

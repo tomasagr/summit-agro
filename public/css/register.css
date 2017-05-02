@@ -143,8 +143,12 @@
   left: -119px;
   top: 96px;
   max-width: 119%;
-  margin-bottom: 32px;
+  margin-bottom: -13px;
   padding-bottom: 0px;
+}
+
+.div-left-responsive {
+  display: none;
 }
 
 .row {
