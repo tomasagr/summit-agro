@@ -10,7 +10,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -59,7 +59,7 @@
 background-size: 100%; background-color: #6BA242;">
 @include('partials.header')
 <div class="container-custom ranking">
-  
+
   <div class="user-header">
     <div class="user-data">
      @if (isset(Auth::user()->avatar))
@@ -87,28 +87,39 @@ background-size: 100%; background-color: #6BA242;">
   </div>
   <div>
     <div class="text-block-10">Eres samurái
-      @if(Auth::user()->points > $levels[0]->points)
+      @if(Auth::user()->points >= $levels[3]->points)
       <strong>Nivel 04</strong>
-      <?php $actual = 0 ?>
-      @elseif(Auth::user()->points >= $levels[1]->points)
-      <strong>Nivel 03</strong>
-      <?php $actual = 1 ?>
-      @elseif(Auth::user()->points >= $levels[2]->points)
-      <strong>Nivel 02</strong>
-      <?php $actual = 2 ?>
-      @elseif(Auth::user()->points >= $levels[3]->points || Auth::user()->points <= $levels[3]->points)
       <?php $actual = 3 ?>
+      @elseif(Auth::user()->points >= $levels[2]->points)
+      <strong>Nivel 03</strong>
+      <?php $actual = 2 ?>
+      @elseif(Auth::user()->points >= $levels[1]->points)
+      <strong>Nivel 02</strong>
+      <?php $actual = 1 ?>
+      @elseif(Auth::user()->points >= $levels[0]->points || Auth::user()->points <= $levels[3]->points)
+      <?php $actual = 0 ?>
+      @if (Auth::user()->points >= $levels[0]->points)
       <strong>Nivel 01</strong>
+      @else
+      <strong>Nivel 00</strong>
+      @endif
       @endif
       <span class="text-span-3">{{Auth::user()->points}} puntos</span>
     </div>
-    @if(isset($levels[$actual - 1]))
+
+    @if(isset($levels[$actual - 1]) && $actual != 3)
     <div class="text-block-11">
-      ¡Necesitas
-      <span>{{$levels[$actual - 1]->points - Auth::user()->points}}</span>
+      ¡Necesitás
+      <span>{{$levels[$actual - 1]->points - (Auth::user()->points - $levels[$actual - 1]->points)}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
-    @endif()
+    @elseif ($actual == 0)
+    <div class="text-block-11">
+      ¡Necesitás
+      <span>{{$levels[$actual]->points}}</span>
+      puntos para alcanzar el siguiente nivel!
+    </div>
+    @endif
   </div>
 </div>
 </div>
@@ -122,6 +133,7 @@ background-size: 100%; background-color: #6BA242;">
           <div class="w-col w-col-2">
             <div class="text-block-15">#{{$key + 1}}</div>
           </div>
+          @if ($value->cuit == Auth::user()->cuit)
           <div class="column-5 w-col w-col-7">
             <img class="image-36" src="@if($value->image){{$value->image}}@else{{'images/user-pic.png'}}@endif" style="border-radius: 100%; height: 37px; width: 37px">
             <div class="text-block-16">{{$value->first_name}} {{$value->last_name}}</div>
@@ -129,6 +141,15 @@ background-size: 100%; background-color: #6BA242;">
           <div class="w-col w-col-3">
             <div class="text-block-17">samurai nivel 01</div>
           </div>
+          @else
+            <div class="column-5 w-col w-col-7">
+            <div>-----</div>
+            <div class="text-block-16">--------</div>
+          </div>
+          <div class="w-col w-col-3">
+            <div class="text-block-17">-----</div>
+          </div>
+          @endif
         </div>
         @endforeach
       </div><img class="image-37" src="images/elipse.png">
