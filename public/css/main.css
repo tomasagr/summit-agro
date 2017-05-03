@@ -1394,6 +1394,10 @@
     justify-content: center;
 }
 
+.column-mobile {
+  display: none;
+}
+
 @media all and (min-width: 1656px) {
   .div-block-14 {
     height: 822px;
@@ -1456,6 +1460,7 @@
     flex-wrap: wrap;
     margin-top: 100px;
   }
+
   .body-profile {
     background: url('/images/bg-grass-alt.png') no-repeat !important;
     background-size: 100%;
@@ -1486,23 +1491,29 @@
   }
 
   .column-mobile {
+    text-align: center;
+    display: block;
+  }
+
+  .column-desktop {
     display: none;
   }
 
   .btn-success.ranking {
-    width: 389px;
+    width: 300px;
     margin-top: 2em;
   }
 
   .div-block-36 {
-    width: 383px;
+    width: 300px;
+    margin: 0 auto;
     margin-top: 39px;
     margin-bottom: 2em;
   }
 
   .div-block-33 {
     width: 100%;
-    font-size: 36px;
+    font-size: 30px;
     padding-bottom: 50px;
   }
 
@@ -1518,6 +1529,19 @@
     left: 36px;
     top: 1042px;
   }
+
+  .user-image img {
+    width: 80%;
+  }
+
+  .text-block-9 {
+    font-size: 18px;
+  }
+
+  .div-block-22  {
+    margin-left: 0;
+  }
+
   .div-block-40 {
     background-size: 100%;
     background-position: top left;

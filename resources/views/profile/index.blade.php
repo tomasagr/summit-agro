@@ -131,7 +131,7 @@ background-size: 100%; background-color: #6BA242;">
 </div>
 
 <div class="row-4 w-row container-custom ranking">
-  <div class="column-6 w-col w-col-4" style="padding: 0;">
+  <div class="column-6 w-col w-col-4 column-mobile" style="padding: 0;" >
   <a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
     <div class="div-block-36">
       <a href="/awards">
@@ -170,7 +170,8 @@ background-size: 100%; background-color: #6BA242;">
       </div><img class="image-37" src="images/elipse.png">
     </div>
   </div>
-  <div class="column-6 w-col w-col-4 column-mobile"><a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
+  <div class="column-6 w-col w-col-4 column-desktop">
+    <a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
     <div class="div-block-36">
       <a href="/awards">
         <img src="/images/btn-verpremios.png" alt="">
