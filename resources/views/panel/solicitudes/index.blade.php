@@ -31,7 +31,8 @@
 				</thead>
 				<tbody>
 					@foreach($solicitudes as $solicitude)
-						<tr>
+						@if (isset($solicitude->user))
+							<tr>
 							<td>
 								<a href="/panel/users/{{$solicitude->user->id}}/edit">{{$solicitude->user->first_name}} {{$solicitude->user->last_name}}</a>
 							</td>
@@ -48,6 +49,7 @@
 								@endif
 							</td>
 						</tr>
+						@endif 
 					@endforeach
 				</tbody>
 			</table>
