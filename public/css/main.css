@@ -1534,7 +1534,7 @@
     width: 80%;
   }
 
-  .text-block-9 {
+  .text-block-9, .text-span-2 {
     font-size: 18px;
   }
 
@@ -1551,5 +1551,13 @@
   .text-block-21 {
     padding: 4em 2.5em;
     line-height: 17px;
+  }
+
+  .text-block-10 {
+    font-size: 15px;
+  }
+
+  .user-avatar {
+    left: 9px;
   }
 }
