@@ -97,9 +97,47 @@
   color: #fff;
 }
 
+.header-mobile {
+    display: none;
+  }
+
 @media all and (min-width: 1656px) {
   .header-main {
     padding-top: 60px;
+  }
+}
+
+@media all and (max-width: 990px) {
+  .header-main {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
+  }
+
+  .header-houses {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .logo-mobile {
+    text-align: center;
+    padding-top: 1em;
+  }
+
+  .header-links {
+    display: flex;
+    width: 100%;
+    margin-bottom: -24px;
+    margin-top: 53px;
+  }
+
+  .header-link {
+    font-size: 10px;
+    width: 99px;
+    height: 38px;
   }
 }
 </style>
@@ -123,4 +161,23 @@
         </a>
       </div>
     </div>
+  </div>
+
+  <div class="header-mobile">
+    <img class="header-houses" src="/images/houses-bg.png">
+    <div class="logo-mobile">
+      <a href="/home"><img width="300" src="/images/logo-summit.svg"></a>
+    </div>
+
+    <div class="header-links">
+        <a class="header-link w-inline-block" href="/home">
+          <div>INICIO</div>
+        </a>
+        <a class="active header-link w-inline-block" href="/profile">
+          <div>MI PERFIL</div>
+        </a>
+        <a class="header-link w-inline-block" href="/logout">
+          <div>SALIR</div>
+        </a>
+      </div>
   </div>

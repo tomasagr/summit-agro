@@ -2572,3 +2572,62 @@
     margin-top: 15%;
   }
 }
+
+@media all and (max-width: 990px) {
+  .body-8 {
+    background-color: #6ba242;
+    background-image: url('../images/bg-grass.png');
+    background-position: 0px 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .image-52 {
+    display: none;
+  }
+
+  .image-49 {
+    height: 97px;
+  }
+
+  .div-block-59 {
+    padding-left: 0;
+    margin: 1em;
+    margin-top: 7em;
+  }
+
+  .div-block-60 {
+    padding-left: 0;
+  }
+
+  .div-block-60 .column-12 {
+    width: 39%;
+    padding-left: 40px;
+  }
+
+  .div-block-58 {
+    margin: 0 1em;
+    width: 93%;
+    background: white;
+  }
+
+  .image-53 {
+    margin-top: -9px;
+  }
+
+  .image-54 {
+    margin-top: -11px;
+    margin-left: -4px;
+  }
+
+  .div-block-40 {
+    background-size: 100%;
+    background-position: top left;
+    background: url(../images/footer-mobile.png) no-repeat;
+  }
+
+  .text-block-21 {
+    padding: 4em 2.5em;
+    line-height: 17px;
+  }
+}
