@@ -1,7 +1,9 @@
 .image {
   width: 100%;
 }
-
+.text-block-16 {
+  text-transform: uppercase;
+}
 .image-2 {
   position: absolute;
   left: 0px;
@@ -1447,4 +1449,83 @@
     font-size: 10px;
     line-height: 17px;
     text-align: center;
+}
+
+@media all and (max-width: 990px) {
+  .user-header {
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+  .body-profile {
+    background: url('/images/bg-grass-alt.png') no-repeat !important;
+    background-size: 100%;
+    background-position: 0% 55% !important;
+    background-color: #6BA242;
+  }
+
+  .user-data {
+    width: 100%;
+  }
+
+  .user-data + div {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .text-block-9 {
+    font-size: 21px;
+  }
+
+  .container-custom.ranking {
+    margin-top: 1em;
+  }
+
+  .container-custom.ranking .column-4 {
+    padding: 1em;
+  }
+
+  .column-mobile {
+    display: none;
+  }
+
+  .btn-success.ranking {
+    width: 389px;
+    margin-top: 2em;
+  }
+
+  .div-block-36 {
+    width: 383px;
+    margin-top: 39px;
+    margin-bottom: 2em;
+  }
+
+  .div-block-33 {
+    width: 100%;
+    font-size: 36px;
+    padding-bottom: 50px;
+  }
+
+  .text-block-16 {
+    width: 163px;
+  }
+
+  .text-block-15, .text-block-16, .text-block-17 {
+    font-size: 16px;
+  }
+
+  .image-37 {
+    left: 36px;
+    top: 1042px;
+  }
+  .div-block-40 {
+    background-size: 100%;
+    background-position: top left;
+    background: url(../images/footer-mobile.png) no-repeat;
+  }
+
+  .text-block-21 {
+    padding: 4em 2.5em;
+    line-height: 17px;
+  }
 }

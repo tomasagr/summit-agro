@@ -55,7 +55,7 @@
     }
   </style>
 </head>
-<body style="background: url('/images/bg-profile.png') no-repeat top left;
+<body class="body-profile" style="background: url('/images/bg-profile.png') no-repeat top left;
 background-size: 100%; background-color: #6BA242;">
 @include('partials.header')
 <div class="container-custom ranking">
@@ -124,12 +124,21 @@ background-size: 100%; background-color: #6BA242;">
       ¡Necesitás
       <span>{{$levels[$actual + 1]->points - Auth::user()->points}}</span>
       puntos para alcanzar el siguiente nivel!
-      </div>
+    </div>
     @endif
   </div>
 </div>
 </div>
+
 <div class="row-4 w-row container-custom ranking">
+  <div class="column-6 w-col w-col-4" style="padding: 0;">
+  <a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
+    <div class="div-block-36">
+      <a href="/awards">
+        <img src="/images/btn-verpremios.png" alt="">
+      </a>
+    </div>
+  </div>
   <div class="column-4 w-col w-col-8">
     <div class="div-block-34">
       <div class="div-block-33">RANKING DE SAMURAIS</div>
@@ -148,7 +157,7 @@ background-size: 100%; background-color: #6BA242;">
             <div class="text-block-17">samurai nivel 01</div>
           </div>
           @else
-            <div class="column-5 w-col w-col-7">
+          <div class="column-5 w-col w-col-7">
             <div>-----</div>
             <div class="text-block-16">--------</div>
           </div>
@@ -161,7 +170,7 @@ background-size: 100%; background-color: #6BA242;">
       </div><img class="image-37" src="images/elipse.png">
     </div>
   </div>
-  <div class="column-6 w-col w-col-4"><a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
+  <div class="column-6 w-col w-col-4 column-mobile"><a class="btn-success ranking w-button" href="/invoices">Sumar puntos</a>
     <div class="div-block-36">
       <a href="/awards">
         <img src="/images/btn-verpremios.png" alt="">
