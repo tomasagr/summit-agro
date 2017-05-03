@@ -2374,7 +2374,8 @@
     overflow-x: hidden;
     background-color: #638c3e;
     background-image: url('../images/home-mobile.png');
-    background-position: 0px 0px;
+    background-position: top left;
+    background-attachment: scroll;
     background-size: 100%;
   }
 

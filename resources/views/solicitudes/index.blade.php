@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>Summit Samurái</title>
   <meta content="Productos Disponibles" property="og:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="width=device-width,maximum-scale=1.0, minimum-scale=1.0 initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
