@@ -2370,13 +2370,17 @@
 
 @media  all and (max-width: 990px) {
 
+  body, html {
+    min-height: 100%;
+  }
+
   .body-5 {
     overflow-x: hidden;
     background-color: #638c3e;
     background-image: url('../images/home-mobile.png');
     background-position: top left;
     background-attachment: scroll;
-    background-size: 100% auto;
+    background-size: 100%;
     min-height: 100%;
   }
 
