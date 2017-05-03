@@ -2376,7 +2376,7 @@
     background-image: url('../images/home-mobile.png');
     background-position: top left;
     background-attachment: scroll;
-    background-size: 100%;
+    background-size: 100% auto;
   }
 
   .container-home.home-c {
