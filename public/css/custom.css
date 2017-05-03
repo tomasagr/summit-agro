@@ -119,3 +119,16 @@ select.factura-field {
     background-size: 5px 5px;
     background-repeat: no-repeat;
 }
+
+@media all and (max-width: 990px) {
+  .footer {
+    background-size: 100%;
+    background-position: top left;
+    background: url(../images/footer-mobile.png) no-repeat;
+  }
+
+  .footer-text {
+    padding: 4em 2.5em;
+    line-height: 17px;
+  }
+}

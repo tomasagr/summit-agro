@@ -1468,6 +1468,13 @@
     background-color: #6BA242;
   }
 
+  .body-profile.invoices {
+    background: url('/images/bg-grass-alt.png') no-repeat !important;
+    background-size: 100%;
+    background-position: 0% 73% !important;
+    background-color: #6BA242;
+  }
+
   .user-data {
     width: 100%;
   }
@@ -1559,5 +1566,66 @@
 
   .user-avatar {
     left: 9px;
+  }
+
+  .div-block-14 {
+    padding: 1em;
+    height: 736px;
+  }
+
+  .div-block-15 img {
+    height: 100px;
+  }
+
+  .btn-success.info {
+    font-size: 15px;
+  }
+
+  .alt-btn.btn-success {
+    font-size: 15px;
+    margin-right: 0;
+  }
+
+  .div-block-14 {
+    height: 736px;
+  }
+
+  .text-block-7 {
+    font-size: 11px;
+  }
+
+  .responsive-6 {
+    width: 38%;
+  }
+
+  .responsive-1 {
+    width: 8.33333333%;
+  }
+
+  .responsive-2 {
+    width: 31%;
+  }
+
+  .responsive-3 {
+    width: 25%;
+  }
+
+  .responsive-3 + div {
+        font-size: 13px;
+  }
+
+  .div-block-20 {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    flex-align: center;
+  }
+
+  .text-block-8 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .image-shadow {
+    width: -10px;
   }
 }

@@ -11,7 +11,7 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/main.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
-  <link href="css/custom.css" rel="stylesheet" type="text/css">
+  <link href="css/custom.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
     WebFont.load({
@@ -51,7 +51,7 @@
 </head>
 <body ng-app="loadInvoices" ng-controller="InvoicesController as invoices"
       style="background: url('/images/bg-solicitudes.png') no-repeat top left;
-      background-size: 100%">
+      background-size: 100%" class="body-profile invoices">
   <div class="div-block-11">
     @include('partials.header')
   </div>
@@ -61,7 +61,7 @@
   </div>
   <div class="container-custom" ng-if="!invoices.formHidden">
     <div class="w-form">
-      <form name="invoicesForm" novalidate ng-cloak>
+      <form name="invoicesForm" novalidate ng-cloak style="margin: 1em;">
         <div class="div-block-14">
           <div class="div-block-15">
             <a class="w-inline-block" href="#">
@@ -110,24 +110,24 @@
           </div>
           <div>
             <div class="row-2 w-row">
-              <div class="w-col w-col-6">
+              <div class="w-col w-col-6 responsive-6">
                 <div class="header-table">Productos</div>
               </div>
-              <div class="w-col w-col-1" style="padding: 0;
+              <div class="w-col w-col-1 responsive-1" style="padding: 0;
             width: 10px;
             margin-top: 14px;
             "></div>
-              <div class="w-col w-col-2">
+              <div class="w-col w-col-2 responsive-2">
                 <div class="header-table">Cantidad</div>
               </div>
-              <div class="w-col w-col-3">
+              <div class="w-col w-col-3 responsive-3">
                 <div class="header-table">Puntos</div>
               </div>
             </div>
           </div>
           <div>
             <div class="row-2 w-row" ng-repeat="product in invoices.productList" ng-cloak>
-              <div class="w-col w-col-6">
+              <div class="w-col w-col-6 responsive-6">
                 <select class="factura-field w-select"
                 ng-model="invoices.invoice.products[$index]"
                 id="products"
@@ -137,11 +137,11 @@
                 <option value="">Seleccionar</option>
               </select>
             </div>
-            <div class=" w-col w-col-1" style="padding: 0;
+            <div class=" w-col w-col-1 responsive-1" style="padding: 0;
             width: 10px;
             margin-top: 14px;
             ">@{{invoices.invoice.products[$index].unit}}</div>
-            <div class="w-col w-col-2">
+            <div class="w-col w-col-2 responsive-2">
               <input class="factura-field w-input"
               ng-model="invoices.invoice.products[$index].quanty"
               id="quanty"
@@ -153,7 +153,7 @@
               type="number">
               <div class="div-block-17"></div>
             </div>
-            <div class="w-col w-col-3">
+            <div class="w-col w-col-3 responsive-3">
               <div ng-if="invoices.invoice.products[$index]" class="points">
                 + @{{invoices.invoice.products[$index].points * ( invoices.invoice.products[$index].quanty || 0)}} pts
               </div>
