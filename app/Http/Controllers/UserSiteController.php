@@ -18,7 +18,7 @@ class UserSiteController extends Controller
 
     if ($user instanceof User) {
       \Mail::to(config('user.mails'))->send(new Register($user));
-      return redirect('/login')->with('status', 'Registrado con exito sera habilitado a la brevedad');
+      return redirect('/login')->with('status', 'Registro de Usuario enviado con exito, una vez aprobado el registro podras ingresar a la web');
     }
 
     return redirect()->back()->with('status', 'Error interno vuelva a intentar');

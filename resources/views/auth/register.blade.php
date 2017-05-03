@@ -72,7 +72,7 @@
               <div class="div-block-title">
                 <img src="/images/bienvenido.png" alt="" width="268">
                 <div class="desc text-block">
-                  Ingresa para poder sumar puntos y ganar grandes premios!
+                  Ingresá para poder sumar puntos y ganar grandes premios!
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@
 
             <div class="text-block">
               <img src="/images/bienvenido.png" alt="" width="268">
-                <div class="desc text-block">Ingresa para poder sumar puntos y ganar grandes premios!</div>
+                <div class="desc text-block">Ingresá para poder sumar puntos y ganar grandes premios!</div>
               <div class="div-block-3 v-divisor">
                 <div class="div-block-2"></div>
               </div>

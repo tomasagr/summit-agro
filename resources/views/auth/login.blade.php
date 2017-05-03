@@ -66,7 +66,7 @@
           <div class="w-form">
             <form class="form" action="{{ route('login') }}" id="email-form" name="email-form" method="POST" style="flex-wrap: wrap;">
               {{csrf_field()}}
-              @if (session('error'))
+              @if (session('status'))
                 <p style="font-family: 'Lato'; width: 100%; color: white; font-weight: 300; margin: 1em 0; ">
                 {{ session('status') }}
               </p>
