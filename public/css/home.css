@@ -2377,6 +2377,7 @@
     background-position: top left;
     background-attachment: scroll;
     background-size: 100% auto;
+    min-height: 100%;
   }
 
   .container-home.home-c {
