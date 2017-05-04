@@ -2389,6 +2389,7 @@
     background-attachment: scroll;
     background-size: 100%;
     min-height: 100%;
+    background-repeat: no-repeat;
   }
 
   .container-home.home-c {
