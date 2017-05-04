@@ -63,7 +63,7 @@
           <div class="column-content div-left-responsive">
             <img src="images/logo-summit.svg">
             <div style="display: flex;">
-              <img src="images/personaje-mobile.png" style="
+              <img src="/images/personaje-mobile.png" style="
               margin-left: -63px;
               width: 147px;
               margin-top: 43px;
@@ -96,7 +96,7 @@
         <div class="column-2 w-col w-col-6">
           <div class="column-content">
             <div class="w-form">
-              <form action="/users" method="POST" autocomplete="off">
+              <form action="/users" method="POST" autocomplete="false">
                 {{csrf_field()}}
                 <div class="div-block-4">
                   <input autofocus class="custom-input w-input"
