@@ -30,6 +30,10 @@ Route::get('bases', function() {
 Route::post('/reset', function(Request $request) {
 	$user = User::where('email', $request->email)->first();
 
+	if (!$user->status) {
+		return redirect()->back()->with('status', 'El usuario se encuentra desactivado.');
+	}
+
 	if ($user) {
 
 		$newPass = random_int(0, 10000);
