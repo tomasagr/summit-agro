@@ -39,7 +39,11 @@
 						<tr>
 							<th>{{$invoice->invoice_number}}</th>
 							<th>{{$invoice->cuit}}</th>
-							<th>{{$invoice->user->first_name}} {{$invoice->user->last_name}}</th>
+							<th>
+								@if ($invoice->user)
+									{{$invoice->user->first_name}} {{$invoice->user->last_name}}
+								@endif
+							</th>
 							<th>{{$invoice->points}}</th>
 							<th>
 								<div class="btn-group">
