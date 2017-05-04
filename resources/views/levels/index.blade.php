@@ -114,7 +114,7 @@
         </div>
         <div class="w-col w-col-9">
           <div class="text-block-27"><a style="color:black; text-decoration: none;" href="#nivel4" rel="modal:open">NIVEL 04</a></div>
-          <div class="text-block-28">Ultimo Samurái</div>
+          <div class="text-block-28">Último Samurái</div>
           <div class="text-block-29">Arma de entrenamiento: Katana Moderna</div>
           <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> 
             {{number_format($level[3]->points, 0, ',', '.')}}</div>
