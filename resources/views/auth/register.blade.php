@@ -224,6 +224,7 @@
                   <option value="XS">XS</option>
                   <option value="S">S</option>
                   <option value="M">M</option>
+                  <option value="L">M</option>
                   <option value="XL">XL</option>
                 </select>
               </div>
@@ -284,7 +285,7 @@
         id="checkbox"
         name="checkbox"
         type="checkbox">
-        <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a href="/bases" class="link-3" style="color:white">Terminos y Condiciones</a></label>
+        <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a target="_blank" href="/bases" class="link-3" style="color:white">Bases y Condiciones</a></label>
       </div>
 
       <button class="btn-success w-button @{{status == false ? 'not-active' : ''}}"

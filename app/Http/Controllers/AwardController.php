@@ -47,7 +47,7 @@ class AwardController extends Controller {
     $award = Award::create($award);
 
     if ($award instanceof Award)   {
-      return redirect('/panel/awards')->with('status', 'Guardado con exito!');
+      return redirect('/panel/awards')->with('status', 'Guardado con éxito!');
     }
 
     return redirect()->back()->with('status', 'Error interno vuelva a intentar');

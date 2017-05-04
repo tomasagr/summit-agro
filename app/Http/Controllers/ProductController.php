@@ -41,7 +41,7 @@ class ProductController extends Controller {
     $product = Product::create($product);
 
     if ($product instanceof Product)   {
-      return redirect('/panel/products')->with('status', 'Guardado con exito!');
+      return redirect('/panel/products')->with('status', 'Guardado con éxito!');
     }
 
     return redirect()->back()->with('status', 'Error interno vuelva a intentar');
