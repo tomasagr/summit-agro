@@ -60,7 +60,7 @@ class SolicitudeController extends Controller {
 
     \Mail::to(config('user.mails'))
       ->send(new Invoice($user));
-      
+
     return response()->json(['code' => 200]);
   }
 

@@ -63,7 +63,7 @@
       <div class="div-block-46">
           <div>
             <div class="w-form">
-              <form class="form" role="form" method="POST" action="{{ route('password.email') }}" style="flex-wrap: wrap">
+              <form class="form" role="form" method="POST" action="/reset" style="flex-wrap: wrap">
                 {{ csrf_field() }}
                 <p style="font-family: 'Lato'; width: 100%; color: white; font-weight: 300; margin: 2em 0; ">Ingresa tu mail para recuperar tu contraseña</p>
                 <div class="div-block-47">

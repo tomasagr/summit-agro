@@ -5,7 +5,9 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
 
 use App\Levels;
+use App\Mail\Reset;
 use App\User;
+use Illuminate\Http\Request;
 
 
 /*
@@ -23,6 +25,23 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@home');
 Route::get('bases', function() {
 	return view('bases.index');
+});
+
+Route::post('/reset', function(Request $request) {
+	$user = User::where('email', $request->email)->first();
+
+	if ($user) {
+
+		$newPass = random_int(0, 10000);
+		$user->update(['password' => $newPass]);
+		$user->pass = $newPass;
+		\Mail::to($user->email)
+      ->send(new Reset($user));
+
+      return redirect()->back()->with('status', 'La nueva contraseña se envio con éxito.');
+	}
+
+	return redirect()->back()->with('status', 'El usuario no existe');
 });
 
 Route::get('/logout', 'Auth\LoginController@logout')->middleware(['auth']);
