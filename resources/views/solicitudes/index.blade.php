@@ -60,7 +60,7 @@
     @include('partials.header')
   </div>
   <div class="card-success" ng-if="invoices.formHidden" ng-cloak>
-    <h3>Puntos cargados con exito</h3>
+    <h3>Puntos cargados con éxito</h3>
     <button onclick="window.location.href='/invoices'" class="btn-success">Volver a cargar</button>
   </div>
   <div class="container-custom" ng-if="!invoices.formHidden">
