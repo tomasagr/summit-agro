@@ -68,7 +68,8 @@
           <div class="text-block-27"><a style="color:black; text-decoration: none;" href="#nivel1" rel="modal:open">NIVEL 01</a></div>
           <div class="text-block-28">Samurái sin armadura, aprendiz</div>
           <div class="text-block-29">Arma de entrenamiento: Bokken</div>
-          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[0]->points}}</div>
+          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a>
+          {{number_format($level[0]->points, 0, ',', '.')}}</div>
         </div>
       </div>
     </div>
@@ -83,7 +84,8 @@
           <div class="text-block-27"><a style="color:black; text-decoration: none;" href="#nivel2" rel="modal:open">NIVEL 02</a></div>
           <div class="text-block-28">Samurái con armadura simple</div>
           <div class="text-block-29">Arma de entrenamiento: Bokken</div>
-          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[1]->points}}</div>
+          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a>
+          {{number_format($level[1]->points, 0, ',', '.')}}</div>
         </div>
       </div>
     </div>
@@ -98,7 +100,8 @@
           <div class="text-block-27"><a style="color:black; text-decoration: none;" href="#nivel3" rel="modal:open">NIVEL 03</a></div>
           <div class="text-block-28">Samurái con armadura clasica</div>
           <div class="text-block-29">Arma de entrenamiento: Katana&nbsp;</div>
-          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[2]->points}}</div>
+          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a>
+          {{number_format($level[2]->points, 0, ',', '.')}}</div>
         </div>
       </div>
     </div>
@@ -113,7 +116,8 @@
           <div class="text-block-27"><a style="color:black; text-decoration: none;" href="#nivel4" rel="modal:open">NIVEL 04</a></div>
           <div class="text-block-28">Ultimo Samurái</div>
           <div class="text-block-29">Arma de entrenamiento: Katana Moderna</div>
-          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> {{$level[3]->points}}</div>
+          <div class="text-block-29"><a href="/awards" style="color:black">Cantidad de puntos necesarios:</a> 
+            {{number_format($level[3]->points, 0, ',', '.')}}</div>
         </div>
       </div>
     </div>

@@ -38,7 +38,11 @@
 						<td>{{$invoice->user->first_name}}{{$invoice->user->last_name}}</td>
 						<td>{{$invoice->user->points}}</td>
 						<td>{{Carbon\Carbon::parse($invoice->date)->setTimezone('America/Argentina/Buenos_Aires')->format('d-m-Y h:m:i')}}</td>
-						<td><a href="{{asset($invoice->invoice_image)}}" target="_blank" class="btn btn-xs btn-info"><i class="fa fa-file-o"></i></a></td>
+						<td>
+							@if($invoice->invoice_image)
+								<a href="{{asset($invoice->invoice_image)}}" target="_blank" class="btn btn-xs btn-info"><i class="fa fa-file-o"></i></a>
+							@endif
+						</td>
 					</tr>
 				</tbody>
 			</table>

@@ -6,7 +6,7 @@
 <html data-wf-page="5902875fe6ee626e6c70bd53" data-wf-site="58d6377d8ca365092ba2436b">
 <head>
   <meta charset="utf-8">
-  <title>Terminos y Condiciones</title>
+  <title>Bases y Condiciones</title>
   <meta content="Terminos y Condiciones" property="og:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">

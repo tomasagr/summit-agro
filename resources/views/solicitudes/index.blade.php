@@ -47,6 +47,10 @@
       /* IE 10+ */
       color: white;
     }
+
+    a.ng-invalid.ng-touched {
+      border: 0 !important;
+    }
   </style>
 </head>
 <body ng-app="loadInvoices" ng-controller="InvoicesController as invoices"
@@ -73,6 +77,7 @@
             ng-model="invoices.invoice.file"
             ngf-accept="'image/*'"
             ngf-max-size="20MB"
+            required
             href="#">Cargar factura</a>
           </div>
           <div>
@@ -207,7 +212,7 @@
  <div class="footer">
   <div class="footer-text">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
       <br>
-      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases & Condiciones</a>
+      Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a  target="_blank" href="/bases" style="color:white">Bases & Condiciones</a>
       <br>
       Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>

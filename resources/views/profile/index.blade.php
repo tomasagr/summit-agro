@@ -104,25 +104,25 @@ background-size: 100%; background-color: #6BA242;">
       <strong>Nivel 00</strong>
       @endif
       @endif
-      <span class="text-span-3">{{Auth::user()->points}} puntos</span>
+      <span class="text-span-3">{{number_format(Auth::user()->points, '0',',', '.')}} puntos</span>
     </div>
 
     @if(isset($levels[$actual - 1]) && $actual != 3)
     <div class="text-block-11">
       ¡Necesitás
-      <span>{{$levels[$actual + 1]->points - Auth::user()->points}}</span>
+      <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, 0, ',', '.')}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
     @elseif (Auth::user()->points < $levels[0]->points  && $actual != 3)
     <div class="text-block-11">
       ¡Necesitás
-      <span>{{$levels[$actual]->points - Auth::user()->points}}</span>
+      <span>{{number_format($levels[$actual]->points - Auth::user()->points, 0 , ',', '.')}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
     @elseif (Auth::user()->points >= $levels[0]->points  && $actual != 3)
     <div class="text-block-11">
       ¡Necesitás
-      <span>{{$levels[$actual + 1]->points - Auth::user()->points}}</span>
+      <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, ',', '.')}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
     @endif
@@ -186,7 +186,7 @@ background-size: 100%; background-color: #6BA242;">
 <div class="div-block-40">
   <div class="text-block-21">Toda la información aquí contenida es propiedad de Summit Agro Argentina S.A., prohibida su reproducción total o parcial, exhibición y/o uso sin expresa autorización de Summit Agro Argentina S.A.
     <br>
-    Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a href="/bases" style="color:white">Bases & Condiciones.</a>
+    Carlos Pellegrini 719, Piso 8 (C1009ABO), Cuidad de Buenos Aires Tel: (011) 3750-6750 - Copyright Summit Agro Argentina 2013. Todos los derechos reservados. <a  target="_blank" href="/bases" style="color:white">Bases & Condiciones.</a>
     <br>
     Si tenés alguna duda escribinos a <a style="color:white" href="mailto:summitsamurai@summit-agro.com.ar">summitsamurai@summit-agro.com.ar</a></div>
   </div>
