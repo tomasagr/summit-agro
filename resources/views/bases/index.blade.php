@@ -51,22 +51,8 @@
   }
   </style>
 </head>
-<body class="body-9">
-  <div class="div-block-38">
-    <div class="div-block-39"><img class="image-40" src="images/logo-summit.svg">
-    </div>
-    <div class="div-block-40">
-      <a class="link-block-2 w-inline-block" href="/home">
-        <div>INICIO</div>
-      </a>
-      <a class="link-block-2 w-inline-block" href="/profile">
-        <div>MI PERFIL</div>
-      </a>
-      <a class="link-block-2 w-inline-block" href="/logout">
-        <div>SALIR</div>
-      </a>
-    </div>
-  </div>
+<body class="body-9" style="background-color: #6BA242">
+  @include('partials.header')
   <div class="bases container-custom w-container">
     <h1 class="heading">Bases y condiCIONES</h1>
     <div class="text-block-30"><strong>Summit Agro Argentina S.A</strong>
