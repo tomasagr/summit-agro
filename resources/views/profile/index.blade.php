@@ -141,7 +141,7 @@ background-size: 100%; background-color: #6BA242;">
   </div>
   <div class="column-4 w-col w-col-8">
     <div class="div-block-34">
-      <div class="div-block-33">RANKING DE SAMURAIS</div>
+      <div class="div-block-33" style="width: 400px; margin:0 auto;"><img src="/images/ranking-profile-title.png" alt="" style="width: 100%; display: inline-block;"></div>
       <div class="div-block-35">
         @foreach($users as $key => $value)
         <div class="row-5 w-row">

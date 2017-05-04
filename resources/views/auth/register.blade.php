@@ -72,7 +72,7 @@
               <div class="div-block-title">
                 <img src="/images/bienvenido.png" alt="" width="268">
                 <div class="desc text-block">
-                  Ingresá para poder sumar puntos y ganar grandes premios!
+                  ¡Ingresá para poder sumar puntos y ganar grandes premios!
                 </div>
               </div>
             </div>
@@ -285,7 +285,7 @@
         id="checkbox"
         name="checkbox"
         type="checkbox">
-        <label class="field-label-3 w-form-label" for="checkbox">Acepto los <a target="_blank" href="/bases" class="link-3" style="color:white">Bases y Condiciones</a></label>
+        <label class="field-label-3 w-form-label" for="checkbox">Acepto las <a target="_blank" href="/bases" class="link-3" style="color:white">Bases y Condiciones</a></label>
       </div>
 
       <button class="btn-success w-button @{{status == false ? 'not-active' : ''}}"
@@ -299,7 +299,7 @@
 <img class="image-6" src="images/elipse.png">
 <div style="text-align: center; font-family: 'Lato'; margin-top: .3em;">
   * campos obligatorios <br>
-  Si ya tienes cuenta <a href="/login" style="color: black">ingresa aqui</a>
+  Si ya tienes cuenta <a href="/login" style="color: black">ingresa aquí</a>
 </div>
 </div>
 <div class="div-block-40">
