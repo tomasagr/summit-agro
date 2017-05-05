@@ -1701,7 +1701,7 @@
 
 .left-arrow:hover {
   background-image: url('../images/arrow-left-on.svg');
-  background-size: 40px;
+  background-size: 30px;
 }
 
 .right-arrow {
@@ -1714,7 +1714,7 @@
 
 .right-arrow:hover {
   background-image: url('../images/arrow-right-on.svg');
-  background-size: 40px;
+  background-size: 30px;
 }
 
 .image-25 {
