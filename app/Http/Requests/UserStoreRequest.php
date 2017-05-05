@@ -29,9 +29,6 @@ class UserStoreRequest extends FormRequest
           "dni" => 'required',
           "cuit" => 'required',
           "phone" => 'required',
-          "address" => 'required',
-          "email" => 'required',
-          "password" => 'required',
           "agronomy" => 'required',
           "agronomy_type" => 'required',
         ];

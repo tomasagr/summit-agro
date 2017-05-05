@@ -64,7 +64,7 @@
       <div class="div-block-46">
         <div>
           <div class="w-form">
-            <form class="form" action="{{ route('login') }}" id="email-form" name="email-form" method="POST" style="flex-wrap: wrap;">
+            <form class="form" action="{{ route('login') }}" method="POST" style="flex-wrap: wrap;">
               {{csrf_field()}}
               @if (session('status'))
                 <p style="font-family: 'Lato'; width: 100%; color: white; font-weight: 300; margin: 1em 0; ">
@@ -73,7 +73,8 @@
               @endif
               <div class="div-block-47">
                 <div class="div-block-48">
-                  <input class="form-control w-input" data-name="email" id="email-2" maxlength="256" name="email" placeholder="Email" required="required" type="email"><img class="image-45" height="25" src="images/email.svg" width="25">
+                  <input class="form-control w-input"  name="email" placeholder="Email" required="required" type="email">
+                  <img class="image-45" height="25" src="images/email.svg" width="25">
                 </div>
                 <div class="div-block-48">
                   <input class="form-control w-input" data-name="password" id="password" maxlength="256" name="password" placeholder="Contraseña" required="required" type="password"><img class="image-45" height="25" src="images/contrasena.svg" width="25">

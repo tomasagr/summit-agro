@@ -96,7 +96,7 @@
         <div class="column-2 w-col w-col-6">
           <div class="column-content">
             <div class="w-form">
-              <form action="/users" method="POST" autocomplete="false">
+              <form action="/users" method="POST" autocomplete="off">
                 {{csrf_field()}}
                 <div class="div-block-4">
                   <input autofocus class="custom-input w-input"
@@ -123,24 +123,17 @@
                   <img class="image-5" height="20" src="images/dni.svg" width="20">
                 </div>
                 <div class="div-block-4">
-                  <input class="custom-input w-input"
-                  name="email"
-                  placeholder="*Email"
-                  required="required"
-                  type="email">
-                  <img class="image-5" height="20" src="images/email.svg" width="20">
-                </div>
-                <div class="div-block-4">
                   <input  class="custom-input w-input"
                   name="phone"
-                  placeholder="*Telefono"
+                  placeholder="*Teléfono"
                   required="required"
                   type="text">
                   <img class="image-5" height="20" src="images/telefono.svg" width="20">
                 </div>
+
                 <div class="div-block-4">
                   <input  class="custom-input w-input"
-                  name="address"
+                  name="new-address"
                   placeholder="*Dirección"
                   required="required"
                   googleplace
@@ -149,11 +142,19 @@
                   <img class="image-5" height="20" src="images/direccion.svg" width="20">
                 </div>
                 <div class="div-block-4">
+                  <input class="custom-input w-input"
+                  name="new-email"
+                  placeholder="*Email"
+                  required="required"
+                  type="email" autocomplete="new-email">
+                  <img class="image-5" height="20" src="images/email.svg" width="20">
+                </div>
+                <div class="div-block-4">
                   <input  class="custom-input w-input"
-                  name="password"
+                  name="new-password"
                   placeholder="*Contraseña"
                   required="required"
-                  type="password">
+                  type="password" autocomplete="new-password">
                   <img class="image-5" height="20" src="images/contrasena.svg" width="20">
                 </div>
                 <div class="div-block-5"></div>
@@ -170,7 +171,7 @@
                 <div class="div-block-4">
                   <input  class="custom-input w-input"
                   name="agronomy"
-                  placeholder="*Agronomia"
+                  placeholder="*Agronomía"
                   ng-model="agronomy"
                   required="required"
                   type="text">
@@ -194,7 +195,7 @@
                 </div>
                 <div class="block-flex">
                   <img height="20" src="images/user.svg" width="20">
-                  <div class="text-block-2">Genero</div>
+                  <div class="text-block-2">Género</div>
                   <div class="radio-button-field-2 w-clearfix w-radio">
                     <input class="w-radio-input"
                     name="gender"
@@ -257,7 +258,7 @@
             <select class="custom-input custom-select estado-select w-select"
             name="sports">
             <option value="">Deportes</option>
-            <option value="futbol">Futbol</option>
+            <option value="futbol">Fútbol</option>
             <option value="basquet">Basquet</option>
             <option value="tenis">Tenis</option>
             <option value="otro">Otro</option>

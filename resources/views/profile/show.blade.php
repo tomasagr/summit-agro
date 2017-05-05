@@ -145,7 +145,7 @@
                 </div>
                 <div class="div-block-48">
                   <input class="form-control register w-input"
-                  placeholder="*Agronomia"
+                  placeholder="*Agronomía"
                   ng-model="user.agronomy"
                   required="required"
                   type="text"><img class="image-45" height="25" src="/images/agronomia.svg" width="25">
