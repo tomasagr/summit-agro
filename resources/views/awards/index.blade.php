@@ -10,7 +10,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/custom-1.css?key=<?php echo time(); ?>">
   <link rel="stylesheet" href="{{asset('bower_components/jquery-modal/jquery.modal.css')}}">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
@@ -82,7 +82,7 @@
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
-<body class="body" style="background: url('/images/awards-bg.png') no-repeat top left;
+<body class="body body-awards" style="background: url('/images/awards-bg.png') no-repeat top left;
 background-size: 100%; background-color: #6BA242">
 <div class="div-block-11" style="margin-bottom: 25em;">
   @include('partials.header')
@@ -112,50 +112,50 @@ background-size: 100%; background-color: #6BA242">
         </div>
       </div>
       <div>
-    <div class="text-block-10">Eres samurái
-      @if(Auth::user()->points >= $levels[3]->points)
-      <strong>Nivel 04</strong>
-      <?php $actual = 3 ?>
-      @elseif(Auth::user()->points >= $levels[2]->points)
-      <strong>Nivel 03</strong>
-      <?php $actual = 2 ?>
-      @elseif(Auth::user()->points >= $levels[1]->points)
-      <strong>Nivel 02</strong>
-      <?php $actual = 1 ?>
-      @elseif(Auth::user()->points >= $levels[0]->points || Auth::user()->points <= $levels[3]->points)
-      <?php $actual = 0 ?>
-      @if (Auth::user()->points >= $levels[0]->points)
-      <strong>Nivel 01</strong>
-      @else
-      <strong>Nivel 00</strong>
-      @endif
-      @endif
-      <span class="text-span-3">{{number_format(Auth::user()->points, '0',',', '.')}} puntos</span>
-    </div>
+        <div class="text-block-10">Eres samurái
+          @if(Auth::user()->points >= $levels[3]->points)
+          <strong>Nivel 04</strong>
+          <?php $actual = 3 ?>
+          @elseif(Auth::user()->points >= $levels[2]->points)
+          <strong>Nivel 03</strong>
+          <?php $actual = 2 ?>
+          @elseif(Auth::user()->points >= $levels[1]->points)
+          <strong>Nivel 02</strong>
+          <?php $actual = 1 ?>
+          @elseif(Auth::user()->points >= $levels[0]->points || Auth::user()->points <= $levels[3]->points)
+          <?php $actual = 0 ?>
+          @if (Auth::user()->points >= $levels[0]->points)
+          <strong>Nivel 01</strong>
+          @else
+          <strong>Nivel 00</strong>
+          @endif
+          @endif
+          <span class="text-span-3">{{number_format(Auth::user()->points, '0',',', '.')}} puntos</span>
+        </div>
 
-    @if(isset($levels[$actual - 1]) && $actual != 3)
-    <div class="text-block-11">
-      ¡Necesitás
-      <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, 0, ',', '.')}}</span>
-      puntos para alcanzar el siguiente nivel!
+        @if(isset($levels[$actual - 1]) && $actual != 3)
+        <div class="text-block-11">
+          ¡Necesitás
+          <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, 0, ',', '.')}}</span>
+          puntos para alcanzar el siguiente nivel!
+        </div>
+        @elseif (Auth::user()->points < $levels[0]->points  && $actual != 3)
+        <div class="text-block-11">
+          ¡Necesitás
+          <span>{{number_format($levels[$actual]->points - Auth::user()->points, 0 , ',', '.')}}</span>
+          puntos para alcanzar el siguiente nivel!
+        </div>
+        @elseif (Auth::user()->points >= $levels[0]->points  && $actual != 3)
+        <div class="text-block-11">
+          ¡Necesitás
+          <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, ',', '.')}}</span>
+          puntos para alcanzar el siguiente nivel!
+        </div>
+        @endif
+      </div>
     </div>
-    @elseif (Auth::user()->points < $levels[0]->points  && $actual != 3)
-    <div class="text-block-11">
-      ¡Necesitás
-      <span>{{number_format($levels[$actual]->points - Auth::user()->points, 0 , ',', '.')}}</span>
-      puntos para alcanzar el siguiente nivel!
-    </div>
-    @elseif (Auth::user()->points >= $levels[0]->points  && $actual != 3)
-    <div class="text-block-11">
-      ¡Necesitás
-      <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, ',', '.')}}</span>
-      puntos para alcanzar el siguiente nivel!
-    </div>
-    @endif
   </div>
-    </div>
-  </div>
-  <div class="container-custom container-premios">
+  <div class="container-custom container-premios mobile">
     <div class="premios-content">
       <div class="premios-title">PREMIOS DISPONIBLES</div>
     </div>
@@ -165,78 +165,35 @@ background-size: 100%; background-color: #6BA242">
     </div>
     @endif
     <div class="div-block-23">
-      <div class="div-block-24"><img class="image-20" src="images/nivel-4.png" @if(Auth::user()->points >= $levels[0]->points) {{"style=opacity:1"}}@endif>
+      <div class="div-block-24">
+        <img class="image-20" src="images/nivel-4.png" @if(Auth::user()->points >= $levels[0]->points) {{"style=opacity:1"}}@endif>
         <div class="text-block-12"  @if(Auth::user()->points < $levels[0]->points) {{"style=color:gray"}}@endif>Nivel 04</div>
       </div>
-      @foreach($levels[0]->awards as $award)
-      <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}"
-       class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@else  {{"doLink"}} @endif">
-       <div class="div-block-25">
-        <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
-          <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
-        </div>
-        <div class="text-block-13" >{{$award->points}} puntos</div>
-        <div class="text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>{{$award->name}}</div>
-        <div class="text-14 text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>Disponible {{$award->stock}}u.</div>
+      @include('partials.awards-mobile', ['level' => $levels[0]->awards])
+      @include('partials.awards-desktop', ['level' => $levels[0]->awards])
+    </div>
+    <div class="div-block-23 odd-premios">
+      <div class="div-block-24"><img class="image-20" src="images/nivel-1.png" @if(Auth::user()->points >= $levels[0]->points) {{"style=opacity:1"}}@endif>
+        <div class="text-block-12"  @if(Auth::user()->points < $levels[1]->points) {{"style=color:gray"}}@endif>Nivel 03</div>
       </div>
-    </a>
-    @endforeach
-  </div>
-  <div class="div-block-23 odd-premios">
-    <div class="div-block-24"><img class="image-20" src="images/nivel-1.png" @if(Auth::user()->points >= $levels[0]->points) {{"style=opacity:1"}}@endif>
-      <div class="text-block-12"  @if(Auth::user()->points < $levels[1]->points) {{"style=color:gray"}}@endif>Nivel 03</div>
+      @include('partials.awards-mobile', ['level' => $levels[1]->awards])
+      @include('partials.awards-desktop', ['level' => $levels[1]->awards])
     </div>
-    @foreach($levels[1]->awards as $award)
-    <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}"
-     class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@else  {{"doLink"}} @endif" >
-     <div class="div-block-25">
-      <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
-        <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
+    <div class="div-block-23">
+      <div class="div-block-24">
+        <img class="image-22" src="images/nivel-2.png" @if(Auth::user()->points >= $levels[2]->points) {{"style=opacity:1"}}@endif>
+        <div class="text-block-12"  @if(Auth::user()->points < $levels[2]->points) {{"style=color:gray"}}@endif>Nivel 02</div>
       </div>
-      <div class="text-block-13" >{{$award->points}} puntos</div>
-      <div class="text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>{{$award->name}}</div>
-      <div class="text-14 text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>Disponible {{$award->stock}}u.</div>
+      @include('partials.awards-mobile', ['level' => $levels[2]->awards])
+      @include('partials.awards-desktop', ['level' => $levels[2]->awards])
     </div>
-  </a>
-  @endforeach
-</div>
-<div class="div-block-23">
-  <div class="div-block-24">
-    <img class="image-22" src="images/nivel-2.png" @if(Auth::user()->points >= $levels[2]->points) {{"style=opacity:1"}}@endif>
-    <div class="text-block-12"  @if(Auth::user()->points < $levels[2]->points) {{"style=color:gray"}}@endif>Nivel 02</div>
+    <div class="div-block-23 odd-premios" style="border-bottom: 0">
+      <div class="div-block-24"><img class="image-23" src="images/nivel-1.png">
+        <div class="text-block-12" >Nivel 01</div>
+      </div>
+      @include('partials.awards-mobile', ['level' => $levels[3]->awards])
+      @include('partials.awards-desktop', ['level' => $levels[3]->awards])
   </div>
-  @foreach($levels[2]->awards as $award)
-  <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}"
-   class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@else  {{"doLink"}} @endif">
-   <div class="div-block-25">
-    <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
-      <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
-    </div>
-    <div class="text-block-13" >{{$award->points}} puntos</div>
-    <div class="text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>{{$award->name}}</div>
-    <div class="text-14 text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>Disponible {{$award->stock}} u.</div>
-  </div>
-</a>
-@endforeach
-</div>
-<div class="div-block-23 odd-premios" style="border-bottom: 0">
-  <div class="div-block-24"><img class="image-23" src="images/nivel-1.png">
-    <div class="text-block-12" >Nivel 01</div>
-  </div>
-  @foreach($levels[3]->awards as $award)
-  <a href="/user/{{Auth::user()->id}}/awards/{{$award->id}}"
-   class="item-premio-link @if(Auth::user()->points < $award->points || $award->stock <= 0) {{"not-active"}}@else  {{"doLink"}} @endif">
-   <div class="div-block-25">
-    <div class="div-block-26"><img class="image-25" src="{{$award->image}}" width="185">
-      <img class="image-24" src="images/lock.png" width="190" @if(Auth::user()->points >= $award->points) {{"style=display:none"}}@endif>
-    </div>
-    <div class="text-block-13" >{{$award->points}} puntos</div>
-    <div class="text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>{{$award->name}}</div>
-    <div class="text-14 text-block-14" @if(Auth::user()->points >= $award->points) {{"style=color:black"}}@endif>Disponible {{$award->stock}} u.</div>
-  </div>
-</a>
-@endforeach
-</div>
 </div>
 </div>
 <div class="footer">
@@ -259,6 +216,7 @@ background-size: 100%; background-color: #6BA242">
 </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+<script src="/js/webflow.js" type="text/javascript"></script>
 <script src="{{asset('bower_components/jquery-modal/jquery.modal.js')}}"></script>
 <script>
   (function() {
@@ -281,5 +239,6 @@ background-size: 100%; background-color: #6BA242">
   })();
 </script>
 <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
 </body>
 </html>
