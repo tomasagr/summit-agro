@@ -615,9 +615,9 @@ display: none;
 @media all and (max-width: 990px) {
     .body-4 {
       height: 100vh;
-    background-color: #f0e1bc;
+        background-color: #45a337;
     background-image: url(../images/show-bg.png);
-    background-position: 0px 157px;
+    background-position: 0px 38%;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -675,7 +675,7 @@ display: none;
     }
 
     .div-block-40 {
-          margin-top: 500px;
+          margin-top: 300px;
     background-size: 100%;
     background-position: top left;
     background: url(../images/footer-mobile.png) no-repeat;
