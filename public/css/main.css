@@ -1773,12 +1773,12 @@
 }
 
 .blocker {
-  z-index: 5;
+  z-index: 5 !important;
 }
 
 .modal {
-  padding: 0;
-  width: 100%;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
 .ok, .cancel {
