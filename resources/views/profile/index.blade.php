@@ -122,7 +122,7 @@ background-size: 100%; background-color: #6BA242;">
     @elseif (Auth::user()->points >= $levels[0]->points  && $actual != 3)
     <div class="text-block-11">
       ¡Necesitás
-      <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, ',', '.')}}</span>
+      <span>{{number_format($levels[$actual + 1]->points - Auth::user()->points, 0, ',', '.')}}</span>
       puntos para alcanzar el siguiente nivel!
     </div>
     @endif
