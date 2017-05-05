@@ -1765,5 +1765,11 @@
   margin: 0 auto;
 }
 
+.image-24 {
+  position: absolute;
+    left: 29px;
+    width: 116px;
+    height: 108px;
+}
 
 }
