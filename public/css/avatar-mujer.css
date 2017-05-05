@@ -2160,3 +2160,111 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.avatar-mobile {
+  display: none;
+}
+
+@media all and (max-width: 990px) {
+  body {
+    overflow-x: hidden!important;
+  }
+  .div-block-42 {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center; 
+  }
+
+  .div-block-46 {
+    position: absolute;
+    height: inherit;
+    padding-left: 0px;
+    background-color: transparent;
+  }
+
+  .columns-2 {
+    height: 380px;
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .div-block-45 {
+    margin: 0;
+  }
+
+  .body-4 {
+    background-image: url(../images/bg-avatar.png);
+    background-position: 0px 0px;
+    background-color: #7ea24c;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+
+  .div-block-41 > div {
+    margin: 2em 1em;
+  }
+
+  .text-block-20 {
+    font-size: 19px;
+  }
+
+  .row-6 {
+    display: flex;
+  }
+
+  .button-gender.woman {
+    border-style: none;
+    width: 140px;
+    height: 120px;
+    background-color: #f0f0f0;
+    background-image: url(../images/female-off.svg);
+    background-size: 50px;
+}
+
+  .button-gender.male {
+    width: 140px;
+    height: 120px;
+    border: 1px none #09f;
+    background-color: #f0f0f0;
+    background-image: url(../images/male-off.svg);
+    background-size: 50px;
+  }
+
+  .avatar-desktop {
+    display: none;
+  }
+
+  .avatar-mobile {
+    display: block;
+  }
+
+  .w-col {
+    width: 50%;
+  }
+
+  .right-arrow {
+    margin-right: -34px;
+    background-size: 30px;
+  }
+
+  .left-arrow {
+    margin-left: -36px;
+    background-size: 30px;
+  }
+
+  .right-arrow:hover, .left-arrow:hover {
+    background-size: 30px;
+  }
+
+  .text-block-23 {
+    width: 34%;
+  }
+
+  .text-block-23 input {
+    width: 100%;
+  }
+}

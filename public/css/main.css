@@ -1756,12 +1756,12 @@
 .alert.alert-success {
   border-radius: 5px;
   display: block;
-  padding: .5em;
+  padding: .5em !important;
   background: green;
   font-family: Helvetica;
-  font-size: 12px;
+  font-size: 12px !important;
   color: white;
-  width: 100%;
+  width: 100% !important;
   margin: 0 auto;
 }
 
@@ -1770,6 +1770,19 @@
     left: 29px;
     width: 116px;
     height: 108px;
+}
+
+.blocker {
+  z-index: 5;
+}
+
+.modal {
+  padding: 0;
+  width: 100%;
+}
+
+.ok, .cancel {
+  margin-top: 1em;
 }
 
 }

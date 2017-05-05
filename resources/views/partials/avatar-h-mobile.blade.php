@@ -46,7 +46,6 @@
       </div>  
       <div class="w-slide">
         <div class="row-7 w-row">
-         
           <div class="column-10 w-col w-col-4">
             <a class="@{{selectedPelo == 'pelo-5' ? 'box-active' : ''}} m-bg pelo-5 slider-btn w-button"  ng-click="selectPelo('pelo-5')" href="#"></a>
           </div>
@@ -137,7 +136,7 @@
             ng-click="selectBoca('boca-3')" href="#"></a>
           </div>
           <div class="column-9 w-col w-col-4">
-            <a class="@{{selectedBoca == 'boca-4' ? 'box-active' : ''}} m-bg boca-4 slider-btn w-button" 
+            <a class="@{{selectedBoca == 'boca-4' ? 'box-active' : ''}} m-bg boca-4 slider-btn w-button"
             ng-click="selectBoca('boca-4')" href="#"></a>
           </div>
         </div>
