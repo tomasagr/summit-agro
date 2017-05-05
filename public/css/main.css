@@ -1189,6 +1189,7 @@
   color: #c32b2b;
   font-size: 46px;
   line-height: 51px;
+
   text-align: center;
 }
 
@@ -1519,7 +1520,7 @@
   }
 
   .div-block-33 {
-    width: 100%;
+    width: 300px!important;
     font-size: 30px;
     padding-bottom: 50px;
   }
@@ -1527,6 +1528,8 @@
   .text-block-16 {
     width: 163px;
   }
+
+
 
   .text-block-15, .text-block-16, .text-block-17 {
     font-size: 16px;
@@ -1627,5 +1630,10 @@
   }
   .image-shadow {
     width: -10px;
+  }
+
+  .user-header {
+    padding-left: 40px; 
+    padding-right: 40px; 
   }
 }
