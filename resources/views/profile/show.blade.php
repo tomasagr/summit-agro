@@ -61,7 +61,7 @@
           <div>
             <div class="w-form">
               <form class="form" name="editprofileForm">
-                <div class="div-block-61">
+                <div class="div-block-61 desktop">
                   <div class="text-block-26">MIS DATOS PERSONALES</div>
                   <div>
                     <img class="image-50"
@@ -74,6 +74,24 @@
                     ngf-select="uploadFiles($file, $invalidFiles)"
                     accept="image/*">CAMBIAR FOTO</a>
                   </div>
+                </div>
+                <div class="div-block-61 mobile">
+                  <div class="header-data">
+                    <div>
+                    <img class="image-50"
+                    ngf-thumbnail="file || '/images/user-pic.png'"
+                    style="border-radius: 100%; width: 108px; height: 100px">
+                  </div>
+                  <div>
+                  <a class="btn-success info w-button"
+                  style="margin-bottom: 1em;"
+                    type="file"
+                    ng-model="file"
+                    ngf-select="uploadFiles($file, $invalidFiles)"
+                    accept="image/*">CAMBIAR FOTO</a>
+                  </div>
+                  </div>
+                  <div class="text-block-26" style="margin: .5em 0;">MIS DATOS PERSONALES</div>
                 </div>
                 <div class="div-block-47">
                   <div class="div-block-48">
@@ -139,7 +157,7 @@
                   required="required" type="text"><img class="image-45" height="25" src="/images/contrasena.svg" width="25">
                 </div>
               </div>
-              <div class="div-block-49"><a class="btn-success s w-button" href="#" ng-click="update()">Modificar</a>
+              <div class="div-block-49"><a class="btn-success s w-button" href="#" ng-click="update()" style="margin-right: 0">Modificar</a>
               </div>
               <div ng-if="message"><p style="color: green">Editado con exito</p></div>
             </form>

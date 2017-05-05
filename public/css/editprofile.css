@@ -607,3 +607,81 @@
   opacity: .4;
   font-size: 14.77px;
 }
+
+.div-block-61.mobile {
+display: none;
+}
+
+@media all and (max-width: 990px) {
+    .body-4 {
+      height: 100vh;
+    background-color: #f0e1bc;
+    background-image: url(../images/show-bg.png);
+    background-position: 0px 157px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    }
+
+    .div-block-53 {
+      height: 122vh;
+      padding-top: 36%;
+    }
+
+    .div-block-61.desktop {
+      display: none;
+    }
+
+    .header-data {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+
+    .div-block-61.mobile {
+      display: block;
+      margin-bottom: .5em;
+    }
+
+    .image-50 {
+      position: static;
+      margin: 1em 0;
+    }
+
+    .div-block-4  {
+      margin-top: 1em;
+    }
+
+    .div-block-47 {
+      margin: 0 auto;
+    }
+
+    .text-block-26 {
+      margin: 0;
+    }
+
+    .div-block-42 {
+        position: relative;
+        width: 92%;
+    }
+
+    .div-block-43 {
+      padding: 2em;
+    }
+
+    .form {
+      text-align: center;
+      padding: 2em;
+    }
+
+    .div-block-40 {
+    background-size: 100%;
+    background-position: top left;
+    background: url(../images/footer-mobile.png) no-repeat;
+  }
+
+  .text-block-21 {
+    padding: 4em 2.5em;
+    line-height: 17px;
+  }
+}
