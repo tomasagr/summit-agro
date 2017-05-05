@@ -616,7 +616,7 @@ display: none;
     .body-4 {
       height: 100vh;
         background-color: #45a337;
-    background-image: url(../images/show-bg.png) no-repeat;
+    background: url(../images/show-bg.png) no-repeat 0px 33%;
     background-position: 0px 33%;
     background-size: 100%;
     background-attachment: scroll;
