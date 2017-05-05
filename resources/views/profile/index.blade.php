@@ -104,7 +104,7 @@ background-size: 100%; background-color: #6BA242;">
       <strong>Nivel 00</strong>
       @endif
       @endif
-      <span class="text-span-3">{{number_format(Auth::user()->points, '0',',', '.')}} puntos</span>
+      <span class="text-span-3">{{number_format(Auth::user()->points, 0,',', '.')}} puntos</span>
     </div>
 
     @if(isset($levels[$actual - 1]) && $actual != 3)
