@@ -12,7 +12,7 @@
   <meta content="Webflow" name="generator">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="/css/bases.css" rel="stylesheet" type="text/css">
+  <link href="/css/bases.css?key=<?php echo time(); ?>" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script type="text/javascript">
