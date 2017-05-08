@@ -2629,7 +2629,8 @@
 
   .body-9 {
     background-image: url(../images/bg-bases.png);
-    background-position: 0px 25px;
+    background-position: 0px 10069px;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 }
