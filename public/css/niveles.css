@@ -2589,7 +2589,7 @@
   }
 
   .image-49 {
-    height: 97px;
+    height: 70px;
   }
 
   .div-block-59 {
@@ -2604,7 +2604,11 @@
 
   .div-block-60 .column-12 {
     width: 39%;
-    padding-left: 40px;
+  }
+
+  .div-block-60 .column-12 img {
+    width: 100px;
+    height: 77px;
   }
 
   .div-block-58 {
