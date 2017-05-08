@@ -2466,3 +2466,25 @@
     height: 100%;
   }
 }
+
+@media all and (max-height: 375px) {
+  .div-block-50 {
+    height: 2050px !important;
+  }
+
+  .link-block-6 {
+    height: 172%;
+  }
+
+  .link-block-7 {
+    height: 155%
+  }
+
+  .link-block-8 {
+        height: 149%;
+  }
+
+  .link-block-9 {
+    height: 107%;
+  }
+}
