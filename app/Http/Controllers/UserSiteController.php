@@ -13,7 +13,7 @@ class UserSiteController extends Controller
   {
     $user = $request->all();
     $user["type"] = "user";
-    $user["status"] = 0;+
+    $user["status"] = 0;
     $user['email'] = $user['new-email'];
     $user['address'] = $user['new-address'];
     $user['password'] = $user['new-password'];
