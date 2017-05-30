@@ -29,7 +29,7 @@ class Reset extends Mailable
     public function build()
     {
         return $this->view('emails.reset')
-                    ->from('postmaster@summitsamurai.com.ar')
+                    ->from('admin@summitsamurai.com.ar')
                     ->subject('Reinicio de clave');
     }
 }

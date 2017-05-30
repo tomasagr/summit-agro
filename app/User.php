@@ -57,6 +57,16 @@ class User extends Authenticatable
         return Carbon::parse($this->attributes['birthday'])->format('Y-m-d');
     }
 
+    public function setBirthdayAttribute($date)
+    {
+        $this->attributes['birthday'] = gmdate('Y-m-d H:i:s', strtotime($date));
+    }
+
+    public function setAniversarioAttribute($date)
+    {
+        $this->attributes['aniversario'] = Carbon::parse($date)->format('Y-m-d H:i:s');
+    }
+
     public function getAniversarioAttribute()
     {
         if (is_null($this->attributes['aniversario'])) {
