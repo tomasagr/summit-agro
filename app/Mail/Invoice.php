@@ -29,7 +29,7 @@ class Invoice extends Mailable
     public function build()
     {
         return $this->view('emails.invoice')
-                    ->from('postmaster@summitsamurai.com.ar')
+                    ->from('admin@summitsamurai.com.ar')
                      ->subject('Carga de factura');
     }
 }

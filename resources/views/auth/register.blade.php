@@ -238,6 +238,8 @@
                 <option value="casado">Casado</option>
                 <option value="soltero">Soltero</option>
                 <option value="viudo">Viudo</option>
+                <option value="viudo">Separado</option>
+                <option value="viudo">Divorciado</option>
               </select>
             </div>
             <div class="div-block-4 select-box">

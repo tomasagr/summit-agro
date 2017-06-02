@@ -32,7 +32,7 @@ class HasASolicitude extends Mailable
     public function build()
     {
         return $this->view('emails.solicitudes')
-                    ->from('postmaster@summitsamurai.com.ar')
+                    ->from('admin@summitsamurai.com.ar')
                     ->subject('Solicitud de premio');
     }
 }
