@@ -93,13 +93,13 @@
               </div>
               <div class="w-col w-col-4">
                 <input class="factura-field w-input"
-                data-name="date"
                 id="date"
                 maxlength="256"
                 ng-model="invoices.invoice.date"
                 placeholder="*Fecha"
+                onfocus="(this.type='date')"
                 required="required"
-                type="date">
+                type="text">
               </div>
               <div class="w-col w-col-4">
                 <input class="factura-field w-input"
@@ -176,7 +176,7 @@
                   id="promo_code"
                   ng-model="invoices.promoCode"
                   ng-change="invoices.searchCode()"
-                  placeholder="*Codigo promocional"
+                  placeholder="Codigo promocional"
                   type="text">
             <small ng-if="invoices.code != ''" style="color: @{{invoices.codeColor}}">@{{invoices.codeMessage}}</small>
           </div>
