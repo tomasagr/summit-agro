@@ -80,7 +80,7 @@ Route::group(['middleware' => 'auth'] , function() {
 
 	Route::get('/profile', function() {
 		$levels = Levels::with('awards')->get();
-		$users = User::all();
+		$users = User::orderBy('points', 'desc')->get();
 
 		return view('profile/index', compact('levels', 'users'));
 	});
