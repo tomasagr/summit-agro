@@ -93,13 +93,13 @@
               </div>
               <div class="w-col w-col-4">
                 <input class="factura-field w-input"
-                id="date"
-                maxlength="256"
-                ng-model="invoices.invoice.date"
-                placeholder="*Fecha"
-                onfocus="(this.type='date')"
-                required="required"
-                type="text">
+                  id="date"
+                  maxlength="256"
+                  ng-model="invoices.invoice.date"
+                  placeholder="*Fecha"
+                  onfocus="(this.type='date')"
+                  required="required"
+                  type="text">
               </div>
               <div class="w-col w-col-4">
                 <input class="factura-field w-input"
@@ -134,11 +134,11 @@
             <div class="row-2 w-row" ng-repeat="product in invoices.productList" ng-cloak>
               <div class="w-col w-col-6 responsive-6">
                 <select class="factura-field w-select"
-                ng-model="invoices.invoice.products[$index]"
-                id="products"
-                name="products"
-                required
-                ng-options="item as item.name for item in invoices.products">
+                  ng-model="invoices.invoice.products[$index]"
+                  id="products"
+                  name="products"
+                  required
+                  ng-options="item as item.name for item in invoices.products">
                 <option value="">Seleccionar</option>
               </select>
             </div>
@@ -195,7 +195,8 @@
         <input type="hidden" ng-init="invoices.user_id = {{Auth::user()->id}}">
         <div class="div-block-20" style="margin-top: 10%; padding-bottom: 1em;">
           <div class="text-block-8">* Campos obligatorios</div>
-          <button class="alt-btn btn-success w-button" ng-click="invoices.storeInvoice()" type="submit" ng-disabled="invoicesForm.$invalid">Sumar Puntos</button>
+          <button class="alt-btn btn-success w-button" ng-if="!invoices.loading" ng-click="invoices.storeInvoice()" type="submit" ng-disabled="invoicesForm.$invalid">Sumar Puntos</button>
+          <button class="alt-btn btn-success w-button" ng-if="invoices.loading" type="submit" ng-disabled="true">Cargando...</button>
           @if (session('status'))
           <div class="alert alert-success">
             {{ session('status') }}
