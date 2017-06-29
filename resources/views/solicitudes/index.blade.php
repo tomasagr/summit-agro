@@ -74,12 +74,14 @@
             <a class="btn-success info w-button"
             ngf-pattern="'image/*'"
             ngf-select
+            name="file"
             ng-model="invoices.invoice.file"
             ngf-accept="'image/*'"
-            ngf-max-size="20MB"
+            ngf-max-size="5MB"
             required
             href="#">Cargar factura</a>
           </div>
+          <span class="help-block" style="color: red" ng-if="invoicesForm.file.$error.maxSize">La imagen no puede superar los 5MB</span>
           <div>
             <div class="w-row">
               <div class="w-col w-col-4">
@@ -195,12 +197,12 @@
         <input type="hidden" ng-init="invoices.user_id = {{Auth::user()->id}}">
         <div class="div-block-20" style="margin-top: 10%; padding-bottom: 1em;">
           <div class="text-block-8">* Campos obligatorios</div>
-          <button class="alt-btn btn-success w-button" ng-if="!invoices.loading" ng-click="invoices.storeInvoice()" type="submit" ng-disabled="invoicesForm.$invalid">Sumar Puntos</button>
+          <button class="alt-btn btn-success w-button" ng-if="!invoices.loading" ng-click="invoices.storeInvoice()" type="submit" ng-disabled="invoicesForm.$invalid || invoicesForm.file.$error.maxSize">Sumar Puntos</button>
           <button class="alt-btn btn-success w-button" ng-if="invoices.loading" type="submit" ng-disabled="true">Cargando...</button>
           @if (session('status'))
-          <div class="alert alert-success">
-            {{ session('status') }}
-          </div>
+            <div class="alert alert-success">
+              {{ session('status') }}
+            </div>
           @endif
         </div>
       </div>
