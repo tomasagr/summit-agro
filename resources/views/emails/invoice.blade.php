@@ -18,7 +18,7 @@
 </head>
 <body>
   <div id="emailContent">
-     <p>Se a cargado una factura</p>
+     <p>Se ha cargado una factura</p>
      <p>Usuario: <b>{{$user->first_name}} {{$user->last_name}}</b></p>
      <p>Email: <b>{{$user->email}}</b></p>
   </div>

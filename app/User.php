@@ -11,13 +11,14 @@ use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $dates = ['deleted_at'];
     protected $fillable =  [
         "first_name",
         "last_name",
