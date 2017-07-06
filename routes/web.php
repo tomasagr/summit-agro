@@ -90,7 +90,7 @@ Route::group(['prefix' => 'panel', 'middleware' => ['auth', 'isAdmin']], functio
 	Route::get('/', 'AdminPagesController@panel');
 
 	Route::resource('users', 'UserController');
-	Route::get('users/{id}/delete', 'UserController@destroy');
+	Route::delete('users/{id}/delete', 'UserController@destroy');
 	Route::get('users/{id}/toggle', 'UserController@toggle');
 	Route::resource('products', 'ProductController');
 

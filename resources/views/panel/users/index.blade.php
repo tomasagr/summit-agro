@@ -45,9 +45,13 @@
 						<td>
 							<div class="btn-group">
 								<a href="/panel/users/{{$user->id}}/edit" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
-								@if (Auth::user()->id != $user->id)
-									<a href="/panel/users/{{$user->id}}/delete" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
-								@endif
+								<form action="/panel/users/{{$user->id}}/delete" method="POST">
+									{{csrf_field()}}
+									<input name="_method" type="hidden" value="DELETE">
+									<button class="btn btn-danger btn-xs" type="submit" onclick="return confirm('Esta Seguro?')">
+										<i class="glyphicon glyphicon-trash"></i>
+									</button>
+								</form>
 							</div>
 						</td>
 					</tr>
